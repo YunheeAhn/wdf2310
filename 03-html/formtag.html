@@ -11,15 +11,90 @@
 
     <form action="">
         <fieldset>
-            <legend>폼 타이틀dd</legend>
+            <legend>폼 타이틀</legend>
             <!-- 항상 input 기본 속성 : text -->
             
-            아이디 <input type="text"> </br>
-            </br>
-            <label for="name">이름</label> <input type="text" id="name"> </br>
+            아이디 <input autofocus reauired type="text" title="아이디" maxlength="8" placeholder="아이디를 입력 하세요.[8wk dlgk]" readonly value="아이디를 입력하세요">
+            </br></br></br>
+            <!-- readonly : 읽기 전용, 수정X -->
+            <!-- placeholder는 글씨쓰면 지워지고, 커서 누르면 앞으로 감 -->
+            <label for="name">이름</label> <input type="text" id="name" value="안윤희"> </br>
             <!-- 인풋 타입 중 라디오버튼, 체크박스에는 라벨을 연결 시킴
             텍스트 눌러도, 라디오버튼이나 체크박스 눌러도 되게끔 함 안되면 코딩 잘못한것 -->
+            </br></br></br>
+
+            <label for="pw">비밀번호</label>
+            <input type="password" id="pw" name="pw">
+            </br></br></br>
+
             
+            라디오<input type="radio" id="html" name="group">
+            <label for="html">html</label></br>
+            라디오<input type="radio" id="css" name="group">
+            <label for="css">css</label></br>
+            라디오<input type="radio" id="js" name="group">
+            <label for="js">js</label></br>
+            라디오<input type="radio" id="script" name="group">
+            <label for="script">script</label>
+            <!-- 라디오버튼은 중복 선택되게 안함, name값을 다르게 지정 -->
+            <!-- name으로 그룹묶기 / for값=id값 동일하게 해서 라벨-라디오버튼 연결 -->
+            </br></br></br>
+
+            체크박스
+            <input type="checkbox" name="consent1" id="consent1">
+            <label for="consent1">동의1</label>
+            <input type="checkbox" name="consent2" id="consent2">
+            <label for="consent2">동의2</label>
+            <input type="checkbox" name="consent3" id="consent3">
+            <label for="consent3">동의3</label>
+            <!-- 체크박스는 중복 선택 되게 함, name값 전체 동일 -->
+            <!-- id값들은 중복 불가 -->
+            </br></br></br>
+
+            <label for="email">이메일</label>
+            <input type="email" name="email" id="email">
+            </br></br></br>
+
+            <label for="file">첨부파일</label>
+            <input type="file" name="file" id="file" >
+            </br></br></br>
+
+            <input type="hidden">
+            <!-- 개발자들만 확인하는 정보들, 사용자에게 노출 되지 않아도
+            되는 정보들 -->
+            </br></br></br>
+
+            <label for="number">숫자</label>
+            <input type="number" disabled name="number" id="number">
+            <!-- disabled : 비활성화 -->
+            </br></br></br>
+
+            <label for="sel">계절선택</label>
+            <select name="sel" id="sel">
+>           <option value="봄">봄</option>
+>           <option value="봄>" selected>-여름</option>
+>           <option value="봄>">-가을</option>
+>           <option value="봄>">-겨울</option>
+            </select>
+            </br></br></br>
+
+
+            <textarea name="text" rows="10" cols="10">글쓰기</textarea>
+            </br></br></br>
+
+            <!-- 기능이 없는 버튼 -->
+            <!-- a하이퍼링크 : 페이지 전환 -->
+            <!-- input:button, button 동적처리 -->
+            <input type="button" value="input 타입 버튼">
+            <button><b>button 타입</b>버튼(태그나 이미지 등 뭔가를 넣을 수 있음)</button>
+            </br></br></br>
+
+            <input type="submit" value="내용전송" > 
+            <input type="reset" value="취소">
+            </br></br></br>
+
+            <!-- Form 태그 -->
+            <!-- w3홈페이지 참조 -->
         </fieldset>
     </form>
 </body>
