@@ -1,0 +1,134 @@
+/* 공통으로 적용되는 스타일 시트 명 -> comm.css */
+
+em {
+    font-size: 40px;
+    color: lightgoldenrodyellow;
+    background-color: #555;
+}
+
+/* 선택자 */
+*{
+    /* 전체선택자, 우선순위는 낮음 */
+    color: aqua;
+}
+
+span {
+    /* 태그 선택자 */
+    font-size: 25px;
+}
+
+.desc1 {
+    /* 클래스 선택자 */
+    color: blueviolet;
+}
+p.desc2 {
+    /* 태그 + 클래스 선택자 */
+    color: green;
+    background-color: white;
+    border: none;
+
+    line-height: 20px;
+    height: inherit;
+}
+
+#main {
+    width: 300px;
+    height: 300px;
+    background-color: pink;
+}
+
+.header {
+    height: 100px;
+    background-color: #222;
+
+}
+
+.header.dark {
+    /* 복합선택자 */
+    background-color: black;
+}
+
+.header .depth1 {
+    /* 클래스 자손선택자 */
+    background-color: blue;
+}
+
+.header > .depth1 {
+    /* 클래스 자식선택자 */
+    color: red;
+}
+
+.depth1 li {
+    /* 자손선택자 */
+    background-color: yellow;
+}
+
+.depth1 a {
+    /* 자손 선택자 */
+    color: green;
+    background-color: brown;
+}
+
+.depth1 > li {
+    /* 자식선택자 */
+    background-color: orange;
+}
+.depth1 > li > a {
+    color: red;
+}
+
+.depth2 > a {
+    color: hotpink;
+}
+
+.depth2 > a:hover {
+    background-color: yellow;
+}
+
+.input {
+    background-color: white;
+    color: #888;
+    text-align: center;
+    width: 100px;
+    height: 50px;
+}
+
+.input:focus {
+    /* 가상클래스 선택자 */
+    color: #f7f7f7;
+    background-color: red;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.bbs li {
+    color: #da1a1a;
+}
+.bbs li:nth-child(3) {
+    /* n번째자손(3번째) */
+    color: green;
+}
+.bbs li:nth-child(3) a {
+    /* n번째자손(3번째)의 a자식 */
+    color: blue;
+}
+.bbs li:first-child {
+    /* .bbs의 li의 첫번째 자손 */
+    background-color: blueviolet;
+}
+.bbs li:first-child a {
+    /* .bbs의 li의 첫번째 자손의 a자식 */
+    color: red;
+}
+.bbs a {
+    color: gray;
+}
+.bbs a:hover {
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+}
+
+/* 우선순위는 점수를 합쳐서 매겨지기 때문에,
+우선순위 생각해서 최대한 짧게 쓰는 연습을 해보자! */
+
