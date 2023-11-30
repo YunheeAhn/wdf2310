@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS기초</title>
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <link rel="stylesheet" href="/04-CSS/comm.css">
     <style>
         /* 임베디드 방식 */
@@ -85,5 +86,43 @@
         </div>
     </div>
 
+    <section class="goto">
+        <!-- 디자인요소는 CSS로 삽입 -->
+        <ul>
+            <li><a href="#">바로가기1</a></li>
+            <li><a href="#">바로가기1</a></li>
+            <li><a href="#">바로가기1</a></li>
+            <li><a href="#">바로가기1</a></li>
+        </ul> 
+    </section>
+    <!-- 뉴스, 배너 등 운영성 이미지는 태그로 삽입 -->
+        <ul>
+            <li>
+                <a href="#">
+                    <img src="./images/thumb.jpeg" alt="기사이미지">
+                </a>
+            </li>
+        </ul>
+        
+        <ul class="icon" style="font-size: 64px;">
+            <li><i class="las la-home"></i>home</li>
+            <li>search</li>
+            <!-- 라인어썸 i태그로 직접 넣어도 되지만 -->
+            <!-- 중복이 많을 경우에는 css 가상공간으로 해서 넣는다 -->
+            <li>menu</li>
+            <li>menu</li>
+            <li>menu</li>
+            <li>menu</li>
+            <li>menu</li>
+        </ul>
+
+        <ul class="icon2" style="font-size: 64px;">
+            <li><a href="#">home</a></li>
+            <li>search</li>
+            <li>instagram</li>
+            <li>youtube</li>
+        </ul>
+         
     </body>
+
 </html>
