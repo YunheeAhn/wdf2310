@@ -1,5 +1,9 @@
-/* 공통으로 적용되는 스타일 시트 명 -> comm.css */
+@import url(/04-CSS/CSS/reset.css);
+@import url(./fonts.css);
 
+
+
+/* 공통으로 적용되는 스타일 시트 명 -> comm.css */
 em {
     font-size: 40px;
     color: lightgoldenrodyellow;
@@ -168,7 +172,7 @@ p.desc2 {
     /* 비포랑 에프터는 인라인 형식이다. 그래서 블록 요소로 변경 해야 함 */
     width: 50px;
     height: 50px;
-    background: url(./images/mobile_212852414260.png) 0 0 no-repeat;
+    background: url(../../images/mobile_212852414260.png) 0 0 no-repeat;
     background-size: 100%;
     /* 이미지가 너무 크면 사이즈를 내가 지정 해놓은 width랑 height값에 100% 들어오게 맞춰줌 */
     /* 아이콘들은 이미지를 백그라운드로 깔고 가상 공간으로 넣음 */
@@ -178,7 +182,7 @@ p.desc2 {
     display: block;
     width: 50px;
     height: 50px;
-    background: url(./images/mobile_212852414260.png) 0 0 no-repeat;
+    background: url(../../images/mobile_212852414260.png) 0 0 no-repeat;
     background-size: 100%;
 }
 
@@ -244,10 +248,54 @@ p.desc2 {
     font-weight: 900;
     content: "\f067";
     color: green;
+    background-color: #888;
 }
-
-
 
 /* 우선순위는 점수를 합쳐서 매겨지기 때문에,
 우선순위 생각해서 최대한 짧게 쓰는 연습을 해보자! */
 
+/* font */
+.font-size1 {
+    font-size: 20px;
+}
+.font-size2 {
+    font-size: 1.25em;
+}
+.font-size3 {
+    font-size: 1.667em;
+}
+.font-size4 {
+    font-size: 1.667em;
+}
+.font-size5 { 
+    font-size: 1.667rem;
+}
+.font-size6 { 
+    font-size: 1.667rem;
+}
+.font-size7 {
+    font-size: 10vw;
+}
+.vw {
+    font-size: 20px;
+}
+
+.font-f1 {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Sofia', cursive;
+
+    font-size: 40px;
+}
+
+.font-f2 {
+    font-family: 'Vina Sans', sans-serif;
+    font-size: 40px;
+}
+.nfonts {
+    font-size: 20px;
+}
+
+.font-f3 {
+    font-family: 'YEONGJUPunggiGinsengTTF';
+    font-size: 40px;
+}
