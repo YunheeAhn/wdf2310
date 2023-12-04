@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background</title>
+    <style>
+        hr {
+            border: 3px solid black;
+
+            margin: 30px 0px;
+        }
+        .bgc1 {
+            /* width: 100px; */
+            height: 100px;
+            background-color: lightcoral;
+            /* div 안에 값이 없으면 배경색 안나옴 */
+            /* 높이 값 넣어주거나, div에 값 넣어줘야 함 */
+            /* 블럭요소인 div의 가로 값은 100%, 세로 값은 0% default */
+        }
+
+        .bgc1 .box1 {
+            height: 50px;
+            background-color: rgba(138, 43, 227, 0.412);
+            /* rgba는 투명도까지 조절 */
+        }
+
+        .bgc2 {
+            height: 500px; 
+            background-image: url(./images/map.jpg);
+            background-position: center;
+            background-size: 100% 500px;
+            background-repeat: no-repeat;
+
+        }
+
+        .bgc3 {
+            background-image: url(./images/flower.png);
+            height: 1000px;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-color: lightgoldenrodyellow;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Background</h1>
+
+    <h2>background-color</h2>
+    <div class="bgc1">
+        <div class="box1"></div>
+    </div>
+    <hr />
+
+    <h2>background-img</h2>
+    <div class="bgc2"></div>
+    <hr />
+
+    <div class="bgc3"></div>
+</body>
+</html>
