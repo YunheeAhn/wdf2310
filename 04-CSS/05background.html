@@ -27,23 +27,45 @@
 
         .bg2 {
             height: 500px; 
-            width: 440px;
             background-image: url(./images/map.jpg);
             /* bg-position의 default 값이 0 0 */
             /* 오른쪽, 아래쪽으로는 음수로 이동 / 왼쪽, 위쪽으로는 양수로 이동  */
-            background-position: 0 100%;
-            background-size: 100%;
-            /* bc-repeat의 default는 repeat */
+            background-position: 0 0;
+            /* bg-repeat의 default는 repeat */
             background-repeat: no-repeat;
-
+            /* bg-attachment의 default는 scroll */
+            background-attachment: fixed;
+            /* bg속성을 한번에 쓸 수 있는데, 공통 속성은 지워지고 최종만 남음 */
+            /* background: yellow; */
         }
 
         .bg3 {
-            background-image: url(./images/flower.png);
-            height: 1000px;
+            /* background-image: url(./images/flower.png);
             background-repeat: no-repeat;
             background-position: 50% 50%;
-            background-color: lightgoldenrodyellow;
+            background-color: lightgoldenrodyellow; */
+            height: 1000px;
+            background: yellow url(./images/flower.png) no-repeat right top fixed;        
+        }
+
+        .bg4 {
+            width: 300px;
+            height: 150px;
+            background-color: antiquewhite;
+            background-position: 0% 50%;
+            background-repeat: no-repeat;
+            background-image: url(./images/youtube.png);
+            /* bg-size는 auto auto가 default */
+            /* 디자인 할 때 기본은 이미지 찌그러지게 하지 않기 */
+            background-size: auto 100%;
+            /* background-size : contain -> 배경이 잘리지 않고 모두 보이게 (로고에 많이 사용) */
+        }
+        .bg5 {
+            width: 300px;
+            height: 150px;
+            background: aquamarine url(./images/map.jpg) no-repeat 0 0 / 300px auto;
+            /* background에 한번에 쓸 때 'no-repeat 0 0 / 300px auto' -> 노리핏 포지션 / 사이즈 순서로 써야 함 */
+            /* 꽉 채울 때는 background-size : cover; 써줌 */
         }
 
     </style>
@@ -62,5 +84,11 @@
 
     <div class="bg3"></div>
     <hr />
+
+    <h2>backgroun-size</h2>
+    <div class="bg4"></div>
+    <div class="bg5"></div>
+
+
 </body>
 </html>
