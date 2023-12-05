@@ -65,8 +65,40 @@
             height: 150px;
             background: aquamarine url(./images/map.jpg) no-repeat 0 0 / 300px auto;
             /* background에 한번에 쓸 때 'no-repeat 0 0 / 300px auto' -> 노리핏 포지션 / 사이즈 순서로 써야 함 */
-            /* 꽉 채울 때는 background-size : cover; 써줌 */
+            /* 꽉 채울 때는 background-size : cover; 써줌(이미지가 잘릴 수 있음) */
         }
+
+        /* 코드는 반복을 싫어함 / 공통으로 쓸 수 있는건 다 빼서 공통으로 쓰기 */
+        .link {
+            text-align: center;
+            margin: 10px;
+            /* 가로로 정렬하기 */
+            display: inline-block;
+            width: 45px;
+            height: 46px;
+            text-indent: -9999px;
+            background-image: url(./images/img_navsprites.gif);
+            background-repeat: no-repeat;
+        }
+        .home {
+            background-position: 0 0;
+        }
+        .prev {
+            background-position: -47px 0;
+        }
+        .next {
+            background-position: -91px 0;
+        }
+
+        .webtoon {
+            width: 70px;
+            height: 63px;
+            background-image: url(./images/sp_main.d5b6c236.png);
+            background-position: -460px -434px;
+            text-indent: -9999px;
+            background-repeat: no-repeat;
+        }
+        
 
     </style>
 </head>
@@ -88,7 +120,17 @@
     <h2>backgroun-size</h2>
     <div class="bg4"></div>
     <div class="bg5"></div>
+    <hr />
 
+    <h2>background image sprites</h2>
+    <a href="#" class="link home">홈</a>
+    <a href="#" class="link prev">이전</a>
+    <a href="#" class="link next">다음</a>
+
+    <h2>background naver image sprites</h2>
+    <div class="webtoon">네이버 웹툰
+    </div>
+    
 
 </body>
 </html>
