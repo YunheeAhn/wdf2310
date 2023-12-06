@@ -9,7 +9,7 @@
         body {
             width: 500px;
             height: 500px;
-            margin : 0 auto;
+            /* margin : 0 auto; */
             /* background: url(./images/flower.png); */
         }
         .box1 {
@@ -97,6 +97,23 @@
             border-radius: 50%;
         }
 
+        .padding {
+            border: 5px solid plum;
+            background: #eee;
+            border-radius: 20px;
+            /* 위 아래로 공간 주기 */
+            /* 유동적으로 넓이가 들어가게 하려면 디스플레이인라인블록, 패딩으로 여백 조절, 가로값 입력X */
+            padding: 0px;
+            display: inline-block;
+        }
+        .padding2 {
+            border: 2px solid green;
+            background: green;
+            padding : 20px 30px 40px;
+            margin-top:50px;
+            display: inline-block;
+        }
+
     </style>
     
 </head>
@@ -145,6 +162,11 @@
     <h2>border-radius</h2>
     <div class="bdrd1">border radius</div>
 
-    
+    <h2>padding</h2>
+    <div class="padding">padding</div>
+    <div class="padding">글씨 크기에 맞춰 늘어나는 사이즈</div>
+    <div class="padding">padding</div>
+
+    <div class="padding2">padding2</div>
 </body>
 </html>
