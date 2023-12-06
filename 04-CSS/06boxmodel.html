@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="stylesheet" href="./assets/CSS/reset.css">
     <title>Box model</title>
     <style>
         body {
@@ -34,12 +34,16 @@
             /* height 값은 0이 auto -> default */
             height: 100px;
             background-color: aquamarine;
+
+            
             
         }
         .box2 > p {
             font-size: 20px;
             text-align: center;
             line-height: 12px;
+
+            line-height: 18px;
         }
 
         .box3 {
@@ -156,10 +160,10 @@
         .wrap {
             width: 1200px;
             margin: 200px auto 0;
-            background-color: paleturquoise;
+            background-color: bisque;
         }
         .header {
-            box-sizing: border-box;
+            /* box-sizing: border-box; */
             /* box-sizing : border-box는 리셋 css에 넣어줌 */
             /* box-sizing : border-box 를 하면 전체 박스 사이즈 고정 */
             /* box-sizing: content-box; 는 CSS2스타일로 값들의 합으로 도출됨 */
@@ -169,6 +173,34 @@
 
             padding: 30px;
 
+            font-size: 20px;
+            text-align: center;
+            font-weight: 900;
+        }
+        .slide {
+            height: 300px;
+            border: 5px solid palevioletred;
+            
+            font-size: 20px;
+            text-align: center;
+            font-weight: 900;
+        }
+        .main {
+            height: 300px;
+            border: 5px solid purple;
+            margin: 20px;
+
+            font-size: 20px;
+            text-align: center;
+            font-weight: 900;
+        }
+        .footer {
+            height: 100px;
+            border: 5px solid saddlebrown;
+
+            font-size: 20px;
+            text-align: center;
+            font-weight: 900;
         }
         
 
@@ -238,10 +270,11 @@
     
         
     <hr />    
-        <div class="wrap">-
-            <header class="header">
-                <a href="#"></a>
-            </header>
+        <div class="wrap">
+            <header class="header">header 100px</header>
+            <div class="slide">slide 300px</div>
+            <main class="main">main 200px</main>
+            <footer class="footer">footer 100px</footer>
         </div>
 </body>
 </html>
