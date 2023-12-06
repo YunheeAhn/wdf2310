@@ -110,9 +110,49 @@
             border: 2px solid green;
             background: green;
             padding : 20px 30px 40px;
+            /* padding : 20px 40px -> 위아래값과 양옆값 */
             margin-top:50px;
             display: inline-block;
         }
+        .margin1 {
+            border: 5px solid peachpuff;
+            background-color: #eee;
+
+            margin: 60px;
+        }
+        .margin1.box {
+            margin-top: 120px;
+        }
+        /* margin1 스타일 적용 후 margin1box 스타일 적용
+            위에서부터 아래 순서대로 읽힘 ->우선순위 적용  */
+
+
+        .margin2 {            
+            border: 5px solid palevioletred;
+            background-color: #eee;
+
+            width: 550px;
+            height: 150px;
+            /* 여기까지만 보면, 왼쪽 정렬이 되어 있음 */
+
+            margin: auto;
+            /* margin:auto;를 넣으면 가운데 정렬 */
+            /* 남아있는 공간을 똑같이 계산해서 반씩 나눠가짐 */
+
+            /* display: inline; */
+            /* 인라인요소는 적용이 안됨 */
+
+            text-align: center;
+        }
+        .margin3 {
+            border: 3px solid olive;
+            background-color: olivedrab;
+            width: 50%;
+            
+            margin: auto;
+            /* 높이는 0이 기본이라 적용X */
+        }
+        
 
     </style>
     
@@ -157,16 +197,25 @@
         <div class="minh">min-height</div>
 
     <h2>Border</h2>
-    <div class="border">border</div>
+        <div class="border">border</div>
 
     <h2>border-radius</h2>
-    <div class="bdrd1">border radius</div>
+        <div class="bdrd1">border radius</div>
 
     <h2>padding</h2>
-    <div class="padding">padding</div>
-    <div class="padding">글씨 크기에 맞춰 늘어나는 사이즈</div>
-    <div class="padding">padding</div>
+        <div class="padding">padding</div>
+        <div class="padding">글씨 크기에 맞춰 늘어나는 사이즈</div>
+        <div class="padding">padding</div>
 
-    <div class="padding2">padding2</div>
+        <div class="padding2">padding2</div>
+
+    <h2>Margin</h2>
+        <div class="margin1">margin1</div>
+        <div class="margin1 box">margin1</div>
+        <div class="margin1">margin1</div>
+
+        <div class="margin2">margin2으로 block 요소 가운데 정렬
+            <div class="margin3">가운데정렬2트</div>
+        </div>
 </body>
 </html>
