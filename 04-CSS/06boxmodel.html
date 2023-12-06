@@ -8,7 +8,7 @@
     <style>
         body {
             width: 500px;
-            height: 500px;
+            /* height: 500px; */
             /* margin : 0 auto; */
             /* background: url(./images/flower.png); */
         }
@@ -152,6 +152,24 @@
             margin: auto;
             /* 높이는 0이 기본이라 적용X */
         }
+
+        .wrap {
+            width: 1200px;
+            margin: 200px auto 0;
+            background-color: paleturquoise;
+        }
+        .header {
+            box-sizing: border-box;
+            /* box-sizing : border-box는 리셋 css에 넣어줌 */
+            /* box-sizing : border-box 를 하면 전체 박스 사이즈 고정 */
+            /* box-sizing: content-box; 는 CSS2스타일로 값들의 합으로 도출됨 */
+
+            height: 100px;
+            border: 5px solid #222;
+
+            padding: 30px;
+
+        }
         
 
     </style>
@@ -216,6 +234,14 @@
 
         <div class="margin2">margin2으로 block 요소 가운데 정렬
             <div class="margin3">가운데정렬2트</div>
+        </div>
+    
+        
+    <hr />    
+        <div class="wrap">-
+            <header class="header">
+                <a href="#"></a>
+            </header>
         </div>
 </body>
 </html>
