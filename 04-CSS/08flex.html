@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+    <style>
+        .flex-container {
+            background-color: cornflowerblue;
+            padding: 30px;
+            margin: 10px;
+            width: 500px;
+        }
+        .flex-container div {
+            background-color: lightslategray;
+            font-size: 30px;
+            padding: 30px;
+            margin : 30px;
+        }
+        .flex1 {
+            display: flex;
+            /* display : flex;는 가로 사이즈 무시하고 들어감 */
+            flex-wrap: wrap;
+            /* flex-wrap : wrap; 하면 가로 사이즈 유지 단, 가로 값 지정 필요 */
+        }
+        .flex2 {
+            display: flex;
+            flex-direction: column;
+        }
+        .flex3 {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .flex3 div {
+            width: 46px;
+        }
+        .flex4 {
+            display: flex;
+            flex-wrap: wrap;
+            /* justify-content : center;많이 씀 */
+            justify-content: center;
+        }
+        .flex5{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 0 0;
+        }
+        .flex5 div {
+            margin: 0 0;
+        }
+        .flex6 {
+            display: flex;
+            justify-content: space-between;
+            height: 300px;
+            align-items: center;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <h1>Flex</h1>
+        <h2>Flex Container</h2>
+        <div class="flex-container flex1">flex1
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+        <div class="flex-container flex2">flex2
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+        <div class="flex-container flex3">flex3
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
+        <div class="flex-container flex4">flex4
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+        <div class="flex-container flex5">flex5
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+        <div class="flex-container flex6">flex6
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+        <div class="flex-container flex7">flex7
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+        <div class="flex-container flex8">flex8
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+        <div class="flex-container flex9">flex9
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+        <div class="flex-container flex10">flex10
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+        <div class="flex-container flex11">flex11
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+        <div class="flex-container flex12">flex12
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+        <div class="flex-container flex13">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+        <div class="flex-container flex14">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+        <div class="flex-container flex15">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+        <div class="flex-container flex16">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+        <div class="flex-container flex17">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+        <div class="flex-container flex18">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+        <div class="flex-container flex19">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+        <div class="flex-container flex20">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+        <h2>Flex Item</h2>
+        <div class="flex-container flex21">
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">3</div>
+        </div>
+        <div class="flex-container flex22">
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">3</div>
+        </div>
+        <div class="flex-container flex23">
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">3</div>
+        </div>
+        <div class="flex-container flex24">
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">3</div>
+        </div>
+        <div class="flex-container flex25">
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">3</div>
+        </div>
+        <div class="flex-container flex26">
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">3</div>
+        </div>
+        <div class="flex-container flex27">
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">3</div>
+        </div>
+        <div class="flex-container flex28">
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">3</div>
+        </div>
+        <div class="flex-container flex29">
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">3</div>
+        </div>
+        <div class="flex-container flex30">
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">3</div>
+        </div>
+        <div class="flex-container flex31">
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">3</div>
+        </div>
+        <div class="flex-container flex32">
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">3</div>
+        </div>
+        <div class="flex-container flex33">
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">3</div>
+        </div>
+        <div class="flex-container flex34">
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">3</div>
+        </div>
+        <div class="flex-container flex35">
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">3</div>
+        </div>
+        <div class="flex-container flex36">
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">3</div>
+        </div>
+        <div class="flex-container flex37">
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">3</div>
+        </div>
+        <div class="flex-container flex38">
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">3</div>
+        </div>
+        <div class="flex-container flex39">
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">3</div>
+        </div>
+        <div class="flex-container flex40">
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">3</div>
+        </div>
+</body>
+</html>
