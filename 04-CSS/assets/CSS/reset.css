@@ -1,64 +1,19 @@
-/* reset */
+/* reset 전체 셋팅값 */
 * {
+    font-family: 'Noto Sans KR', sans-serif,
+    "Malgun Gothic", "맑은 고딕", helvetica, 
+    "Apple SD Gothic Neo", sans-serif;
+
+    /* 자간 기본값, -0.4px */
+    letter-spacing: -0.2px;
+
+    /* 브라우저 기본 폰트 */
+    font-size: 14px;
+    font-weight: 500;
+
     margin: 0;
     padding: 0;
 
-    /* list style */
-    list-style: none;
-    
-    line-height: 1.5;
-    font-size: 16px;
-    text-decoration: none;
-    color: #222328;
-
     box-sizing: border-box;
-    /* 웹디자인기능사 시험용 기본 세팅 */
-}
-
-/* 본문 */
-.wrap {
-    background-color: antiquewhite;
-    width: 1200px;
-    margin: auto;
-}
-header {
-    background-color: aquamarine;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100px;
-}
-#logo a {
-    display: flex;
-    width: 200px;
-    height: 40px;
-    align-items: center;
-}
-
-#gnb .depth1 {
-    display: flex;
-}
-
-#gnb .depth1 > li > a {
-    height: 100px;
-    display: block;
-    padding: 0 30px;
-    align-items: center;
-    border: 1px solid black;
-}
-
-#gnb .depth2 {
-    display: none;
-}
-
-.slide ul {
-    display: flex;
-}
-.slide ul img {
-    /* 이미지 태그도 인라인 요소라 블록 안 하면 a태그 아랫부분이 보임 */
-    display: block;
-}
-.slide ul a {
-    display: block;
-    background: red;
+    /* margin 0, padding 0, box-sizing:border-box는 기본 디폴트 값 */
 }
