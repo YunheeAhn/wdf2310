@@ -1,0 +1,16 @@
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+
+    /* list style */
+    list-style: none;
+    
+    line-height: 1.5;
+    font-size: 16px;
+    text-decoration: none;
+    color: #333333;
+
+    box-sizing: border-box;
+    /* 웹디자인기능사 시험용 기본 세팅 */
+}
