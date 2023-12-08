@@ -122,6 +122,16 @@
             /* flex-basis : 0 false (일정하게 분배/1:1크기) basis(기본값) 하지마 */
             flex-basis: 0;
         }
+
+        .flex25 {
+            display: flex;
+        }
+        /* 최대 800px = 800px이하부터 */
+        @media screen and (max-width : 800px) {
+            .flex25 {
+                flex-direction: column;
+            }
+        }
     </style>
 </head>
 <body>
@@ -279,6 +289,7 @@
             <div class="flex-item">가나다</div>
             <div class="flex-item">가나다라마</div>
         </div>
+        <h3>flex25</h3>
         <div class="flex-container flex25">
             <div class="flex-item">1</div>
             <div class="flex-item">2</div>
