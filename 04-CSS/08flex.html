@@ -9,7 +9,7 @@
             background-color: cornflowerblue;
             padding: 30px;
             margin: 10px;
-            width: 500px;
+            width: 1000px;
         }
         .flex-container div {
             background-color: lightslategray;
@@ -76,7 +76,52 @@
             justify-content: space-between;
         }
 
+        .flex21 {
+            display: flex;
+        }
+        .flex21 .item1 {
+            order: 2;
+        }
+        .flex21 .item2 {
+            order: 3;
+        }
+        .flex1 .item3 {
+            order: 1;
+        }
+
+        .flex22 {
+            display: flex;
+        }
+        .flex22 .flex-item {
+            /* 1 True -> grow 하자 */
+            flex-grow: 1;
+        }
+        .flex22 .item1 {
+            /* 기본값 : 0 false -> gorw 하지마 */
+            flex-grow: 0;
+        }
+
+        .flex23 {
+            display: flex;
+        }
+        .flex23 .flex-item {
+            width: 100px;
+            flex-shrink: 0;
+        }
+        /* .flex23 .item3 {
+            /* 기본값 : 0 false -> shrink 하지마 */
+            /* flex-shrink: 0;
+        } */ 
         
+        .flex24 {
+            display: flex;
+        }
+        .flex24 .flex-item {
+            flex-grow: 1;
+            /* flex-basis : auto (default) */
+            /* flex-basis : 0 false (일정하게 분배/1:1크기) basis(기본값) 하지마 */
+            flex-basis: 0;
+        }
     </style>
 </head>
 <body>
@@ -204,26 +249,35 @@
             <div>2</div>
             <div>3</div>
         </div>
-        <h2>Flex Item</h2>
+        <h2>Flex Item</h2><h3>flex21</h3>
         <div class="flex-container flex21">
-            <div class="flex-item">1</div>
-            <div class="flex-item">2</div>
-            <div class="flex-item">3</div>
+            <div class="flex-item item1">1</div>
+            <div class="flex-item item2">2</div>
+            <div class="flex-item item3">3</div>
         </div>
+        <h3>flex22</h3>
         <div class="flex-container flex22">
-            <div class="flex-item">1</div>
+            <div class="flex-item item1">1</div>
             <div class="flex-item">2</div>
             <div class="flex-item">3</div>
         </div>
+        <h3>flex23</h3>
         <div class="flex-container flex23">
             <div class="flex-item">1</div>
             <div class="flex-item">2</div>
-            <div class="flex-item">3</div>
+            <div class="flex-item item3">3</div>
+            <div class="flex-item">4</div>
+            <div class="flex-item">5</div>
+            <div class="flex-item">6</div>
+            <div class="flex-item">7</div>
+            <div class="flex-item">8</div>
+            <div class="flex-item">9</div>
         </div>
+        <h3>flex24</h3>
         <div class="flex-container flex24">
-            <div class="flex-item">1</div>
-            <div class="flex-item">2</div>
-            <div class="flex-item">3</div>
+            <div class="flex-item">가</div>
+            <div class="flex-item">가나다</div>
+            <div class="flex-item">가나다라마</div>
         </div>
         <div class="flex-container flex25">
             <div class="flex-item">1</div>
