@@ -62,3 +62,25 @@ header {
     display: block;
     background: red;
 }
+#main {
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+.sec-g {    
+    /* width: 30%; */
+    flex-grow: 1;
+    /* 1:true(참) -> 확대를 하라는 이야기, 0 : false(거짓) -> 확대 하지 말란 이야기 */
+    padding: 20px 0;
+}
+.sec-g .sec-tit {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+#footer {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
