@@ -14,3 +14,8 @@
     box-sizing: border-box;
     /* 웹디자인기능사 시험용 기본 세팅 */
 }
+
+.wrap {
+    width: 1200px;
+    background-color: beige;
+}
