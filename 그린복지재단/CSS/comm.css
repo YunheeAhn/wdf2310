@@ -19,3 +19,57 @@
     width: 1200px;
     background-color: beige;
 }
+#header {
+    background: brown;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#logo a {
+    width: 200px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+#gnb .depth1 {
+    display: flex;
+}
+#gnb .depth1 > li > a {
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    width: 100%;
+    height: 100px;
+}
+#gnb .depth2 {
+    display: none;
+    text-align: center;
+}
+#gnb .depth1:hover .depth2 {
+    display: block;
+}
+
+
+/*  슬라이드 */
+.slide {
+    width: 100%;
+    height: 300px;
+    
+}
+.slide ul {
+    display: flex;
+    object-fit: cover;  
+}
+.slide ul a {
+    display: block;
+}
+.slide li a img {
+    display: block;
+
+}
+
+.main {
+    width: 100%;
+    height: 200px;
+}
