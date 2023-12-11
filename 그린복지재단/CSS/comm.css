@@ -55,21 +55,56 @@
 .slide {
     width: 100%;
     height: 300px;
+    background-color: red;
+    object-fit: contain;
+
     
 }
 .slide ul {
     display: flex;
-    object-fit: cover;  
 }
 .slide ul a {
     display: block;
 }
 .slide li a img {
     display: block;
-
+    height: 300px;
 }
 
-.main {
+#main {
     width: 100%;
     height: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+.sec-g {
+    width: 33.333%;
+    padding: 10px;
+}
+.sec-g .sec-tit {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.sec-g .list-bbs a {
+    display: block;
+}
+.sec-g .list-bbs li {
+    display: block;
+    display: flex;
+    align-items: center;
+}
+.sec-g .list-bbs li::before {
+    width: 5px;
+    height: 5px;
+    border-radius: 10px;
+    display: block;
+    content: '';
+    background-color: black;
+    margin-right: 5px;
+}
+
+#footer {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
 }
