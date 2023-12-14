@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float 연습</title>
+    <style>
+        .box1 .item {
+            /* display: inline-block;
+            -> 이렇게 하면 아이템들 사이 공간이 생김*/
+
+            float: left;
+
+            width: 100px;
+            height: 100px;
+            background: lightblue;
+        }
+
+        .box2 .item {
+            float: right;
+
+            width: 100px;
+            height: 100px;
+            background: lightblue;
+        }
+        .wrap {
+            margin: 0 auto;
+        }
+        #header {
+            height: 100px;
+            background: blue;
+        }
+        #logo {
+            width: 100px;
+            height: 100px;
+            background: lightcyan;
+            
+            /* float 는 자식에게 적용 / 부모는X */
+            float: left;
+        }
+        #gnb {
+            background: lightcoral;
+
+            float: right;
+        }
+        #gnb ul li {
+            float: left;
+            /* float:right: 하면 4->1 순서로 정렬됨 ; */
+        }
+        
+        .slide ul li {
+            float: left;
+        }
+    </style>
+</head>
+<div>
+    <h1>Float</h1>
+    <div class="div">
+        <h2>float : left</h2>
+        <div class="box1">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+        </div>
+    </div>
+    <hr />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <h2>float : right</h2>
+    <div class="div">
+        <div class="box2">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+        </div>
+    </div>    
+    <hr />
+    <hr />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+</div>
+
+    <h2>float layout</h2>
+
+        <div class="wrap">
+            <header id="header">header
+                <h1 id="logo">logo</h1>
+                <nav id="gnb">
+                    <ul>
+                        <li>menu1
+                            
+                        </li>
+                        <li>menu2
+                            
+                        </li>
+                        <li>menu3
+                            
+                        </li>
+                        <li>menu4
+                            
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="slide">slide
+                <ul>
+                    <li>slide1</li>
+                    <li>slide2</li>
+                    <li>slide3</li>
+                </ul>
+            </div>
+            <main id="main">main
+                <section class="sec-g">공지사항</section>
+                <section class="sec-g">배너</section>
+                <section class="sec-g">바로가기</section>
+            </main>
+            <footer id="footer">footer
+                <div class="ft-logo">logo</div>
+                <div class="ft-copy">copyright</div>
+                <div class="ft-sns">SNS</div>
+            </footer>
+        </div>
+
+</body>
+</html>
