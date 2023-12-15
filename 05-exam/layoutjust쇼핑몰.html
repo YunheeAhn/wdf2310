@@ -3,9 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" type="text/css" href="./CSS/comm.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script defer type="text/javascript" src="./JS/comm.js"></script>
     <title>Just쇼핑몰</title>
 </head>
+
 <body>
     <div class="wrap">
         <header id="header">
@@ -53,15 +57,36 @@
                 </ul>
             </nav>
         </header>
-        <div class="slide">
+
+        <!-- Slider main container -->
+        <div class="swiper">
+        <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+            ...
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        
+            <!-- If we need scrollbar -->
+            <!-- <div class="swiper-scrollbar"></div> -->
+        </div>
+        <!-- <div class="slide">
             <div class="ul">
                 <ul>
-                    <li ><a href=""><img src="./images/slide1.png" alt="1"></a></li>
-                    <li ><a href=""><img src="./images/slide2.png" alt="2"></a></li>
-                    <li ><a href=""><img src="./images/slide3.jpg" alt="3"></a></li>
+                    <li><a href=""><img src="./images/slide1.png" alt="1"></a></li>
+                    <li><a href=""><img src="./images/slide2.png" alt="2"></a></li>
+                    <li><a href=""><img src="./images/slide3.jpg" alt="3"></a></li>
                 </ul>
             </div>
-        </div>
+        </div> -->
         <main id="main">
             <!-- 그룹핑을 잘 해줘야 작업하기 편함 -->
             <!-- 공지 -->

@@ -85,6 +85,11 @@ header {
     padding: 3px 0;
 
 }
+/* Swiper */
+.swiper {
+    height: 300px;
+  }
+  /* slide 스와이퍼 쓰기 전 */
 .slide {
     overflow: hidden;
     position: relative;
