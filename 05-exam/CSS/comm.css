@@ -25,9 +25,24 @@
 /* 본문 */
 .wrap {
     /* background-color: antiquewhite; */
-    width: 1200px;
+    max-width: 1200px;
     margin: auto;
 }
+
+/* wrap 미디어쿼리 */
+/* 태블릿버전 */
+@media screen and (max-width:980px) {
+    .wrap {
+        padding: 0 30px;
+    }
+}
+/* 모바일버전 */
+@media screen and (max-width:430px) {
+    .wrap {
+        padding: 0 15px;
+    }
+}
+
 #header {
     /* background-color: aquamarine; */
     display: flex;
@@ -38,6 +53,7 @@
 }
 #logo a {
     display: flex;
+    font-size: 20px;
     width: 200px;
     height: 40px;
     align-items: center;
@@ -69,7 +85,8 @@
     align-items: center;
     /* border: 1px solid black; */
     width: 100%;
-    padding: 50px;
+    padding: 0 50px;
+    white-space: nowrap;
 }
 #gnb .depth1 > li {
     position: relative;
@@ -92,6 +109,50 @@
     padding: 3px 0;
 
 }
+
+/* 헤더 미디어쿼리 */
+/* 태블릿버전 */
+@media screen and (max-width:980px) {
+    #header {
+        /* background-color: aquamarine; */
+        flex-direction: column;
+        height: auto;
+    }
+    #logo a {
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        padding: 20px 0px 10px;
+    }
+    #gnb .depth1 > li > a {
+        height: 50px;
+    }   
+    #gnb .depth2 {
+        display: none;
+        background: yellow;
+        z-index: 1000;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        right: 0;
+    
+        text-align: center;
+        padding: 5px 0;
+    }
+}
+/* 모바일버전 */
+@media screen and (max-width:430px) {
+    #gnb {
+        width: 100%;
+        overflow-x: auto;
+    }
+   
+    #gnb .depth1 > li > a {
+        padding: 0 20px;
+    } 
+    
+}
+
 /* Swiper */
 .swiper {
     height: 300px;
@@ -185,8 +246,58 @@
     justify-content: center;
     align-items: center;
 }
+/* 메인 미디어쿼리 */
+/* 태블릿버전 */
+@media screen and (max-width:980px) {
+    #main {
+        height: auto;
+        flex-wrap: wrap;
+        /* gap:0; -> 원래#main에 gap:값;이 있었으면 적기 */
+    }
+    .sec-g {
+        flex-basis: auto;
+    }
+    .sec-bbs {
+        width: 100%;
+    }
+    .sec-bnr, .sec-goto {
+        width: 50%;
+        /* 원래 #main에 gap:값;이 있었다면?
+            width:calc(100% / 2 - 10px) */
+    }
+}
+
+/* 모바일버전 */
+@media screen and (max-width:430px) {
+    .sec-bnr, .sec-goto {
+        width: 100%;
+    }
+    .sec-bnr img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
+}
+
 #footer {
     border-top: 1px solid lightgrey;
+}
+
+
+/* 풋터 미디어쿼리 */
+/* 태블릿버전 */
+@media screen and (max-width:980px) {
+    #footer {
+        height: auto;
+
+        padding: 20px 0;
+
+        background: #eee;
+        text-align: center;
+
+        flex-direction: column;
+        /* display:block;을 써도 됨 -> 두가지 방법 */
+    }
 }
 
 /* ------------------------------------------------------------------------ */
@@ -262,3 +373,7 @@
     font-size: 1.5rem;
 
 }
+
+/* 미디어쿼리
+min-width : mobile->pc
+max-width : pc->mobile  */
