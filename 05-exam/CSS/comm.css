@@ -14,14 +14,21 @@
     box-sizing: border-box;
     /* 웹디자인기능사 시험용 기본 세팅 */
 }
-
+/* 공통 */
+.blind { /* 숨김텍스트 */
+    position: absolute;
+    text-indent: -9999px;
+    font-size: 0;
+    line-height: 0;
+}
+/* ----------------------------------------------------------------- */
 /* 본문 */
 .wrap {
     /* background-color: antiquewhite; */
     width: 1200px;
     margin: auto;
 }
-header {
+#header {
     /* background-color: aquamarine; */
     display: flex;
     justify-content: space-between;
@@ -180,4 +187,78 @@ header {
 }
 #footer {
     border-top: 1px solid lightgrey;
+}
+
+/* ------------------------------------------------------------------------ */
+
+/* dimmed modal */
+.dimmed {
+    background-color: rgba(0, 0, 0, 0.5);
+
+    z-index: 10000;
+
+    /* 모달창은 스크롤이 생겨도 꽉차있어야 하기 때문에 absolute보단 fixed사용 */
+    position: fixed;
+    /* width: 100%;
+    height: 100%; */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    display: none;
+}
+.modal {
+    background: #fff;
+    width: 500px;
+    height: 300px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+    border-radius: 20px;
+    border: 0.5px solid #888;
+
+    text-align: center;
+
+    padding: 50px 20px;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+.modal-hd {
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: bold;
+}
+.modal-bd {
+    font-size: 16px;
+}
+.btn-close {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    color: #fff;
+    border-radius: 50%;
+    background: #222;
+    height: 50px;
+    width: 50px;
+    
+    border: none;
+}
+
+.btn-close > i {
+    color: #fff;
+    font-size: 2rem;
+}
+
+.modal .btn-close::after {
+    content: '\f00d';
+    display: block;
+    font-family: 'Line Awesome Free';
+    font-weight: 900;
+    font-size: 1.5rem;
+
 }
