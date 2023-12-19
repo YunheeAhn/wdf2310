@@ -1,4 +1,21 @@
+/* 전역변수 설정 */
+:root {
+    --default:#222328;
+    --primary:#e30613;
+    --white:#fff;
+    --black:#000;
+    --widthWrap:1200px;
+    /* 최소높이 */
+    --minHeight:100vh;
+    /* --minHeight:calc(100vh - var(--hdHeight) - var(--ftHeight)-var(slideHeight); */
+
+    --hdHeigt:100px;
+    --ftHeight:100px;
+    --slideHeight:300px;
+}
+
 /* reset */
+
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +26,7 @@
     line-height: 1.5;
     font-size: 16px;
     text-decoration: none;
-    color: #222328;
+    color: var(--default);
 
     box-sizing: border-box;
     /* 웹디자인기능사 시험용 기본 세팅 */
@@ -25,7 +42,7 @@
 /* 본문 */
 .wrap {
     /* background-color: antiquewhite; */
-    max-width: 1200px;
+    max-width: var(--widthWrap);
     margin: auto;
 }
 
@@ -177,12 +194,13 @@
 }
 .slide ul a {
     display: block;
-    background: red;
+    background: var(--primary);
 }
 #main {
     height: 200px;
     display: flex;
     justify-content: space-between;
+    min-height: var(--minHeight);
 }
 .sec-g {    
     /* width: 30%; */
@@ -216,7 +234,7 @@
     display: block;
     width: 5px;
     height: 5px;
-    background: #000;
+    background: var(--black);
     margin-right: 5px;
 }
 .sec-bnr .sec-tit, .sec-goto .sec-tit {
@@ -320,7 +338,7 @@
     display: none;
 }
 .modal {
-    background: #fff;
+    background: var(--white);
     width: 500px;
     height: 300px;
 
@@ -351,9 +369,9 @@
     position: absolute;
     top: -20px;
     right: -20px;
-    color: #fff;
+    color: var(--white);
     border-radius: 50%;
-    background: #222;
+    background: var(--default);
     height: 50px;
     width: 50px;
     
@@ -361,7 +379,7 @@
 }
 
 .btn-close > i {
-    color: #fff;
+    color: var(--white);
     font-size: 2rem;
 }
 
