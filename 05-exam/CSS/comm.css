@@ -12,6 +12,9 @@
     --hdHeigt:100px;
     --ftHeight:100px;
     --slideHeight:300px;
+
+    /* 스와이퍼 관련 변수 */
+    --swiper-theme-color: #1eff00;
 }
 
 /* reset */
@@ -24,7 +27,7 @@
     list-style: none;
     
     line-height: 1.5;
-    font-size: 16px;
+    font-size: 16px; /*기준폰트*/
     text-decoration: none;
     color: var(--default);
 
@@ -70,7 +73,7 @@
 }
 #logo a {
     display: flex;
-    font-size: 20px;
+    font-size: 1.25rem;
     width: 200px;
     height: 40px;
     align-items: center;
@@ -210,7 +213,7 @@
     padding: 10px 0;
 }
 .sec-g .sec-tit {
-    font-size: 20px;
+    font-size: 1.25rem;
     margin-bottom: 10px;
 }
 #footer {
@@ -359,11 +362,11 @@
 }
 .modal-hd {
     margin-bottom: 20px;
-    font-size: 28px;
+    font-size: 1.75rem;
     font-weight: bold;
 }
 .modal-bd {
-    font-size: 16px;
+    font-size: 1rem;
 }
 .btn-close {
     position: absolute;
