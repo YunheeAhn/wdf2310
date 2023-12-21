@@ -86,18 +86,6 @@
 }
 
 
-/* gnb hover기능 */
-/* #gnb .depth1:hover .depth2 {
-    display: block;
-    전체메뉴 나올 때
-} */
-
-#gnb .depth1 li:hover .depth2 {
-    display: block;
-    /* 각각 depth2로 나올 때 */
-}
-
-
 #gnb .depth1 > li > a {
     display: flex;
     height: 100px;
@@ -112,8 +100,37 @@
     position: relative;
 }
 
+/* gnb hover기능 */
+/* #gnb .depth1:hover .depth2 -> 마우스 오버시 전체 메뉴   */
+#gnb .depth1 li:hover .depth2 { /*-> 마우스 오버시 개별 메뉴*/
+    display: block;
+    /* opacity: 1;
+    visibility: visible; */
+
+    visibility: visible;
+    opacity: 1;
+    padding: 5px 0;
+    overflow: visible;
+    /* max-height: 300px; */
+    height: auto;
+}
 #gnb .depth2 {
-    display: none;
+    /* 단, 실무에선 오퍼시티, 비지빌리티를 잘 쓰진 않음
+    opacity: 0;
+    visibility: hidden; */
+    /* 오퍼시티0을 줬을 때 검사 해보면 화면에 존재가 남아있음,
+    그래서 visibility:hidden;을 넣어줌 */
+
+    /* 실무에서 트랜지션 사용 하는법 */
+    /* max-height: 0; */
+    height: 0;
+    overflow: hidden;    
+    padding: 0;
+    opacity: 0;
+    visibility: hidden;
+    
+    transition: all 0.9s;
+
     background: yellow;
     z-index: 1000;
     position: absolute;
@@ -122,7 +139,7 @@
     right: 0;
 
     text-align: center;
-    padding: 5px 0;
+    
 }
 #gnb .depth2 a {
     display: block;
