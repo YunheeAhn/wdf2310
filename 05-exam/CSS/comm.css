@@ -207,7 +207,33 @@
     position: absolute;
     top: 0;
     left: 50px;
+
+    animation: ani-slide 10s linear infinite;
 }
+@keyframes ani-slide {
+    0% {
+        left: 0;
+    }
+    30% {
+        left: 0;
+    }
+    34% {
+        left: -100%;
+    }
+    64% {
+        left: -100%;
+    }
+    67% {
+        left: -200%;
+    }
+    98% {
+        left: -200%;
+    }
+    100% {
+        left: 0;
+    }
+}
+
 .slide ul img {
     /* 이미지 태그도 인라인 요소라 블록 안 하면 a태그 아랫부분이 보임 xptmxm */
     display: block;
@@ -216,6 +242,10 @@
     display: block;
     background: var(--primary);
 }
+
+
+
+
 #main {
     height: 200px;
     display: flex;
