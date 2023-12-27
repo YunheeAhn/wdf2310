@@ -78,7 +78,9 @@
     height: 40px;
     align-items: center;
 }
-
+.blind {
+    text-indent: -9999px;
+}
 
 #gnb .depth1 {
     display: flex;
@@ -362,6 +364,10 @@
 
 #footer {
     border-top: 1px solid lightgrey;
+}
+
+#footer>.logo {
+    filter: grayscale(100%);
 }
 
 
