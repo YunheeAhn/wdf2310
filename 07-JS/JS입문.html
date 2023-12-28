@@ -4,14 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS입문</title>
-    <script src="./JS/comm.js"></script>
+    <!-- 위에 쓰면 html보다 먼저 읽음 -->
+    <!-- 그래서 defer쓰거나 아래에 씀 -->
+    <script defer src="./JS/comm.js"></script>
 
     <script>
         // 여기에 쓰기도 하고
     </script>
+    <style>
+        .box.active {
+            background: red;
+        }
+    </style>
 </head>
 <body>
     <h1>JS 입문</h1>
+    <button class="box">박스 Box!!</button>
+
+    <div class="tab">tab1</div>
+    <div class="tab">tab2</div>
+    <div class="tab">tab3</div>
+    <div class="tab">tab4</div>
+
+
+
+
     <script>
         // 아래에 쓰기도 함
         // 이유 : html은 위에서부터 순서대로 읽기 때문에 js파일이 위에 있을 때 적용이 안되는 경우가 있음
