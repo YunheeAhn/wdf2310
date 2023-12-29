@@ -27,9 +27,15 @@
 // ---------------------------
 // 준비이벤트
 // html페이지를 로드한 후 실행
-$(document).ready(function(){})
+// $(document).ready(function(){})
+
+
 
 $(function() {
+  // gnb 마우스오버
+$('#gnb .depth1 > li').on('mouseenter',function(){
+  $(this).find('.depth2').stop().slideDown(300);
+})
   // 모달창 열기
   // $('.list-bbs li:first-child').click(function(){
   //   $('.dimmed').show();
@@ -47,11 +53,7 @@ $(function() {
     $('.dimmed').hide();
   })
 
-})
-
-
-
-//tabs
+  //tabs
 // 기본 세팅
 // active 삭제
 $('#tabs .sec-g').removeClass('active');
@@ -59,16 +61,19 @@ $('#tabs .sec-g').removeClass('active');
 $("#tabs .sec-g:first-child").addClass('active');
 
 // 클릭 했을때
-// $('#tabs .sec-tit').on('click',function () {
+$('#tabs .sec-tit').on('click',function (){
   // 기존에 있는거 삭제
-  // $('#tabs .sec-g').removeClass('active');
-  // this(그 아이의 부모에게) .active 추가
-  // $(this).parent().addClass('active');
-// });
-
-$('#tabs .sec-tit').on('click', function () {
-  // 기존에 있는 거 삭제
   $('#tabs .sec-g').removeClass('active');
-  // this(클릭된 h2의 부모인 section에게) .active 추가
+  // this(그 아이의 부모에게) .active 추가
   $(this).parent().addClass('active');
 });
+
+
+
+
+
+});
+
+
+
+

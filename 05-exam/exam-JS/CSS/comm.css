@@ -114,19 +114,19 @@
 
 /* gnb hover기능 */
 /* #gnb .depth1:hover .depth2 -> 마우스 오버시 전체 메뉴   */
-#gnb .depth1 li:hover .depth2 { /*-> 마우스 오버시 개별 메뉴*/
-    display: block;
+/* #gnb .depth1 li:hover .depth2 { -> 마우스 오버시 개별 메뉴 */
+    /* display: block; */
     /* opacity: 1;
     visibility: visible; */
 
-    visibility: visible;
-    opacity: 1;
-    padding: 5px 0;
-    overflow: visible;
+    /* visibility: visible; */
+    /* opacity: 1; */
+    /* padding: 5px 0; */
+    /* overflow: visible; */
     /* max-height: 300px; */
-    height: auto;
+    /* height: auto; */
+/* } */
 
-}
 #gnb .depth2 {
     /* 단, 실무에선 오퍼시티, 비지빌리티를 잘 쓰진 않음
     opacity: 0;
@@ -136,13 +136,14 @@
 
     /* 실무에서 트랜지션 사용 하는법 */
     /* max-height: 0; */
-    height: 0;
-    overflow: hidden;    
-    padding: 0;
-    opacity: 0;
-    visibility: hidden;
+    /* height: 0; */
+    /* overflow: hidden; */
+    /* padding: 0; */
+    /* opacity: 0; */
+    /* visibility: hidden; */
     
-    transition: all 0.9s;
+    display: none;
+    /* transition: all 0.9s; */
 
     background: white;
 
@@ -293,6 +294,11 @@
     display: block;
     padding: 5px 0;
 }
+.list-bbs {
+    flex-direction: column;
+    padding-left: 10px;
+    
+}
 .sec-bbs .list-bbs li {
     display: flex;
     align-items: center;
@@ -353,7 +359,7 @@
 }
 
 .tabs .tab-cont {
-    /* display: none; */
+    display: none;
     position: absolute;
     top: 50px;
     left: 0;
@@ -378,6 +384,10 @@
 }
 .tabs .active .tab-cont {
     display: flex;
+}
+.list-bbs {
+    flex-direction: column;
+    padding-left: 10px;
 }
 
 

@@ -192,7 +192,6 @@ boxEl.addEventListener ('click', function() {
 });
 
 // 요소 모두 찾기
-
 const tabEls = document.querySelectorAll('.tab');
 console.log(tabEls);
 
@@ -200,3 +199,6 @@ tabEls.forEach(function(tabEl, index) {
     console.log(tabEl,index);
     tabEl.classList.add(`tab${index + 1}`);
 })
+
+// 자바스크립트보다 좀 더 간단하게 쓰는 제이쿼리는 프로덕션
+// <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
