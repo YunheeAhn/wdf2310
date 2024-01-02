@@ -105,12 +105,12 @@
 #gnb .depth1 li:hover {
     background: pink;
 }
-#gnb .depth2 li:hover a {
+/* #gnb .depth2 li:hover a {
     color: pink;
     background: white;
     font-size: 20px;
     font-weight: 600;
-}
+} */
 
 /* gnb hover기능 */
 /* #gnb .depth1:hover .depth2 -> 마우스 오버시 전체 메뉴   */
@@ -224,9 +224,12 @@
     top: 0;
     left: 50px;
 
-    animation: ani-slide 10s linear infinite;
+    transition: all 0.3s;
+    /* js파일에서 슬라이드 변수 처리 후 트랜지션으로 부드럽게 넘어가게 하기*/
+
+    /* animation: ani-slide 10s linear infinite; */
 }
-@keyframes ani-slide {
+/* @keyframes ani-slide {
     0% {
         left: 0;
     }
@@ -248,7 +251,7 @@
     100% {
         left: 0;
     }
-}
+} */
 
 .slide ul img {
     /* 이미지 태그도 인라인 요소라 블록 안 하면 a태그 아랫부분이 보임 xptmxm */

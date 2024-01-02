@@ -105,12 +105,12 @@
 #gnb .depth1 li:hover {
     background: pink;
 }
-#gnb .depth2 li:hover a {
+/* #gnb .depth2 li:hover a {
     color: pink;
     background: white;
     font-size: 20px;
     font-weight: 600;
-}
+} */
 
 /* gnb hover기능 */
 /* #gnb .depth1:hover .depth2 -> 마우스 오버시 전체 메뉴   */

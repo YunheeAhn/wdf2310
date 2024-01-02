@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="./CSS/comm.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script type="text/javascript" src="./JS/comm.js"></script>
+    <script src="./JS/comm.js"></script>
     
     <title>Just쇼핑몰</title>
 </head>
@@ -182,7 +182,7 @@
         <footer id="footer">
             <div class="logo">
                 <a href="#">
-                    <img src="./images/logo.png">
+                    <img src="./images/logo.png" alt="로고">
                     <p class="blind">JUST쇼핑몰</p>
                 </a>
             </div>
@@ -196,16 +196,15 @@
                 <a href="#">유튜브s</a>
             </div>
         </footer>
-    </div>
 
     <!-- 모달창 -->
-    <div class="dimmed">
+    <div id="modal" class="dimmed">
         <div class="modal">
             <header class="modal-hd">모달 제목</header>
-            <main class="modal-bd">모달 본문 제이쿼리로 보이게 함 Lorem ipsum dolor sit amet consectetur 
+            <div class="modal-bd">모달 본문 제이쿼리로 보이게 함 Lorem ipsum dolor sit amet consectetur 
                 adipisicing elit. Modi obcaecati autem ipsum voluptates necessitatibus 
                 fugit nulla aperiam earum, blanditiis atque cum libero inventore deleniti 
-                itaque. Similique quae quo dolorem beatae!</main>
+                itaque. Similique quae quo dolorem beatae!</div>
             <button type="button" class="btn-close"><span class="blind">모달 창 닫기</span>
                 <!-- <i class="las la-times"></i> -->
             </button>
