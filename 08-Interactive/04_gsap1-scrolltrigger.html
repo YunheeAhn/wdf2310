@@ -87,6 +87,11 @@
 
             // gsap 이용하여 스크롤시 헤더 온오프
             const hd = document.querySelector("#header");
+            const topBtn = document.querySelector('.topbtn');
+            const btnRightHidden = -250;
+
+            
+            
 
             window.addEventListener('scroll', _.throttle(hdScroll, 300));
 
@@ -95,22 +100,32 @@
                 if (window.scrollY > 100) {
                     // 헤더를 숨기기
                     // gsap사용
-                    gsap.to("#header",{opacity:0, display:"none", duration:0.5});
+                    gsap.to(hd,{opacity:0, display:"none", duration:0.5});
                     // 버튼 보이기
                     // gsap.to(".topbtn",2,{x:-200});
-                    gsap.set(".topbtn",{x:-200});
+                    gsap.set(topBtn,{x:-200});
                     
 
                 } else {
                     // 헤더를 보이기
-                    gsap.to("#header",{opacity:1, display:"flex", duration:0.5});
+                    gsap.to(hd,{opacity:1, display:"flex", duration:0.5});
                     // 버튼 숨기기
                     // gsap.to(".topbtn",2,{x:200});
-                    gsap.set(".topbtn",{x:200});
+                    gsap.set(topBtn,{x:200});
                 }
             };
 
-
+            btnTop.addEventListener("click",function(event) {
+                //링크 이동방지
+                // 둘 중 아무거나 사용 가능
+                event.preventDefault();
+                gsap.to(window,{
+                    scrollTo:0,
+                    duration:1
+                })
+            });
+           
+                
             
 
             // 스크롤트리거 사용을 위한 기초
