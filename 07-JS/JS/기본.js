@@ -62,7 +62,7 @@ height = 200  // 마찬가지로 let선언 했기 때문에 값 재 할당 가�
 console.log(height) // 200 
 
 
-// 배열
+// 배열(Array)
 // 여러개의 값을 순차적으로 나열한 자료형 
 // 순서가 있음 [0,1,2]
 const animals = ["강아지","고양이","햄스터"]
@@ -73,3 +73,87 @@ console.log(animals[2]) // 햄스터 / 2번째 값 출력
 console.log(animals.length) // 3 / 배열의 길이를 출력
 console.log(animals[animals.length]) // undefined / animals의 길이 만큼의 값을 출력 하라는데 3의 값은 없기 때문에 undefined
 console.log(animals[animals.length - 1]) // 햄스터 / 배열의 가장 마지막 값을 출력
+
+
+// 객체(Object)
+// properties(속성)들의 순서가 없는 집합
+// {key:value,key:value,---} 여러개의 값을 저장한 자료형
+const user = {
+  name:'cloud',
+  age:10
+};
+console.log(user)
+  // user의 네임 값만 쓰려면?
+console.log(user.name) // cloud
+console.log(user.age) // 10
+
+  // 점 표기법
+    // 구름이의 나이는 N살 입니다
+console.log(`${user.name} 의 나이는 ${user.age} 입니다!`);
+
+  // 대괄호 표기법
+console.log(user['name'],user['age']);
+
+
+  // ex
+  const userA = {
+    name:'Yunhee',
+    age:29,
+    species:'human'
+  }
+  const userB = {
+    name:'cloud',
+    age:10,
+    species:'dog',
+    parent:userA
+  }
+  console.log(userB); // {name:'cloud'---}
+  
+  // userB를 통해서 userA의 네임값을 알려면?
+  console.log(userB.parent.name)
+  console.log(userB['parent']['name'])
+
+
+  // 배열에 객제 넣기
+  const users = [userA,userB];
+  console.log(users) // {usersA~,usersB}
+  console.log(users[0]) //user의 0번째 값들
+  console.log(users[0].name) //userA의 0번째값 
+
+
+//////// 함수 ////////
+// 특정 코드를 하나의 명령으로 실행 할 수 있게 해주는 자료형 데이터
+//  function(NAME){}
+function printHello() {
+  console.log('Hello')
+}
+printHello(); // Helloe, 함수 출력 하기
+
+  function getNumber() {
+    return 123; //123으로 반환
+  }
+  // 데이터 타입
+  console.log(getNumber) // getNumber() { return 123}
+  console.log(getNumber,typeof getNumber) //function
+  console.log(getNumber(),typeof getNumber) //string
+
+  // type Conversions(형 변환) : 값만 비교
+  const h = 1;
+  const i = '1'
+    // 동등 연산자
+    console.log(h == i) // true
+    // 일치 현장가
+    console.log(h === i) //false
+
+
+    // truthy(참 같은 값) & falsy(거짓 같은 값)
+    // falsy : false, 0, '', null, undefined, NaN
+    
+    const Ja = false;
+    if (Ja) {
+      console.log('참입니다!')
+    } // false일 경우는 거짓이기 때문에 '참입니다!'가 출력이 되지 않음
+    else {
+      console.log('거짓입니다!')
+    } // 값이 false이기 때문에 '거짓입니다!'가 출력 됨
+      // false,0,'',null,undefined,NaN 도 마찬가지로 '거짓입니다!가 출력 됨
