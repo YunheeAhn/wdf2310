@@ -184,11 +184,6 @@ console.log('             ')
 console.log("'a' && 'b' && 'c'")
 console.log('a' && 'b' && 'c') // C 모두가 참인 경우, 가장 마자막 true값을 반환
 
-
-
-
-
-
 console.log('             ')
 
 console.log('6-2. OR 연산자 || ')
@@ -210,11 +205,76 @@ console.log('false || false')
 console.log(false || false) //false
 
 
+// 연산자를 기준으로 가장 먼저만나는 true값 반환
+console.log(false || false) // ture
+console.log(1 || 0)
+console.log(false || 0 || {} )
+console.log(false || 0 || {} )
+console.log("" || 0 || NaN) //NaN
+
 // 병합 연산자
-console.log('6-3. Nullist 병합 연산자 ?? ')
+console.log('6-3. Nullise 병합 연산자 ?? ')
+// || or 연산자와 비슷
+//  null또는 undefined 는 제와 하고 반환
+
+console.log(0 || 5) //5, 근데 만약 0도 사용하고 싶다면??
+console.log(0 ?? 5) //0
+
+console.log(null || undefined)
+
+//  8. 삼항 연산자
+// 조건 ? 참일 때 반환, 거짓일 때 반환
+console.log(1 < 2 ? '참' : '거짓') // 참
+console.log(1 > 2 ? '참' : '거짓') // 참
+
+function isCat(NAME) {
+    return (
+        // 조컨 ? 참 : 거짓
+        NAME === '구름이' ? '강아지' : '강아지 아님'
+    )
+}
+console.log(isCat('구름이')) //강아지
+console.log(isCat('고양이')) //고양이 나미  
 
 
-console.log('-----------------------------')
-console.log('-----------------------------')
-console.log('-----------------------------')
-console.log('-----------------------------')
+// 9. 전개 연산자
+
+  // 9-1. 배열의 전개
+  const NUM1 = [1,2,3]
+  const NUM2 = [4,5,6]
+
+ console.log(NUM1.concat(NUM2)) //1,2,3,4,5,6
+ console.log([...NUM1, ...NUM2]) //1,2,3,4,5,6
+
+  // 9-2. 객체의 전개
+  const dog = {
+    name: '구름이',
+    phoe: 010-0000-0000
+  }
+  const dogInfo = {
+    ...dog,
+    age: 10,
+  }
+  console.log(dogInfo)
+
+  // 9-3. 함수의 전개
+  // ...을 사용하여 파라미터(인수)를 전개 할 수 있다
+
+  // sum 함수 선언
+  function sum(k,y,h){
+    console.log(k + y + h)
+  }
+  // sum 함수 호출
+  sum(5,6,7) //18
+
+  // 배열을 파라미터(인수)로 전달하려면?
+  const num10 = [5,6,7]
+  const num11 = [4,2,8]
+  sum(num10[0],num10[1],num10[2]) //18
+  sum(num11[0],num11[1],num11[2]) //14
+  // 위 내용처럼 사용하면 너무 복잡하다(인수가 많아지면 더 복잡)
+  // 그래서!
+  // 전개 연산자를 사용해서 인수를 전달하는 방법을 알아보자
+  sum(...num10) //18
+  sum(...num11) //14
+  // ... 전개 연산자를 사용 하면 된다
