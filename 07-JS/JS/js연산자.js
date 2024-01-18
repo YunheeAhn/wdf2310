@@ -249,7 +249,7 @@ console.log(isCat('고양이')) //고양이 나미
   // 9-2. 객체의 전개
   const dog = {
     name: '구름이',
-    phoe: 010-0000-0000
+    phoe: '010-0000-0000'
   }
   const dogInfo = {
     ...dog,

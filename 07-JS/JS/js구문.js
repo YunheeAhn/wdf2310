@@ -7,7 +7,7 @@ console.log('1. 구조분해 할당')
 // 객체나 배열의 속성을 해체하여 그 값을 개별 변수에 담게 하는 표현식
 
 // 1-1. 배열의 구조분해
-console.log('1-1. 구조분해 할당')
+console.log('1-1. 배열의 구조분해')
 
   // 구조분해 하지 않은 경우
   console.log('구조분해 하지 않은 경우')
@@ -107,7 +107,7 @@ const userCloud = {
 };
 const userMeong = {
     myName : '멍이',
-    age : 9,
+    age : 11,
 }
 
 function printCity(user) {
