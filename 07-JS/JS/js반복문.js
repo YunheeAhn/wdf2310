@@ -64,7 +64,7 @@ for (let i=0; i < animals.length; i++) {
     console.log(animals[i]);
 }
 
-console.log('1-4. for of문')
+console.log('1-4. for of문 - 배열 속성 사용')
 // for (변수 of 배열) {실행 될 코드}
 for (let animal of animals) {
     console.log(animal);
@@ -90,3 +90,65 @@ for (let user of users) {
     console.log(user.myName); // myName만 출력
     console.log(user.age); // age만 출력
 }
+
+console.log('   ')
+console.log('1-5. for in문 - 객체 속성 사용')
+// for in문
+// for (변수 in 객체) {실행될 코드}
+
+console.log('-객체 생성 {}')
+// 객체 생성( '{}} )
+const user = {
+    myName : 'YH',
+    age : 29
+};
+
+console.log('-객체 점 표기법')
+  // 객체 점 표기법
+console.log(user.myName, user.age);
+
+console.log('-객체 대괄효 표기법')
+  // 객체 대괄호 표기법
+console.log(user['myName'],user['age'])
+
+for (let key in user) {
+    console.log(key) // myNme age
+    console.log(user[key]) //myName YH, age 29 
+}
+
+console.log('   ')
+console.log('1-6. while')
+// while 반복문
+// while (조건) {실행될 코드}
+
+// 1부터 10까지 더하기
+let i = 1; // 초기 값
+let sum = 0; // 합계를 저장할 변수
+
+while(i <= 10) {
+    // sum에 1더하기
+    // sum = sum + i;
+    sum += i;
+    // i에 1더하기
+    // i = i + i;
+    // i += 1;
+    i++;
+};
+console.log(sum); // 55
+
+
+console.log('   ')
+console.log('1-7. do while')
+// do while문
+// do {실행될 코드} while (조건);
+// 코드 먼저 실행 후 조건 검사 함
+
+// 0부터 9까지 출력되는 실행
+let j = 0;
+
+do {
+    console.log(j);
+    j++;
+} while (j < 10);
+
+
