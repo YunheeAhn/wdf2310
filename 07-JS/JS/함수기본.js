@@ -171,6 +171,7 @@ console.log(getS3(animals))
 function getS4([,b,c]) { // 고양이랑 물고기만 나오게 하려면 ,를 넣어서 앞에 비어있다는 것을 표현
     return `난 ${b}와 ${c}를 키우고 있어`
 }
+
 console.log(getS4(animals)) //고양이와 물고기
 
 const getA = animals[0]
@@ -179,3 +180,100 @@ const getC = animals[2]
 
 console.log(getA,getB,getC)
 
+function getS6([b = '두번째 요소가 없습니다.'] ) {
+    return `난 ${b}를 키우고 잇어`
+}
+console.log(getS6(animals))
+
+function getS6([,b = '두번째 요소가 없습니다.'] ) {
+    return `난 ${b}를 키우고 잇어`
+}
+console.log(getS6(animals))
+
+console.log('')
+console.log('4-3. 나머지 매개변수')
+// 나머지 매개변수 (...rest)
+// 매개변수를 배열로 전달 받는다.
+
+// function 함수이름(...매개변수) {}
+
+function print(...rest) {
+    console.log(rest) // 콘솔로그로 호출
+}
+print(1,2) // 콘솔창에서 print 호출 [1,2]
+print(1,2,3,4,5,6,7,8) // 콘솔창에서 print 호출 [1,2,3,4,5,6,7,8]
+
+function print2(a,...rest2) {
+    console.log(a,rest2) // 콘솔로그로 호출
+}
+print2(1,2) // 1 [2]
+print2(1,2,3,4,5,6,7,8) // 1 [2,3,4,5,6,7,8]
+
+// 배열 데이터에 숫자를 더하는 로직 함수
+function print3All(...rest) {
+    console.log(rest)
+
+    // return rest.reduce(fn, 초기값);
+    return rest.reduce(function (acCount, curRent) {
+        return acCount + curRent // 누적된 값에, 현재 값을 계속 더함
+    }, 0);
+}
+console.log(print3All(1,2,3)) // 6
+console.log(print3All(1,2,3,4,5,6,7)) // 28
+
+print3All(1,2) // [1,2]
+print3All(1,2,3,4,5,6,7,8) // [1,2,3,4,5,6,7,8]
+
+// 화살표 함수
+// const fn = function() {}; 함수의 표현식
+// const 함수이름 = (매개변수) => {실행문}; 매개변수가 없을 경우 화살표 함수
+// () => {}; 매개변수가 없을 경우
+// ('생략') => {} ; 매개변수가 하나일 경우 소괄호 생략 가능
+// (x,y) => {} ; 매개 변수가 여러개인 경우, 소괄호 생략 할 수 없다.
+
+
+const hello3 = (naName) => {
+    console.log(`나는 ${naName}입니다.`)
+}
+hello3('안윤희'); // 나는 안윤희입니다.
+
+// sum함수에 적용해보기
+const print5 = (a,b) => {
+    return a + b;
+}
+console.log(print5(1,2)) // 3
+
+// 화살표 함수의 다양한 예시
+// 1. 매개변수가 없는 경우
+const Aa = () => {} ;
+
+// 2. 매개변수가 하나만 있는 경우
+// 매개변수 감싸는()괄호 생략 가능
+const Bb = x => {}; 
+
+// 3. 매개변수가 여러개인 경우
+// 매개변수 감싸는()괄호 생략 불가
+const Cc = (Xx,Yy) => {};
+
+// 4. 함수에 리턴이 있는 경우
+// {}중괄호 포함 리턴 생략 가능
+// 4-1. return으로 시작하는 경우
+const Dd = (Xxx,Yyy) => Xxx + Yyy
+ // const Dd = (Xxx,Yyy) => {return Xxx + Yyy};
+
+// 4-2. return으로 시작하지 않는 경우
+const Ee = (Xxxx,Yyyy) => {
+    console.log(Ee);
+    return Yyyy;
+}
+
+// 5. 객체를 반환 하는 경우 
+// {}중괄호 포함 리턴 생략 가능
+// 단, 객체를 ()소괄호로 감싸준다
+const Ff = () => ({Xa : 1});
+// const Ff = (Xa) => {return { Xa : 1}};
+
+// 6. 배열을 반환 하는 경우
+// {}중괄호 포함 리턴 생략 가능
+const Gg = () => [1,2,3]
+// const Gg = () => {return [1,2,3]};
