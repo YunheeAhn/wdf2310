@@ -9,7 +9,7 @@ import { GiStripedSun } from "react-icons/gi";
 import { FaUmbrellaBeach } from "react-icons/fa6";
 
 import logo from './logo.svg'; // <-이미지 사용하는 방법
-import Comments from './Ccoments';
+// import Comments from './_Ccoments';
 
 
 // 컴포넌트 만들기
@@ -18,16 +18,16 @@ import Comments from './Ccoments';
 
 function Layout() { // App이라는 기명 함수 선언
 
-  const airbnb = [
-    {text : '방', icon : <LuBedDouble/>},
-    {text : '최고의 전망', icon : <GiStripedSun />},
-    {text : '해변근처', icon : <FaUmbrellaBeach />},
-    // {text : '국립공원', icon : },
-    // {text : '한옥', icon : },
-    // {text : '한적한 시골', icon : },
-    // {text : '멋진 수영장', icon : },
-    // {text : '캠핑장', icon : }
-  ]
+  // const airbnb = [
+  //   {text : '방', icon : <LuBedDouble/>},
+  //   {text : '최고의 전망', icon : <GiStripedSun />},
+  //   {text : '해변근처', icon : <FaUmbrellaBeach />},
+  //   {text : '국립공원', icon : },
+  //   {text : '한옥', icon : },
+  //   {text : '한적한 시골', icon : },
+  //   {text : '멋진 수영장', icon : },
+  //   {text : '캠핑장', icon : }
+  // ]
   
   const navDeskArr = [
     {title : 'd-html'},
@@ -54,13 +54,13 @@ function Layout() { // App이라는 기명 함수 선언
     // 여러개의 태그를 사용 하고 싶다면 (<></>) 를 사용한다
     // 또는 <Fragment></Fragment>를 사용한다
   <div className="wrap">
-    <Comments></Comments>
+    {/* <Comments></Comments> */}
     <Header nav = {navDeskArr} />
       <NavMobile nav = {navMobileArr} />
-      <CardAir air = {airbnb}/>
-      <CardAir air = {airbnb}/>
-      <CardAir air = {airbnb}/>
-      <CardAir air = {airbnb}/>
+      {/* <CardAir air = {airbnb}/> */}
+      {/* <CardAir air = {airbnb}/> */}
+      {/* <CardAir air = {airbnb}/> */}
+      {/* <CardAir air = {airbnb}/> */}
       <Article title="Html이란?" desc="첫번째 아티클 내용은 이렇습니다. 이러이러해서 이렇게 되었고, 또 이렇게 하겠습니다." />
       <Article title="Css란?" desc="두번째 아티클 내용은 이렇습니다. 이러이러해서 이렇게 되었고, 또 이렇게 하겠습니다." />
       <Article title="Javascript란?" desc="세번째 아티클 내용은 이렇습니다. 이러이러해서 이렇게 되었고, 또 이렇게 하겠습니다." />
