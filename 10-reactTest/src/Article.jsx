@@ -2,6 +2,9 @@
 
 // import
 import styled from 'styled-components';
+import { AiFillBell } from "react-icons/ai";
+
+
 
 // 아티클 화살표 함수
 const Article = (propsArticle) => {
@@ -10,6 +13,7 @@ const Article = (propsArticle) => {
     <At>
         <h2>{title}</h2>
         <p>{desc}</p>
+        <AiFillBell />
     </At>
     );
   }

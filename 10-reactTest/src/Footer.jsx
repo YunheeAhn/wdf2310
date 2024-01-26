@@ -3,6 +3,7 @@
 // import
 import styled from 'styled-components';
 
+
 // 풋터 화살표 함수
 const Footer = () => {
     return <Ft>footer</Ft>

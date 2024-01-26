@@ -2,12 +2,14 @@
 
 // import
 import styled from 'styled-components';
+import Nav from './Nav';
 
 // 헤더 일반 함수
-function Header() {
+function Header(propsHnav) {
     return (
     <Hd>
-      <h1>Logo</h1>
+      <h1> 윤희 회사 </h1>
+      <Nav nav = {propsHnav.nav} />
     </Hd>
     );
   }

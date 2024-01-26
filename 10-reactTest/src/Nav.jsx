@@ -3,23 +3,36 @@
 // import
 import styled from 'styled-components';
 
+
+
 // nav화살표 함수
-const Nav = () => {
+const Nav = ( propsDnav ) => {
+    console.log(propsDnav)
+    // console.log(propsDnav.nav)
+    // console.log(propsDnav.nav[0])
+    // console.log(propsDnav.nav[0].title)
+    // console.log(propsDnav.nav[1].title)
+    // console.log(propsDnav.nav[2].title)
+    // console.log(propsDnav.nav[3].title)
+    // console.log(propsDnav.nav[4].title)
+    // console.log(propsDnav.nav[5].title)
+    // console.log(propsDnav.nav[6].title)
+   const list = [];
     return (
-    <Nv>헤더메인네브
-      <ul>
-        <li>
-            <a href='/'>ㅇㅇ</a>
-            </li>
-            <li>
-                <a href='/'>ㄹㄹ</a>
-            </li>
-            <li>
-                <a href='/'>ㄴㄴ</a>
-            </li>
-      </ul>
-    </Nv>)
-  }
+        <Nv>헤더메인네브
+        <ul>
+            {/* 배열이름.map((item, index) => {}) */}
+            {/* item = 객체, 들어올 정보 */}
+            { propsDnav.nav.map((item, index) => (
+                <li key={index}>
+                    <a href={'/sub/' + item.title + '.html' }>{item.title}</a>
+                </li>
+                ))
+            }
+        </ul>
+        </Nv> 
+        )
+    }
   // nav 컴포넌트
   const Nv = styled.nav`
     color : Gray;
@@ -45,7 +58,7 @@ const NavMobile = ( propsNav ) => {
     for (let i = 0; i < propsNav.nav.length; i++) {
         // list라는 빈 배열에 push()
         list.push(
-            <li>
+            <li key={i} >
                 <a href={'/sub/' + propsNav.nav[i].title + '.html'}>{propsNav.nav[i].title}</a>
             </li>
         )
