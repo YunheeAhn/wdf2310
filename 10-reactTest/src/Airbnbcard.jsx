@@ -1,4 +1,5 @@
 // 컴포넌트 분리 파일명 작성시 첫글자는 대문자
+// 안윤희 연습중
 
 // import
 import styled from 'styled-components';

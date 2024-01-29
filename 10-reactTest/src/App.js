@@ -1,8 +1,15 @@
+import Comments from "./Ccoments";
 import Layout from "./Layout";
+import Product from "./Product";
 
 function App() { 
   return ( 
     <>
+    <Product />
+    <Comments />
+
+
+
     {/* 부모컴포넌트 Cat */}
       <Cat type="고양이" name="가을이" age="2"/>
       {/* {name : '가을', age : 2} 객체가 Cat컴포넌트로 전달 */}
