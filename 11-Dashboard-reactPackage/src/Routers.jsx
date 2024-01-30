@@ -1,21 +1,22 @@
 // 라우터스 컴포넌트
 
-import { BrowserRouter, Routes, Route} from "react-router-dom";
 import Marketplace from "./views/Marketplace";
 import Home from "./views";
 import DataTables from "./views/Datatables";
 import Profile from "./views/Profile";
 import Signin from "./views/Signin";
 import Rtl from "./views/Rtl";
-import './assets/scss/style.scss'
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+
 const routeArr = [
-    {   path:"home",
+    {   path : "/",
         element: <Home/> },
-    {   path:"/marketplace",
+    {   path : "/marketplace",
         element: <Marketplace/> },
-    {   path:"/datatables",
-        element: <DataTables/> },
-    {   path:"/profile",
+    {   path : "/datatables",
+        element : <DataTables/> },
+    {   path : "/profile",
         element: <Profile/> },
     {   path:"/signin",
         element: <Signin/> },
@@ -24,7 +25,7 @@ const routeArr = [
 
 ]
 
-const Routers = (props) => {
+const Routers = () => {
     return(
         <BrowserRouter>
             <Routes>
