@@ -8,7 +8,7 @@ const Footer = () => {
     return (
         <FooterStyled>
             <Containerwrap as="footer" h={20} bg={'#eee'}>
-                <h2>저스트쇼핑몰</h2>
+                저스트쇼핑몰
             </Containerwrap>
         </FooterStyled>
     )

@@ -1,14 +1,26 @@
 // chakra-ui 컴포넌트 스타일 변경
 
-import { extendTheme } from "@chakra-ui/react"
+import { lighten } from "polished";
 
-const theme = extendTheme({
+const BasicTheme = ({
     colors: {
-        brand: {
-          100: "#f7fafc",
-          900: "#1a202c",
-        },
+      primary : '#e0613e',
+      brand: {
+        100: "#f7fafc",
+        900: "#1a202c",
       },
+      red : {
+        base: "ff0000",
+        100: "#ff9999",
+        200: lighten(0.10, "#ff9999"),
+        900: "#ff2626"
+      }
+    },
+    
 });
 
-export default theme;
+export default BasicTheme;
+
+// polished 라이브러리 설치 하면 lighten 설정 가능
+// npm install polished
+// 예시 -> 100: lighten(0.2, '#ff9999'),

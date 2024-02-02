@@ -1,11 +1,11 @@
 // 라우터스 컴포넌트
 
-import Marketplace from "./views/Marketplace";
-import Home from "./views";
-import DataTables from "./views/Datatables";
-import Profile from "./views/Profile";
-import Signin from "./views/Signin";
-import Rtl from "./views/Rtl";
+import Marketplace from "./views/marketplace/Marketplace";
+import Home from "./views/home";
+import DataTables from "./views/datatables/Datatables";
+import Profile from "./views/profile/Profile";
+import Signin from "./views/signin/Signin";
+import Rtl from "./views/rtl/Rtl";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 

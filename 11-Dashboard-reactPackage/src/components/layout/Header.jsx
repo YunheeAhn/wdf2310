@@ -1,44 +1,104 @@
 // 헤더컴포넌트
 
-import { EmailIcon, PhoneIcon } from "@chakra-ui/icons";
-import { Box, Heading } from "@chakra-ui/layout";
-import { ButtonGroup, IconButton } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
-import styled from "styled-components";
+import { SearchIcon, SunIcon } from '@chakra-ui/icons'
+import { ButtonGroup, IconButton,Box, Heading, Button, ListItem} from "@chakra-ui/react";
 import Containerwrap from "./Container";
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import { FaHamburger, FaUser } from "react-icons/fa";
+import { RiSearchFill } from "react-icons/ri";
+import Mainslide from '../../views/home/components/Topslide';
+import Gnb from './Gnb';
+
+
 
 const Header = () => {
     return (
         <>
-        <Box as="header" borderBottom={['1px','solid']} borderColor={'#eee'}>
+        <Box as='header' position={'fixed'} top={0} left={0} right={0} zIndex={1000} bg="rgba(0,0,0,.1)" backdropFilter={'saturate(180%) blur(15px)'} >
+
+            
+
+            {/* tnb, 모다일에선 없음 */}
+            <Box display={['none', null, null, null, "block"]} bgColor={"rgba(0,0,0,0.6)"}>
+
+                <Containerwrap display="flex" justifyContent={"space-between"} >
+                    <ButtonGroup direction="row" spacing={4} align="center">
+                        <Button variant="link12">공공기관용</Button>
+                        <Button variant="link12">금융클라우드</Button>
+                    </ButtonGroup>
+                    <ButtonGroup direction="row" spacing={4} align="center">
+                        <Button variant="link12">로그인</Button>
+                        <Button variant="link12">회원가입</Button>
+                        <Button variant="link12">Languages</Button>
+                    </ButtonGroup>
+                </Containerwrap>
+            </Box>
+
+            {/* gnb */}
+            <Box bgColor={"rgba(150,30,150,0.1)"} h={100} display={'flex'} alignItems={'center'} justifyContent={'space-between'}>
+                <Containerwrap display={["block", null, "flex" ]} alignItems={'center'} justifyContent={'space-between'}>
+                    <Heading as={"h1"} fontSize={20}>
+                        <Link to="/">네이버 클라우드 플랫폼</Link>
+                    </Heading>
+
+                    <Gnb display={'flex'} gap={'20px'}>
+                        <ListItem>
+                            <Link to="/marketplace" >Main Dashboard</Link>
+                        </ListItem>
+                        <ListItem>
+                        <Link to="/datatables">Datatables Dashboard</Link>
+                        </ListItem>
+                        <ListItem>
+                            <Link to="/profile">Profile Dashboard</Link>
+                        </ListItem>
+                        <ListItem>
+                            <Link to="/signin">signin Dashboard</Link>
+                        </ListItem>
+                        <ListItem>
+                            <Link to="/rtl">Rtl Dashboard</Link>
+                        </ListItem>
+                    </Gnb>
+
+                    <ButtonGroup display={'flex'} gap={3} >
+                        <IconButton variants="ghost" aria-label="Search database" icon={<FaUser />} />
+                        <IconButton variants="ghost" aria-label="Light database" icon={<RiSearchFill />} />
+                        <IconButton variants="ghost" aria-label="Light database" icon={<FaHamburger />} />
+                    </ButtonGroup>
+                </Containerwrap>
+            </Box>
+        </Box>
+
+
+
+        <Box as="header" borderBottom={['1px','solid']} borderColor={'#eee'} >
             {/* chakra-ui용 스타일 넣는 방법 */}
             <Containerwrap>
                 <Box display={['block',null,'flex']} h={100} alignItems={'center'} justifyContent={'space-between'}>
-                    <Heading fontSize={24}>
-                        <Link to="/">Dashboard</Link>
-                        
-                    </Heading>
                     
-                    <NavStyled>
-                        <NavUlStled>
-                            <li><Link to="/marketplace">Main Dashboard</Link></li>
+                        <Heading fontSize={24}>
+                            <Link to="/">Dashboard</Link>
+                        </Heading>
+
+                    <nav>
+                        <ul>
+                            <li><Link to="/marketplace" >Main Dashboard</Link></li>
                             <li><Link to="/datatables">Datatables Dashboard</Link></li>
                             <li><Link to="/profile">Profile Dashboard</Link></li>
                             <li><Link to="/signin">signin Dashboard</Link></li>
                             <li><Link to="/rtl">Rtl Dashboard</Link></li>
-                        </NavUlStled>
-                    </NavStyled>
+                        </ul>
+                    </nav>
 
                     <IconBtnGroup gap='4'>
-                        <IconButton aria-label='Search database' icon={<EmailIcon />}> 
-                            Email
-                        </IconButton>
-                        <IconButton label='Light database' icon={<PhoneIcon />}> 
-                            Phone
-                        </IconButton>
+                        <IconButton variant="outline" aria-label="Search database" icon={<SearchIcon />} />
+                        <IconButton variant="outline" aria-label="Light database" icon={<SunIcon />} />
                     </IconBtnGroup>
                 </Box>
             </Containerwrap>
+        </Box>
+        <Box>
+            <Mainslide />
         </Box>
         </>
     )
@@ -48,44 +108,52 @@ const Header = () => {
 // const 변수이름 = styled.태그이름 `속성 : 값` -> 일반태그사용
 // const 변수이름 = styled(컴포넌트이름) `속성 : 값` -> 컴포넌트사용
 
-const NavStyled = styled.nav`
-    height : 100%;
+// const 변수이름 = styled(컴포넌트 이름)`속성: 값;`
 
-    background : lightgreen;
+
+
+// const LogoStyled = styled(Heading)`
+//     color: ${props => props.theme.colors.red[900]};
+
+// `
+
+// const NavStyled = styled.nav`
+//     height : 100%;
+//     background : ${props => props.theme.colors.red[200]};
     
-`
-const NavUlStled = styled.ul`
-    display : flex;
-    align-items : center;
-    justify-content: space-between;
-    margin : 0;
-    gap : 20px;
-    height : 100px;
-    list-style : none; 
+// `
+// const NavUlStled = styled.ul`
+//     display : flex;
+//     align-items : center;
+//     justify-content: space-between;
+//     margin : 0;
+//     gap : 20px;
+//     height : 100px;
+//     list-style : none; 
 
-    text-decoration : none;
+//     text-decoration : none;
 
-    li {
-        width : 100%;
-        text-align : center;        
-    }
+//     li {
+//         width : 100%;
+//         text-align : center;        
+//     }
 
-    a {
-        display: block;
-    }
+//     a {
+//         display: block;
+//     }
 
-    @media screen and (min-width : 768px) {
-        flex-direction : row;;
+//     @media screen and (min-width : 768px) {
+//         flex-direction : row;;
 
-        li {
-            width : auto;
-        }
+//         li {
+//             width : auto;
+//         }
 
-        a {
-            display: inline-block;
-        }
-    }
-    `
+//         a {
+//             display: inline-block;
+//         }
+//     }
+//     `
 const IconBtnGroup = styled(ButtonGroup)`
     
     button {
