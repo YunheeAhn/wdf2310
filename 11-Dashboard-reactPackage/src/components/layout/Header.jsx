@@ -7,7 +7,6 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { FaHamburger, FaUser } from "react-icons/fa";
 import { RiSearchFill } from "react-icons/ri";
-import Mainslide from '../../views/home/components/Topslide';
 import Gnb from './Gnb';
 import gsap from 'gsap';
 
@@ -22,12 +21,12 @@ const Header = () => {
         const navBelt = document.querySelector('.nav-belt__wrapper') // 헤더
         const navBar = document.querySelector('.nav-bar__wrapper') // 헤더
         const hdHeight = hd.offsetHeight // 헤더 높이
-        const swiperHeight = document.querySelector('.mySwiper').offsetHeight // 슬라이드 높이
+        const swiperHeight = document.querySelector('.top-cont')?.offsetHeight || 0; // 슬라이드 높이
         console.log(scrollY)
         console.log(swiperHeight - hdHeight)
 
 
-        if (scrollY > 100) {
+        if (scrollY > swiperHeight - hdHeight ) {
             // gsap.to(요소, {옵션})
             gsap.to(navBar, { backgroundColor: '#fff', duration: 0.5 })
             gsap.to(navBelt, { backgroundColor: '#fff', duration: 0.5 })
@@ -35,12 +34,16 @@ const Header = () => {
             // gsap.to(navBelt.querySelectorAll('button'), {color: #000, duration: 0.5})
         } else {
             // else : 100px 이하로 스크롤 되면 배경색을 없앤다.
-            gsap.to(navBar, { backgroundColor: 'rgba(0,0,0,.3)', duration: 0.5 })
-            gsap.to(navBelt, { backgroundColor: 'rgba(0,0,0,.3)', duration: 0.5 })
+            gsap.to(navBar, { backgroundColor: '', duration: 0.5 })
+            gsap.to(navBelt, { backgroundColor: '', duration: 0.5 })
         }
+
+        
     }
     // 스크롤 이벤트 등록
     window.addEventListener('scroll', HandleScroll)
+
+    
     
 
     return (
@@ -64,8 +67,8 @@ const Header = () => {
             </Box>
 
             {/* gnb */}
-            <Box id='hd' bgColor={"rgba(150,30,150,0.1)"} h={100} display={'flex'} alignItems={'center'} justifyContent={'space-between'}>
-                <Containerwrap display={["block", null, "flex" ]} alignItems={'center'} justifyContent={'space-between'}>
+            <Box id='hd' className="nav-bar__wrapper" bgColor={"rgba(150,30,150,0.1)"} h={100} display={'flex'} alignItems={'center'} justifyContent={'space-between'}>
+                <Containerwrap display={'flex'} h={'60px'} alignItems={'center'} justifyContent={'space-between'}>
                     <Heading as={"h1"} fontSize={20}>
                         <Link to="/">네이버 클라우드 플랫폼</Link>
                     </Heading>
@@ -97,7 +100,7 @@ const Header = () => {
             </Box>
         </Box>
 
-        <Box className="nav-bar__wrapper" borderBottom={['1px','solid']} borderColor={'#eee'} >
+        <Box  borderBottom={['1px','solid']} borderColor={'#eee'} >
             {/* chakra-ui용 스타일 넣는 방법 */}
             <Containerwrap>
                 <Box display={['block',null,'flex']} h={100} alignItems={'center'} justifyContent={'space-between'}>
@@ -124,7 +127,6 @@ const Header = () => {
             </Containerwrap>
         </Box>
         <Box>
-            <Mainslide />
         </Box>
         </>
     )

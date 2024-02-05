@@ -13,7 +13,7 @@ const routeArr = [
     {   path : "/",
         element: <Home/> },
     {   path : "/marketplace",
-        element: <Marketplace/> },
+        element: <Marketplace/>},
     {   path : "/datatables",
         element : <DataTables/> },
     {   path : "/profile",

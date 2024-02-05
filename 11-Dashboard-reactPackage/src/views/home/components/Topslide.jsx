@@ -11,7 +11,7 @@ import styled from 'styled-components';
 
 const Mainslide = () => {
     return (
-        <Swiper navigation={true} modules={[Navigation]} className="mySwiper" >
+        <Swiper navigation={true} modules={[Navigation]} className="mySwiper top-cont" >
             <SwiperSlide>
                 <ImgSizing src='https://images.unsplash.com/photo-1706737141648-2a95d33d2a63?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
                     alt='pink flower'>
