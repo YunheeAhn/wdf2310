@@ -3,7 +3,6 @@
 // import styled from "styled-components";
 
 import { Box } from "@chakra-ui/react";
-import Containerwrap from "./Container";
 import Header from "./Header";
 import Footer from "./Footer";
 
@@ -12,11 +11,9 @@ const Layout = (props) => {
     return (
         <Box display={'flex'} flexDir={'column'} minH={'100vh'}>
             <Header />
-                <Box as="main" id="main" flexGrow={1}>
-                    <Containerwrap py={4}>
+                <Box as="main" id="main" flexGrow={1} pt={{ sm: '60px', lg: '92px' }} >
                         {props.showTitle && <h2>{props.title}</h2>}
                         {props.children}
-                    </Containerwrap>
                 </Box>
             <Footer />
         </Box>
