@@ -1,26 +1,23 @@
 // 풋터 컴포넌트
 
-import styled from "styled-components";
 import Containerwrap from "./Container";
+import { Box } from "@chakra-ui/react";
 
 
 const Footer = () => {
     return (
-        <FooterStyled>
+        <Box as="footer" h={20} bg={'#eee'}>
             <Containerwrap as="footer" h={20} bg={'#eee'}>
                 저스트쇼핑몰
             </Containerwrap>
-        </FooterStyled>
+        </Box>
     )
 }
 
 
-const FooterStyled = styled.div`
-    background : beige;
-    height : 100px
 
-   
-`
+
+
 
 
 export default Footer;
