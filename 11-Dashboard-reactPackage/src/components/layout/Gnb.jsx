@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 
 const Gnb = () => {
     return (
-        <UnorderedList display={{sm : 'none', lg: 'flex'}} gap={'20px'}>
+        <UnorderedList display={{sm : 'none', lg: 'flex'}} gap={'20px'}  fontSize={'16px'}>
             <ListItem>
                 <Link to="/marketplace" >Main Dashboard</Link>
             </ListItem>
