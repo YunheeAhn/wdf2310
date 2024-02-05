@@ -6,6 +6,12 @@ import './assets/scss/style.scss'
 import theme from "./theme/theme";
 import { ThemeProvider } from "styled-components";
 
+// gsap 라이브러리 임포트, 제일 상위에 붙이기
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
 
 function App() {
   return (
