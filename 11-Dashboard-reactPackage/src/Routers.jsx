@@ -7,7 +7,7 @@ import Profile from "./views/profile/Profile";
 import Signin from "./views/signin/Signin";
 import Rtl from "./views/rtl/Rtl";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Layout from "./components/layout/Layout";
+import Layout, { LayoutNone } from "./components/layout/Layout";
 
 
 const routeArr = [
@@ -19,8 +19,6 @@ const routeArr = [
         element : <DataTables/> },
     {   path : "/profile",
         element: <Profile/> },
-    {   path:"/signin",
-        element: <Signin/> },
     {   path:"/rtl",
         element: <Rtl/> },
 ]
@@ -29,7 +27,7 @@ const routeArr = [
 
 const Routers = () => {
     return(
-        <>
+
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Layout />}>
@@ -37,9 +35,14 @@ const Routers = () => {
                     <Route key={index} path={item.path} element={item.element} />
                     ))}
                 </Route>
+
+                <Route element={<LayoutNone />}>
+                    <Route path="/signin" element={<Signin/>}/>
+                </Route>
+
             </Routes>
         </BrowserRouter>
-        </>
+
     )
 }
 

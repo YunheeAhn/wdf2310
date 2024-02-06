@@ -36,6 +36,17 @@ const Layout = (props) => {
 }
 
 
+export const LayoutNone = () => {
+    return (
+        <Box display={'flex'} bg={'lightcoral'} flexDir={'column'} minH={'100vh'}>
+            <Box as="main" id="main" flexGrow={1}>
+                <Outlet />
+            </Box>
+        </Box>
+        
+    )
+}
+
 
 // const WrapStyled = styled.div`
 //     height : 100vh;
