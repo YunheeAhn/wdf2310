@@ -1,14 +1,14 @@
 // 헤더컴포넌트
 
-import { SearchIcon, SunIcon } from '@chakra-ui/icons'
+// import { SearchIcon, SunIcon } from '@chakra-ui/icons'
 import { ButtonGroup, IconButton,Box, Heading, Button, ListItem} from "@chakra-ui/react";
 import Containerwrap from "./Container";
-import styled from 'styled-components';
+// import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { FaHamburger, FaUser } from "react-icons/fa";
 import { RiSearchFill } from "react-icons/ri";
 import Gnb from './Gnb';
-import gsap from 'gsap';
+// import gsap from 'gsap';
 import { useEffect, useState } from 'react';
 
 
@@ -16,40 +16,62 @@ const Header = () => {
     // const 
     // gsap 적용하기
     // 스크롤 이벤트 함수
-    const HandleScroll = () => {
-        const scrollY = window.scrollY // 현재 스크롤 위치
-        const hd = document.querySelector('#header') // 헤더
-        const navBelt = document.querySelector('.nav-belt__wrapper') // 헤더
-        const navBar = document.querySelector('.nav-bar__wrapper') // 헤더
-        const hdHeight = hd.offsetHeight // 헤더 높이
-        const swiperHeight = document.querySelector('.top-cont')?.offsetHeight || 0; // 슬라이드 높이
-        console.log(scrollY)
-        console.log(swiperHeight - hdHeight)
+
+    
+    // const HandleScroll = () => {
+    //     const scrollY = window.scrollY // 현재 스크롤 위치
+    //     const hd = document.querySelector('#header') // 헤더
+    //     const navBelt = document.querySelector('.nav-belt__wrapper') // 헤더
+    //     const navBar = document.querySelector('.nav-bar__wrapper') // 헤더
+    //     const hdHeight = hd.offsetHeight // 헤더 높이
+    //     const swiperHeight = document.querySelector('.top-cont')?.offsetHeight || 0; // 슬라이드 높이
+    //     console.log(scrollY)
+    //     console.log(swiperHeight - hdHeight)
 
 
-        if (scrollY > swiperHeight - hdHeight ) {
-            // gsap.to(요소, {옵션})
-            gsap.to(navBar, { backgroundColor: 'rgba(250,250,250,0.6)', duration: 0.5 })
-            gsap.to(navBelt, { backgroundColor: 'rgba(150,30,150,0.1)', duration: 0.5 })
+    //     if (scrollY > swiperHeight - hdHeight ) {
+    //         // gsap.to(요소, {옵션})
+    //         gsap.to(navBar, { backgroundColor: 'rgba(250,250,250,0.6)', duration: 0.5 })
+    //         gsap.to(navBelt, { backgroundColor: 'rgba(150,30,150,0.1)', duration: 0.5 })
 
-            // gsap.to(navBelt.querySelectorAll('button'), {color: #000, duration: 0.5})
-        } else {
-            // else : 100px 이하로 스크롤 되면 배경색을 없앤다.
-            gsap.to(navBar, { backgroundColor: '', duration: 0.5 })
-            gsap.to(navBelt, { backgroundColor: '', duration: 0.5 })
-        }
+    //         // gsap.to(navBelt.querySelectorAll('button'), {color: #000, duration: 0.5})
+    //     } else {
+    //         // else : 100px 이하로 스크롤 되면 배경색을 없앤다.
+    //         gsap.to(navBar, { backgroundColor: '', duration: 0.5 })
+    //         gsap.to(navBelt, { backgroundColor: '', duration: 0.5 })
+    //     }
 
         
-    }
+    // }
     // 스크롤 이벤트 등록
-    window.addEventListener('scroll', HandleScroll)
+
+    const [isScroll, setIsScroll] = useState(false)
+
+    useEffect( () => {
+        const handleScroll = () => {
+            const navBeltHeight = document.querySelector('.nav-belt__wrapper')?.offsetHeight || 0
+            const scrollPosition = window.pageYOffset || document.documentElement.scrollTop
+
+            if (scrollPosition > navBeltHeight) {
+                document.getElementById('header').style.top = '-32px'
+                document.querySelector('.nav-bar__wrapper').style.width = '100%'
+            } else {
+                document.getElementById('header').style.top = -scrollPosition + 'px'
+                setIsScroll(true)
+            }
+        }
+        window.addEventListener('scroll', handleScroll)
+        return () => window.removeEventListener('scroll', handleScroll)
+
+    },[])
+    
 
     
     
 
     return (
         <>
-        <Box id="header" as='header' position={'fixed'} top={0} left={0} right={0} zIndex={1000} bg="rgba(0,0,0,.1)" backdropFilter={'saturate(180%) blur(15px)'} >
+        <Box id="header" as='header' position={'fixed'} top={0} left={0} right={0} zIndex={1000} bg={isScroll ? "rgba(0,0,0,.1)" : 'transparent'} backdropFilter={isScroll ? 'saturate(180%) blur(15px)' : 'none'} >
 
             {/* tnb, 모바일에선 없음 */}
             <Box className="nav-belt__wrapper" display={['none', null, null, null, "block"]} bgColor={"rgba(0,0,0,0.6)"}>
@@ -101,34 +123,6 @@ const Header = () => {
             </Box>
         </Box>
 
-        <Box  borderBottom={['1px','solid']} borderColor={'#eee'} >
-            {/* chakra-ui용 스타일 넣는 방법 */}
-            <Containerwrap>
-                <Box display={['block',null,'flex']} h={100} alignItems={'center'} justifyContent={'space-between'}>
-                    
-                        <Heading fontSize={24}>
-                            <Link to="/">Dashboard</Link>
-                        </Heading>
-
-                    <nav>
-                        <ul>
-                            <li><Link to="/marketplace" >Main Dashboard</Link></li>
-                            <li><Link to="/datatables">Datatables Dashboard</Link></li>
-                            <li><Link to="/profile">Profile Dashboard</Link></li>
-                            <li><Link to="/signin">signin Dashboard</Link></li>
-                            <li><Link to="/rtl">Rtl Dashboard</Link></li>
-                        </ul>
-                    </nav>
-
-                    <IconBtnGroup gap='4'>
-                        <IconButton variant="outline" aria-label="Search database" icon={<SearchIcon />} />
-                        <IconButton variant="outline" aria-label="Light database" icon={<SunIcon />} />
-                    </IconBtnGroup>
-                </Box>
-            </Containerwrap>
-        </Box>
-        <Box>
-        </Box>
         </>
     )
 }
@@ -183,14 +177,14 @@ const Header = () => {
 //         }
 //     }
 //     `
-const IconBtnGroup = styled(ButtonGroup)`
+// const IconBtnGroup = styled(ButtonGroup)`
     
-    button {
-    color : #555;
-    backgroundcolor : lightgray;
+//     button {
+//     color : #555;
+//     backgroundcolor : lightgray;
     
-    display: flex;
-    align-items: center;}
-    `
+//     display: flex;
+//     align-items: center;}
+//     `
 
 export default Header;
