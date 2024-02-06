@@ -7,6 +7,7 @@ import Profile from "./views/profile/Profile";
 import Signin from "./views/signin/Signin";
 import Rtl from "./views/rtl/Rtl";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Layout from "./components/layout/Layout";
 
 
 const routeArr = [
@@ -22,18 +23,23 @@ const routeArr = [
         element: <Signin/> },
     {   path:"/rtl",
         element: <Rtl/> },
-
 ]
+
+
 
 const Routers = () => {
     return(
+        <>
         <BrowserRouter>
             <Routes>
-                {routeArr.map((item, index) => (
+                <Route path="/" element={<Layout />}>
+                    {routeArr.map((item, index) => (
                     <Route key={index} path={item.path} element={item.element} />
-                ))}
+                    ))}
+                </Route>
             </Routes>
         </BrowserRouter>
+        </>
     )
 }
 

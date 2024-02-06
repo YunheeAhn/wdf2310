@@ -8,7 +8,7 @@ import Mainslide from './components/Topslide'
 
 const Home = () => {
     return (
-        <Layout title="home" showTitle={false}>
+        <>
             <Mainslide />
             <Section isLightBackground={true}>
                 <Container>
@@ -42,7 +42,7 @@ const Home = () => {
                     sint
                 </Container>
             </Section>
-        </Layout>
+        </>
     )
 }
 

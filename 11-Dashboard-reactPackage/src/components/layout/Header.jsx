@@ -9,13 +9,14 @@ import { FaHamburger, FaUser } from "react-icons/fa";
 import { RiSearchFill } from "react-icons/ri";
 import Gnb from './Gnb';
 import gsap from 'gsap';
+import { useEffect, useState } from 'react';
 
 
 const Header = () => {
+    // const 
     // gsap 적용하기
     // 스크롤 이벤트 함수
     const HandleScroll = () => {
-        
         const scrollY = window.scrollY // 현재 스크롤 위치
         const hd = document.querySelector('#header') // 헤더
         const navBelt = document.querySelector('.nav-belt__wrapper') // 헤더
@@ -28,8 +29,8 @@ const Header = () => {
 
         if (scrollY > swiperHeight - hdHeight ) {
             // gsap.to(요소, {옵션})
-            gsap.to(navBar, { backgroundColor: '#fff', duration: 0.5 })
-            gsap.to(navBelt, { backgroundColor: '#fff', duration: 0.5 })
+            gsap.to(navBar, { backgroundColor: 'rgba(250,250,250,0.6)', duration: 0.5 })
+            gsap.to(navBelt, { backgroundColor: 'rgba(150,30,150,0.1)', duration: 0.5 })
 
             // gsap.to(navBelt.querySelectorAll('button'), {color: #000, duration: 0.5})
         } else {
