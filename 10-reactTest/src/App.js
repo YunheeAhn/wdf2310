@@ -1,10 +1,13 @@
 import Comments from "./Ccoments";
+import Event from "./Event";
 import Layout from "./Layout";
 import Product from "./Product";
 
 function App() { 
+
   return ( 
     <>
+    <Event />
     <Product />
     <Comments />
 
