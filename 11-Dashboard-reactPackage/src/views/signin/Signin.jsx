@@ -1,6 +1,6 @@
 // 회원가입 페이지
 
-import Layout from '../../components/layout/Layout'
+// import Layout from '../../components/layout/Layout'
 
 const Signin = () => {
     return (

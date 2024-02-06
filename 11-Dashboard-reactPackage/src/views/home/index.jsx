@@ -2,7 +2,7 @@
 
 import { Container } from '@chakra-ui/react'
 import { Section } from '../../components/layout/Container'
-import Layout from '../../components/layout/Layout'
+// import Layout from '../../components/layout/Layout'
 import Title, { TitleH4 } from '../../components/comm/Title'
 import Mainslide from './components/Topslide'
 

@@ -1,7 +1,7 @@
 // 마켓플레이스 페이지
 
 import { Box, Img } from "@chakra-ui/react";
-import Layout from "../../components/layout/Layout";
+// import Layout from "../../components/layout/Layout";
 import { motion } from 'framer-motion';
 import topImg from '../../assets/images/31448559_about_media_38ef19cd-33e8-4842-aa7c-2ca5473ae3a3.avif'
 
