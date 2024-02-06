@@ -10,30 +10,29 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout, { LayoutNone } from "./components/layout/Layout";
 
 
-const routeArr = [
-    {   path : "/",
-        element: <Home/> },
-    {   path : "/marketplace",
-        element: <Marketplace/>},
-    {   path : "/datatables",
-        element : <DataTables/> },
-    {   path : "/profile",
-        element: <Profile/> },
-    {   path:"/rtl",
-        element: <Rtl/> },
-]
-
-
-
 const Routers = () => {
     return(
 
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Layout />}>
-                    {routeArr.map((item, index) => (
-                    <Route key={index} path={item.path} element={item.element} />
-                    ))}
+                <Route element={<Layout />}>
+                    <Route path="/" element={<Home/>}  />
+                </Route>
+
+                <Route element={<Layout />}>
+                    <Route path="/marketplace" element={<Marketplace/>}  />
+                </Route>
+
+                <Route element={<Layout />}>
+                    <Route path="/datatables" element={<DataTables/>}  />
+                </Route>
+
+                <Route element={<Layout />}>
+                    <Route path="/profile" element={<Profile/>}  />
+                </Route>
+
+                <Route element={<Layout />}>
+                    <Route path="/rtl" element={<Rtl/>}  />
                 </Route>
 
                 <Route element={<LayoutNone />}>
@@ -43,7 +42,26 @@ const Routers = () => {
             </Routes>
         </BrowserRouter>
 
+        // <Route path="/" element={<Layout />}>
+        //     {routeArr.map((item, index) => (
+        //     <Route key={index} path={item.path} element={item.element} />
+        //     ))}
+        // </Route>
+
     )
 }
+
+// const routeArr = [
+//     {   path : "/",
+//         element: <Home/> },
+//     {   path : "/marketplace",
+//         element: <Marketplace/>},
+//     {   path : "/datatables",
+//         element : <DataTables/> },
+//     {   path : "/profile",
+//         element: <Profile/> },
+//     {   path:"/rtl",
+//         element: <Rtl/> },
+// ]
 
 export default Routers
