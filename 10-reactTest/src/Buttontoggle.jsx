@@ -5,14 +5,14 @@ import styled from "styled-components"
 
 const Btntoggle = () => {
 
-    const [isToggled, setIsToggled] = useState(true)
+    const [istoggled, setIsToggled] = useState(true)
 
 
     return (
         <>
-            <MenuStyle id="gnb" isToggled={isToggled} >
-                <button onClick={() => {setIsToggled(!isToggled)}}>
-                    <FontAwesomeIcon icon={isToggled ? faXmark : faBars} />
+            <MenuStyle id="gnb" istoggled={istoggled} >
+                <button onClick={() => {setIsToggled(!istoggled)}}>
+                    <FontAwesomeIcon icon={istoggled ? faXmark : faBars} />
                     <span className="blind">전체메뉴보기</span>
                 </button>
 
@@ -34,7 +34,7 @@ const Btntoggle = () => {
 
 const MenuStyle = styled.div`
     .header__menulist {
-        display : ${(props) => (props.isToggled ? "block" : "none")};
+        display : ${(props) => (props.istoggled ? "block" : "none")};
         max-width : 100px;
         padding : 20px;
         border-radius : 4px;
