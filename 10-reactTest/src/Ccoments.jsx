@@ -1,7 +1,6 @@
 // 컴포넌트 분리 파일명 작성시 첫글자는 대문자
 
 // import
-import styled from 'styled-components';
 import Comment from './Comment';
 
 
@@ -15,12 +14,12 @@ const Comments = () => {
         {
             name: '희윤',
             img: 'https://images.unsplash.com/photo-1702541619085-a196485b9c09?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-             alt: '희윤 프사',
+            alt: '희윤 프사',
         },
         {
             name: '윤히',
             img: 'https://images.unsplash.com/photo-1705097569397-0aa271711bcb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-             alt: '윤히 프사',
+            alt: '윤히 프사',
         },
 
         

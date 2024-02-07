@@ -1,17 +1,9 @@
 
-import CardAir from './Airbnbcard';
 import Article from './Article';
 import Footer from './Footer';
 import Header from './Header';
-import Nav, { NavMobile } from './Nav';
-import { LuBedDouble } from "react-icons/lu";
-import { GiStripedSun } from "react-icons/gi";
-import { FaUmbrellaBeach } from "react-icons/fa6";
-
-import logo from './logo.svg'; // <-이미지 사용하는 방법
-import Comments from './Ccoments';
+import { NavMobile } from './Nav';
 import Sort from './Sort';
-import Comment from './Comment';
 // import Comments from './_Ccoments';
 
 

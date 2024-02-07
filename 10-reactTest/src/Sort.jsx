@@ -22,7 +22,7 @@ const Sort = () => {
                 {sortArr.map((item, index) => (
                     <li key={index} onClick={() => setSelected(index)} className={selected === index ? 'active' : ''}>
                         {/* // 클릭 시, selected의 상태를 변경 
-                    // selected의 상태가 변경되면, 화면이 다시 렌더링되어 selected === index가 true가 되어 active 클래스가 추가된다. */}
+                         // selected의 상태가 변경되면, 화면이 다시 렌더링되어 selected === index가 true가 되어 active 클래스가 추가된다. */}
                         {item.icon}
                         {item.value}
                     </li>
@@ -49,6 +49,7 @@ const SortStyled = styled.div`
         color: #777;
         text-decoration: none;
         cursor: pointer;
+        
         &:hover {
             color: #000;
         }

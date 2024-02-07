@@ -17,7 +17,7 @@ const Nav = ( propsDnav ) => {
     // console.log(propsDnav.nav[4].title)
     // console.log(propsDnav.nav[5].title)
     // console.log(propsDnav.nav[6].title)
-   const list = [];
+    
     return (
         <Nv>헤더메인네브
         <ul>
@@ -34,7 +34,7 @@ const Nav = ( propsDnav ) => {
         )
     }
   // nav 컴포넌트
-  const Nv = styled.nav`
+const Nv = styled.nav`
     color : Gray;
     font-size : 16px;
     `

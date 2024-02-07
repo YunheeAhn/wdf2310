@@ -1,3 +1,4 @@
+import Btntoggle from "./Buttontoggle";
 import Comments from "./Ccoments";
 import Event from "./Event";
 import Layout from "./Layout";
@@ -9,6 +10,8 @@ function App() {
 
   return ( 
     <>
+    <Btntoggle />
+    <hr />
     <SetNumber />
     <hr />
     <State />

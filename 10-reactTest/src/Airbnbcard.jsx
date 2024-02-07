@@ -3,12 +3,10 @@
 
 // import
 import styled from 'styled-components';
-import { LuBedDouble } from "react-icons/lu";
 
 function CardAir (propsAir) {
     
     console.log(propsAir.air)
-    const list = [];
     
     return (
         <Sort>
