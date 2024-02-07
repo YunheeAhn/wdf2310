@@ -2,13 +2,21 @@ import Comments from "./Ccoments";
 import Event from "./Event";
 import Layout from "./Layout";
 import Product from "./Product";
+import SetNumber from "./Setnumber";
+import State from "./State";
 
 function App() { 
 
   return ( 
     <>
+    <SetNumber />
+    <hr />
+    <State />
+    <hr />
     <Event />
+    <hr />
     <Product />
+    <hr />
     <Comments />
 
 
