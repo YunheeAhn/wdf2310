@@ -5,11 +5,14 @@ import Layout from "./Layout";
 import Product from "./Product";
 import SetNumber from "./Setnumber";
 import State from "./State";
+import Switch from "./Switch";
 
 function App() { 
 
   return ( 
     <>
+    <Switch />
+    <hr />
     <Btntoggle />
     <hr />
     <SetNumber />
