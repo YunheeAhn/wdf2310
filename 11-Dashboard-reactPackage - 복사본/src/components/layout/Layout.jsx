@@ -8,7 +8,7 @@ import Footer from "./Footer";
 import { Outlet } from "react-router-dom";
 
 
-const Layout = (props) => {
+const Layout = () => {
     return (
         <Box display={'flex'} flexDir={'column'} minH={'100vh'}>
             <Header />
@@ -19,19 +19,6 @@ const Layout = (props) => {
                 </Box>
             <Footer />
         </Box>
-
-
-        // <WrapStyled>
-        //     <Header />
-        //         <MainStyled id="main" flexGrow={1} >
-        //             <Containerwrap py={4}>
-        //                 <h2>{props.title}</h2>
-        //                 {props.children}
-        //                 {/* props.children : App.jsx의 Layout태그 안에 있는 내용 */}
-        //             </Containerwrap>
-        //         </MainStyled>
-        //     <Footer />
-        // </WrapStyled>
     )
 }
 
@@ -46,20 +33,6 @@ export const LayoutNone = () => {
         
     )
 }
-
-
-// const WrapStyled = styled.div`
-//     height : 100vh;
-//     display : flex;
-//     flex-direction: column;
-//     justify-content: space-between;
-
-// `
-
-// const MainStyled = styled.main`
-//     heigt : 500px;
-    
-//     `
 
 
     
