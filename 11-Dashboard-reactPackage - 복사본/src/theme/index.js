@@ -4,7 +4,7 @@ import { lighten } from "polished";
 
 const BasicTheme = ({
     colors: {
-      primary : '#e0613e',
+      primary : '#1b254b',
       brand: {
         100: "#f7fafc",
         900: "#1a202c",

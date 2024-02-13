@@ -20,6 +20,13 @@ export const buttonStyles = {
           color : "white",
 
         }),
+        icon: () => ({
+          bg: "#fff",
+          color : "#D1D5DB",
+          with: "22px",
+          height : "22px",
+          padding : "none"
+        }),
         link12: () => ({
           fontSize: "12px",
           color: "white",

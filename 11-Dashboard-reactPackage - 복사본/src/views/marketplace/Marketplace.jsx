@@ -16,7 +16,6 @@ const Marketplace = () => {
 
     return (
         < >
-            
             <Box className="top-cont" h={'500px'} bg={`url(${topImg}) no-repeat 50% 50% / cover`}>
                 {/* 리액트의 경우 이미지를 src폴더에 저장 하면, import해서 변수처럼 설정 후 데이터값으로 가져온다 */}
             </Box>

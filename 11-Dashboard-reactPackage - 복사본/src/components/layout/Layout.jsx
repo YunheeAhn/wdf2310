@@ -2,19 +2,26 @@
 
 // import styled from "styled-components";
 
-import { Box } from "@chakra-ui/react";
+import { Box, Stack } from "@chakra-ui/react";
 import Header from "./Header";
 import Footer from "./Footer";
 import { Outlet } from "react-router-dom";
+import History from "../comm/History";
+import Util from "../comm/Util";
 
 
 const Layout = () => {
+    
     return (
         <Box display={'flex'} flexDir={'column'} minH={'100vh'}>
             <Header />
-                <Box as="main" id="main" flexGrow={1} pt={'37px'} >
-                        {/* {props.showTitle && <h2>{props.title}</h2>}
-                        {props.children} */}
+                <Box as="main" id="main" flexGrow={1} pt={10} pl={{sm : 0, xl: 292}} transition={'all 0.3s'} >
+                    <Stack>
+                        <Box display={'flex'} flexDir={{sm : 'column', xl : 'row'}} justifyContent={'space-between'} marginBottom={'8px'}>
+                            <History />
+                        </Box>
+                        <Util />
+                    </Stack>
                     <Outlet />
                 </Box>
             <Footer />

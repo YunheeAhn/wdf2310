@@ -10,7 +10,7 @@ const Header = () => {
 
     return (
         <>
-        <Box as="header" id="header" position={'fixed'} top={0} left={0} bottom={0} zIndex={1000} w={292} bg={'white'}>
+        <Box as="header" id="header" position={'fixed'} top={0} left={{sm : '-100%',xl : 0}} transition={'left 0.3s'} bottom={0} zIndex={1000} w={292} bg={'white'}>
             <Heading as={'h1'}
                 fontSize={25}
                 fontWeight={400}
