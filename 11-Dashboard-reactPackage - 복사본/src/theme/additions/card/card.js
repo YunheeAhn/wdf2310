@@ -16,6 +16,15 @@ const Card = {
 
 export const CardComponent = {
   components: {
-    Card,
+    Card: {
+      variants: {
+        cardPrimary: (props) => ({
+          borderRadius: "10px",
+          bg: mode('white', 'gray.700')(props),
+          boxShadow: 'none',
+          padding: '20px'
+      })
+      }
+    }
   },
 };

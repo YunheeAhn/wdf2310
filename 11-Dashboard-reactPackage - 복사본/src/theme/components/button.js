@@ -3,8 +3,8 @@ export const buttonStyles = {
   components: {
     Button: {
       baseStyle: {
-        borderRadius: "16px",
-        // boxShadow: "45px 76px 113px 7px rgba(112, 144, 176, 0.08)",
+        borderRadius: "0",
+        boxShadow: "45px 76px 113px 7px rgba(112, 144, 176, 0.08)",
         transition: ".25s all ease",
         boxSizing: "border-box",
         _focus: {
@@ -21,12 +21,22 @@ export const buttonStyles = {
 
         }),
         icon: () => ({
-          bg: "#fff",
-          color : "#D1D5DB",
-          with: "22px",
-          height : "22px",
-          padding : "none"
-        }),
+          w: '45px',
+          h: '45px',
+          minW: 'none',
+          bg: 'transparent',
+          color: 'gray.500',
+          borderRadius: '50%',
+          _focus: {
+              bg: 'gray.100',
+          },
+          _active: {
+              bg: 'gray.100',
+          },
+          _hover: {
+              bg: 'gray.100',
+          },
+      }),
         link12: () => ({
           fontSize: "12px",
           color: "white",
@@ -37,7 +47,7 @@ export const buttonStyles = {
           bg : [
             'red.100', 'red.500', 'red.600', 'white'
           ],
-          color : {sm : 'white', xl : 'red.500'}
+          color : {base : 'white', xl : 'red.500'}
         }),
         brand: (props) => ({
           bg: mode("brand.500", "brand.400")(props),

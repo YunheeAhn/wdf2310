@@ -11,6 +11,7 @@ import { linkStyles } from "./components/link";
 import { breakpoints } from "./foundations/breakpoints";
 import { globalStyles, maxWidth } from "./styles";
 import BasicTheme from "../theme/index";
+import { cardstyles } from "./components/card";
 
 export default extendTheme(
   { breakpoints }, // Breakpoints
@@ -25,6 +26,7 @@ export default extendTheme(
   switchStyles, // switch styles
   CardComponent, // card component
   BasicTheme, // 내가 설정하는 값
-  maxWidth
+  maxWidth,
+  cardstyles
   
 );
