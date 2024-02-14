@@ -15,12 +15,12 @@ const Layout = () => {
     return (
         <Box display={'flex'} flexDir={'column'} minH={'100vh'}>
             <Header />
-                <Box as="main" id="main" flexGrow={1} pt={10} pl={{sm : 0, xl: 292}} transition={'all 0.3s'} >
+                <Box as="main" id="main" flexGrow={1} pt={10} pl={{base : 0, xl: 292}} pr={{ base: '12px', xl: '12px' }} transition={'all 0.3s'} >
                     <Stack>
-                        <Box display={'flex'} flexDir={{sm : 'column', xl : 'row'}} justifyContent={'space-between'} marginBottom={'8px'}>
+                        <Box display={'flex'} flexDir={{base : 'column', xl : 'row'}} justifyContent={'space-between'} marginBottom={'8px'}>
                             <History />
-                        </Box>
                         <Util />
+                        </Box>
                     </Stack>
                     <Outlet />
                 </Box>
