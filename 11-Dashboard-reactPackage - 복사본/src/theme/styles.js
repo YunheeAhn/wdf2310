@@ -128,7 +128,7 @@ export const globalStyles = {
       },
       
       body: {
-        bg: mode("white", "white")(props),
+        bg: mode("#f4f7fe", "white")(props),
         fontFamily: mode("DM Sans", "san-serif")(props),
         letterSpacing: "-0.5px",
 

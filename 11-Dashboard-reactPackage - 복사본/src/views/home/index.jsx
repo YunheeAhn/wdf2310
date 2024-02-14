@@ -2,6 +2,10 @@
 
 import { Box, SimpleGrid, VStack } from "@chakra-ui/react";
 import Ministatics from "../../components/card/Ministatics";
+import IconBox from "../../components/icons/IconBox";
+import { faChartSimple, faHouse, faPaste, faQrcode, faStar } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 
 
 
@@ -9,33 +13,46 @@ const Home = () => {
     return (
         <>
         
-        <VStack spacing="20px" width={'100%'}>
-
-            <SimpleGrid columns={{base : 1,md : 2,xl : 6}} spacing={10} width={'100%'}>
-                <Ministatics />
-                <Ministatics />
-                <Ministatics />
-                <Ministatics />
-                <Ministatics />
-                <Ministatics />
+        <VStack spacing="10px" width={'100%'}>
+            <SimpleGrid columns={{base : 1,md : 2,xl : 6}} spacing={'10px'} width={'100%'}>
+                <Ministatics name="Earnings" value='$350.4' startContent={
+                    <IconBox w={'52px'} h={'52px'} bg={'bgDefault'} icon={<FontAwesomeIcon icon={faChartSimple} color='#422AFB' />} />
+                } />
+                <Ministatics name="Spend this month" value='$642.39' startContent={
+                    <IconBox w={'52px'} h={'52px'} bg={'bgDefault'} icon={<FontAwesomeIcon icon={faPaste} color='#422AFB' />} />
+                } /> 
+                <Ministatics growth="4.28%" name="Sales" value='$574.34' startContent={
+                    <IconBox w={'52px'} h={'52px'} bg={'bgDefault'} icon={<FontAwesomeIcon icon={faChartSimple} color='#422AFB' />} />
+                } /> 
+                <Ministatics name="Your Balance" value='$1000' 
+                    endContent={
+                        <IconBox w={'52px'} h={'52px'} bg={'bgDefault'} pl={'auto'} icon={<FontAwesomeIcon icon={faQrcode} color='#422AFB' />} />
+                    }/> 
+                <Ministatics name="New Tasks" value='145' startContent={
+                    <IconBox w={'52px'} h={'52px'} bg={'bgDefault'} icon={<FontAwesomeIcon icon={faChartSimple} color='#422AFB' />} />
+                } /> 
+                <Ministatics name="Total Projects" value='$2433' startContent={
+                    <IconBox w={'52px'} h={'52px'} bg={'bgDefault'} icon={<FontAwesomeIcon icon={faHouse} color='#422AFB' />} />
+                } /> 
+                
             </SimpleGrid>
             
-            <SimpleGrid columns={{base : 1,md : 2}} spacing={10} width={'100%'}>
+            <SimpleGrid columns={{base : 1,md : 2}} spacing={'10px'} width={'100%'}>
                 <Box bg={'tomato'} height={'90px'}></Box>
                 <Box bg={'tomato'} height={'90px'}></Box>
             </SimpleGrid>
 
-            <SimpleGrid columns={{base : 1,md : 2}} spacing={10} width={'100%'}>
+            <SimpleGrid columns={{base : 1,md : 2}} spacing={'10px'} width={'100%'}>
                 <Box bg={'tomato'} height={'90px'}></Box>
-                <SimpleGrid columns={{base : 1,md : 2}} spacing={10} width={'100%'}>
+                <SimpleGrid columns={{base : 1,md : 2}} spacing={'10px'} width={'100%'}>
                     <Box bg={'tomato'} height={'90px'}></Box>
                 <Box bg={'tomato'} height={'90px'}></Box>
                 </SimpleGrid>
             </SimpleGrid>
 
-            <SimpleGrid columns={{base : 1,md : 2}} spacing={10} width={'100%'}>
+            <SimpleGrid columns={{base : 1,md : 2}} spacing={'10px'} width={'100%'}>
                 <Box bg={'tomato'} height={'90px'}></Box>
-                <SimpleGrid columns={{base : 1,md : 2}} spacing={10} width={'100%'}>
+                <SimpleGrid columns={{base : 1,md : 2}} spacing={'10px'} width={'100%'}>
                     <Box bg={'tomato'} height={'90px'}></Box>
                 <Box bg={'tomato'} height={'90px'}></Box>
                 </SimpleGrid>

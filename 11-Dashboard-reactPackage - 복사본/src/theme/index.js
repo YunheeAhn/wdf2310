@@ -7,7 +7,11 @@ const BasicTheme = ({
       primary : '#1b254b',
       brand: {
         100: "#f7fafc",
+        200: "#A3AED0",
         900: "#1a202c",
+      },
+      key: {
+        base: "#1B254B",
       },
       red : {
         base: "ff0000",

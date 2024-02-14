@@ -1,20 +1,23 @@
-import { Box, Card, Flex, Spacer, Stat, StatLabel, StatNumber } from "@chakra-ui/react";
-import { faChartSimple } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Card, Flex, Spacer, Stat, StatLabel, StatNumber, Text } from "@chakra-ui/react";
 
-const Ministatics = () => {
+
+const Ministatics = (props) => {
+    const {startContent, name, value, endContent, growth} = props
     return (
         <Card py={'15px'} pl={'18px'} pr={'18px'}>
             <Flex my={'auto'} >
-                <Box w={'52px'} h={'52px'} bg={'bgDefault'} display={'flex'} alignItems={'center'} justifyContent={'center'} borderRadius={'50%'}>
-                    <FontAwesomeIcon icon={faChartSimple} color='#422AFB' />
-                </Box>
-                <Stat ml={5}>
-                    <StatLabel>Earnings</StatLabel>
-                    <StatNumber>$340.5</StatNumber>
+                {startContent}
+                <Stat ml={startContent ? '5' : '0'}>
+                    <StatLabel color={'brand.200'}>{name}</StatLabel>
+                    <StatNumber color={'key.base'}>{value}</StatNumber>
+                {growth ? (
+                    <Text>{growth}</Text>
+                ) : null}
                 </Stat>
-                <Spacer />
                 
+                <Spacer />
+                {endContent}
+
             </Flex>
         </Card>
     )
