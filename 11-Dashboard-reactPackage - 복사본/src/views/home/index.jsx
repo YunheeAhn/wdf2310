@@ -7,6 +7,7 @@ import { faChartSimple, faHouse, faPaste, faQrcode } from "@fortawesome/free-sol
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import TotalSpent from "./components/TotalSpent";
 import WeeklyRevenue from "./components/WeeklyRevenue";
+import CheckTable from "./components/CheckTable";
 
 
 
@@ -45,7 +46,7 @@ const Home = () => {
             </SimpleGrid>
 
             <SimpleGrid columns={{base : 1,md : 2}} spacing={'10px'} width={'100%'}>
-                <Box bg={'tomato'} height={'90px'}></Box>
+                <CheckTable bg={'tomato'} height={'90px'}></CheckTable>
                 <SimpleGrid columns={{base : 1,md : 2}} spacing={'10px'} width={'100%'}>
                     <Box bg={'tomato'} height={'90px'}></Box>
                 <Box bg={'tomato'} height={'90px'}></Box>
