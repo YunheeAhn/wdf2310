@@ -12,6 +12,7 @@ import { breakpoints } from "./foundations/breakpoints";
 import { globalStyles, maxWidth } from "./styles";
 import BasicTheme from "../theme/index";
 import { cardstyles } from "./components/card";
+import { tableStyle } from "./components/table";
 
 export default extendTheme(
   { breakpoints }, // Breakpoints
@@ -27,6 +28,7 @@ export default extendTheme(
   CardComponent, // card component
   BasicTheme, // 내가 설정하는 값
   maxWidth,
-  cardstyles
+  cardstyles,
+  tableStyle
   
 );
