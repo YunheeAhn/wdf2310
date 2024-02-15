@@ -1,4 +1,4 @@
-import { Box, Button, Card, CardBody, Flex, Spacer, Stat, StatArrow, StatHelpText, StatLabel, StatNumber } from "@chakra-ui/react"
+import { Box, Button, Card, CardBody, CardHeader, Flex, Spacer, Stat, StatArrow, StatHelpText, StatLabel, StatNumber } from "@chakra-ui/react"
 import { faChartSimple} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Chart from 'react-apexcharts'
@@ -32,17 +32,18 @@ class TotalSpent extends Component {
             <>
             <Card ml={'10px'}>
                 <Stat> 
-                    <Flex display={'flex'}  alignItems={'center'} justifyContent={'space-between'} borderRadius={'50%'} >
-                        <Box>
-                            <Button>
-                                <StatLabel color={'brand.200'}>This month</StatLabel>
-                            </Button>
-                        </Box>
-                        <Box>
-                            <FontAwesomeIcon icon={faChartSimple} color='#422AFB' />
-                        </Box>
-                    </Flex>
-
+                    <CardHeader>
+                        <Flex display={'flex'}  alignItems={'center'} justifyContent={'space-between'} borderRadius={'50%'} >
+                            <Box>
+                                <Button>
+                                    <StatLabel color={'brand.200'}>This month</StatLabel>
+                                </Button>
+                            </Box>
+                            <Box>
+                                <FontAwesomeIcon icon={faChartSimple} color='#422AFB' />
+                            </Box>
+                        </Flex>
+                    </CardHeader>
                     <Flex>
                         <Box>
                             <StatNumber color={'key.base'}>$37.5K</StatNumber>
