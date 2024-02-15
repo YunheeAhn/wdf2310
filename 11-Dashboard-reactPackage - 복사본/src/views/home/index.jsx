@@ -3,8 +3,10 @@
 import { Box, SimpleGrid, VStack } from "@chakra-ui/react";
 import Ministatics from "../../components/card/Ministatics";
 import IconBox from "../../components/icons/IconBox";
-import { faChartSimple, faHouse, faPaste, faQrcode, faStar } from "@fortawesome/free-solid-svg-icons";
+import { faChartSimple, faHouse, faPaste, faQrcode } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import TotalSpent from "./components/TotalSpent";
+import WeeklyRevenue from "./components/WeeklyRevenue";
 
 
 
@@ -38,8 +40,8 @@ const Home = () => {
             </SimpleGrid>
             
             <SimpleGrid columns={{base : 1,md : 2}} spacing={'10px'} width={'100%'}>
-                <Box bg={'tomato'} height={'90px'}></Box>
-                <Box bg={'tomato'} height={'90px'}></Box>
+                <TotalSpent bg={'tomato'} height={'90px'}>1</TotalSpent>
+                <WeeklyRevenue bg={'tomato'} height={'90px'}></WeeklyRevenue>
             </SimpleGrid>
 
             <SimpleGrid columns={{base : 1,md : 2}} spacing={'10px'} width={'100%'}>
