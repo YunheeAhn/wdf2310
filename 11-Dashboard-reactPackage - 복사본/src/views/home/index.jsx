@@ -1,6 +1,6 @@
 // 첫페이지
 
-import { Box, SimpleGrid, VStack } from "@chakra-ui/react";
+import { SimpleGrid, VStack } from "@chakra-ui/react";
 import Ministatics from "../../components/card/Ministatics";
 import IconBox from "../../components/icons/IconBox";
 import { faChartSimple, faHouse, faPaste, faQrcode } from "@fortawesome/free-solid-svg-icons";
@@ -8,6 +8,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import TotalSpent from "./components/TotalSpent";
 import WeeklyRevenue from "./components/WeeklyRevenue";
 import CheckTable from "./components/CheckTable";
+import Daily from "./components/Daily";
+import PieChart from "./components/PieChart";
 
 
 
@@ -48,18 +50,18 @@ const Home = () => {
             <SimpleGrid columns={{base : 1,md : 2}} spacing={'10px'} width={'100%'}>
                 <CheckTable bg={'tomato'} height={'90px'}></CheckTable>
                 <SimpleGrid columns={{base : 1,md : 2}} spacing={'10px'} width={'100%'}>
-                    <Box bg={'tomato'} height={'90px'}></Box>
-                <Box bg={'tomato'} height={'90px'}></Box>
+                <Daily bg={'tomato'} height={'90px'}></Daily>
+                <PieChart bg={'tomato'} height={'90px'}></PieChart>
                 </SimpleGrid>
             </SimpleGrid>
 
-            <SimpleGrid columns={{base : 1,md : 2}} spacing={'10px'} width={'100%'}>
+            {/* <SimpleGrid columns={{base : 1,md : 2}} spacing={'10px'} width={'100%'}>
                 <Box bg={'tomato'} height={'90px'}></Box>
                 <SimpleGrid columns={{base : 1,md : 2}} spacing={'10px'} width={'100%'}>
                     <Box bg={'tomato'} height={'90px'}></Box>
                 <Box bg={'tomato'} height={'90px'}></Box>
                 </SimpleGrid>
-            </SimpleGrid>
+            </SimpleGrid> */}
 
         </VStack>
 

@@ -8,6 +8,7 @@ import Footer from "./Footer";
 import { Outlet } from "react-router-dom";
 import History from "../comm/History";
 import Util from "../comm/Util";
+import DynamicTitle from './DynamicTitle';
 
 
 const Layout = () => {
@@ -16,11 +17,12 @@ const Layout = () => {
         <Box display={'flex'} flexDir={'column'} minH={'100vh'}>
             <Header />
                 <Box as="main" id="main" flexGrow={1} pt={10} pl={{base : 0, xl: 292}} pr={{ base: '12px', xl: '12px' }} transition={'all 0.3s'} >
-                    <Stack>
-                        <Box display={'flex'} flexDir={{base : 'column', xl : 'row'}} justifyContent={'space-between'} marginBottom={'8px'}>
+                    <Stack direction={{ base: 'column', md: 'row' }} justifyContent={'space-between'} spacing={0} backdropFilter={'blur(10px)'}borderRadius={'0.75rem'} ml={'10px'} mb={'10px'}>
+                        <Box >
                             <History />
-                        <Util />
+                            <DynamicTitle />
                         </Box>
+                        <Util />
                     </Stack>
                     <Outlet />
                 </Box>
