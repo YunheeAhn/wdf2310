@@ -47,7 +47,7 @@ const Home = () => {
                 <WeeklyRevenue bg={'tomato'} height={'90px'}></WeeklyRevenue>
             </SimpleGrid>
 
-            <SimpleGrid columns={{base : 1,md : 2}} spacing={'10px'} width={'100%'}>
+            <SimpleGrid columns={{base : 1,md : 2}} spacing={'20px'} width={'100%'}>
                 <CheckTable bg={'tomato'} height={'90px'}></CheckTable>
                 <SimpleGrid columns={{base : 1,md : 2}} spacing={'10px'} width={'100%'}>
                 <Daily bg={'tomato'} height={'90px'}></Daily>

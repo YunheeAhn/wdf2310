@@ -8,7 +8,7 @@ const CheckTable = ( ) => {
 
     return (
         <>
-            <Card>
+            <Card ml={'10px'}>
                 <CardHeader>
                     <Flex alignItems={'center'} justifyContent={'space-between'}>
                             <Text color={'brand.200'}>This month</Text>
