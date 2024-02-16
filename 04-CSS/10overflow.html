@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>overflow</title>
+    <style>
+        .box1{
+            display: flex;
+            width: 100px;
+            border: 5px solid black;
+            overflow: hidden;
+        }
+        .item {
+            width: 100px;
+            height: 100px;
+            background: aquamarine;
+            flex-shrink: 0;
+        }
+
+        .container {
+            border: 5px solid blue;
+            overflow: scroll;
+            overflow: auto;
+            min-width: 0px;
+            max-width: 500px;
+            height: 200px;
+            margin: 0 auto;
+        }
+
+        .box2 {
+            display: flex;
+            width: 100px;
+            border: 5px solid black;
+            overflow-x: auto;
+        }
+        .item2 {
+            width: 100px;
+            height: 100px;
+            background: aquamarine;
+            flex-shrink: 0;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>overflow</h1>
+
+    <div class="box1">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+
+    <h2>이용약관 ㅣ overflow : scroll 사용</h2>
+    <div class="container">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+        Ratione modi, harum dicta similique distinctio quod. 
+        Dignissimos dolorum placeat numquam repellendus voluptas ducimus,
+        alias impedit non corporis quam architecto quae praesentium.
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+        Ratione modi, harum dicta similique distinctio quod. 
+        Dignissimos dolorum placeat numquam repellendus voluptas ducimus,
+        alias impedit non corporis quam architecto quae praesentium.
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+        Ratione modi, harum dicta similique distinctio quod. 
+        Dignissimos dolorum placeat numquam repellendus voluptas ducimus,
+        alias impedit non corporis quam architecto quae praesentium.
+    </div>
+
+    <h2>overflow-x / overflow-Y</h2>
+    <div class="box2">
+        <div class="item2">1</div>
+        <div class="item2">2</div>
+        <div class="item2">3</div>
+    </div>
+
+
+</body>
+</html>

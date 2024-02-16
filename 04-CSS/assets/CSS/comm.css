@@ -1,0 +1,301 @@
+@import url(/04-CSS/CSS/reset.css);
+@import url(./fonts.css);
+
+
+
+/* 공통으로 적용되는 스타일 시트 명 -> comm.css */
+em {
+    font-size: 40px;
+    color: lightgoldenrodyellow;
+    background-color: #555;
+}
+
+/* 선택자 */
+*{
+    /* 전체선택자, 우선순위는 낮음 */
+    /* color: aqua; */
+}
+
+span {
+    /* 태그 선택자 */
+    font-size: 25px;
+}
+
+.desc1 {
+    /* 클래스 선택자 */
+    color: blueviolet;
+}
+p.desc2 {
+    /* 태그 + 클래스 선택자 */
+    color: green;
+    background-color: white;
+    border: none;
+
+    line-height: 20px;
+    height: inherit;
+}
+
+#main {
+    width: 300px;
+    height: 300px;
+    background-color: pink;
+}
+
+.header {
+    height: 100px;
+    background-color: #222;
+
+}
+
+.header.dark {
+    /* 복합선택자 */
+    background-color: black;
+}
+
+.header .depth1 {
+    /* 클래스 자손선택자 */
+    background-color: blue;
+}
+
+.header > .depth1 {
+    /* 클래스 자식선택자 */
+    color: red;
+}
+
+.depth1 li {
+    /* 자손선택자 */
+    background-color: yellow;
+}
+
+.depth1 a {
+    /* 자손 선택자 */
+    color: green;
+    background-color: brown;
+}
+
+.depth1 > li {
+    /* 자식선택자 */
+    background-color: orange;
+}
+.depth1 > li > a {
+    color: red;
+}
+
+.depth2 > a {
+    color: hotpink;
+}
+
+.depth2 > a:hover {
+    background-color: yellow;
+}
+
+.input {
+    background-color: white;
+    color: #888;
+    text-align: center;
+    width: 100px;
+    height: 50px;
+}
+
+.input:focus {
+    /* 가상클래스 선택자 */
+    color: #f7f7f7;
+    background-color: red;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.bbs li {
+    color: #da1a1a;
+}
+.bbs li:nth-child(3) {
+    /* n번째자손(3번째) */
+    color: green;
+}
+.bbs li:nth-child(3) a {
+    /* n번째자손(3번째)의 a자식 */
+    color: blue;
+}
+.bbs li:first-child {
+    /* .bbs의 li의 첫번째 자손 */
+    background-color: blueviolet;
+}
+.bbs li:first-child a {
+    /* .bbs의 li의 첫번째 자손의 a자식 */
+    color: red;
+}
+.bbs a {
+    color: gray;
+}
+.bbs a:hover {
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+}
+
+.bbs li:last-child {
+    background-color: yellow;
+}
+
+.bbs li:last-child a {
+    color: #2a25dc;
+}
+
+.bbs li:last-child a:hover {
+    background-color: black;
+    color: #fff;
+    font-size: 25px;
+}
+
+.bbs li:nth-child(2) {
+    color: #333;
+}
+
+.goto li {
+    color: black;
+}
+.goto li a {
+    color: black
+}
+.goto li::before {
+    /* 내가 가상 공간을 만들면 적용하는 content */
+    content: '>1';
+
+}
+.goto li::after{
+    content:'<1';
+}
+
+.goto a::before {
+    content: '+';
+    display: block;
+    /* 비포랑 에프터는 인라인 형식이다. 그래서 블록 요소로 변경 해야 함 */
+    width: 50px;
+    height: 50px;
+    background: url(../../images/mobile_212852414260.png) 0 0 no-repeat;
+    background-size: 100%;
+    /* 이미지가 너무 크면 사이즈를 내가 지정 해놓은 width랑 height값에 100% 들어오게 맞춰줌 */
+    /* 아이콘들은 이미지를 백그라운드로 깔고 가상 공간으로 넣음 */
+}
+.goto a::after {
+    content: '-';
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: url(../../images/mobile_212852414260.png) 0 0 no-repeat;
+    background-size: 100%;
+}
+
+.icon li::before {
+    /* hone */
+    font-family: 'Line Awesome Free';
+    font-weight: 900;
+    font-size: 64px;
+    content: "\f061";
+
+    /* github */
+    font-family: 'Line Awesome Brands';
+    font-size: 64px;
+    content: "\f09b";
+}
+
+.icon li::after {
+    /* tree */
+    font-family: 'Line Awesome Free';
+    font-weight: 900;
+    font-size: 64px;
+    content: "\f1bb";
+}
+
+.icon2 li:first-child::before {
+    font-family: 'Line Awesome Free';
+    font-weight: 900;
+    font-size: 64px;
+    content: "\f061";
+
+}
+.icon2 li:nth-child(2)::before {
+    font-family: 'Line Awesome Free';
+    font-weight: 900;
+    font-size: 64px;
+    content: "\f002";
+
+}
+.icon2 li:nth-child(3)::before {
+    font-family: 'Line Awesome Brands';
+    font-weight: 900;
+    font-size: 64px;
+    content: "\f16d";
+
+}
+.icon2 li:nth-child(4)::before {
+    font-family: 'Line Awesome Brands';
+    font-weight: 900;
+    font-size: 64px;
+    content: "\f167";
+}
+.icon2 li:first-child a {
+    text-decoration: none;
+    color: green;
+}
+.icon2 li:first-child a:hover {
+    background-color: green;
+    color: black;
+}
+
+.icon2 li:first-child a::after {
+    font-family: 'Line Awesome Free';
+    font-weight: 900;
+    content: "\f067";
+    color: green;
+    background-color: #888;
+}
+
+/* 우선순위는 점수를 합쳐서 매겨지기 때문에,
+우선순위 생각해서 최대한 짧게 쓰는 연습을 해보자! */
+
+/* font */
+.font-size1 {
+    font-size: 20px;
+}
+.font-size2 {
+    font-size: 1.25em;
+}
+.font-size3 {
+    font-size: 1.667em;
+}
+.font-size4 {
+    font-size: 1.667em;
+}
+.font-size5 { 
+    font-size: 1.667rem;
+}
+.font-size6 { 
+    font-size: 1.667rem;
+}
+.font-size7 {
+    font-size: 10vw;
+}
+.vw {
+    font-size: 20px;
+}
+
+.font-f1 {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Sofia', cursive;
+
+    font-size: 40px;
+}
+
+.font-f2 {
+    font-family: 'Vina Sans', sans-serif;
+    font-size: 40px;
+}
+.nfonts {
+    font-size: 20px;
+}
+
+.font-f3 {
+    font-family: 'YEONGJUPunggiGinsengTTF';
+    font-size: 40px;
+}

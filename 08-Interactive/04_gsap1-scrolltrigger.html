@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+        
+        <title>Document</title>
+        <style>
+            .area1, .area3 { 
+            height: 500px; 
+            background: lightpink; 
+            }
+            .area2 { 
+            position: relative; 
+            height: 500px;
+            background: lightblue; 
+            }
+            .circle-g {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            }
+            .circle1 {
+            background-color: rgba(255,0,255,.5);
+            }
+            .circle2 {
+            margin-top: -100px;
+            background-color: rgba(0,0,255,.5);
+            }
+            #header {
+                position: fixed;
+                top: 0;
+                left: 0;
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                height: 100px;
+                background: #333;
+                color: #fff;
+            }
+            .topbtn {
+                width: 100px;
+                height: 20px;
+
+                padding: 10px;
+
+                border: 1px solid black;
+                border-radius: 5px;
+
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+
+                text-align: center;
+                text-decoration: none;
+
+                color: black;
+                background: lightskyblue;
+            }
+        </style>
+    </head>
+    <body>
+        <header id="header">header</header>
+        <div class="area1"></div>         
+        <div class="area2">
+            <div class="circle-g circle1">circle1</div>
+            <div class="circle-g circle2">circle2</div>
+        </div>
+
+        <div class="area3">
+            <a href="#" class="topbtn">상단으로</a>
+        </div>
+
+        <script>
+            // gsap의 scrolltrigger사용, 플러그인을 붙여준다
+            gsap.registerPlugin(ScrollTrigger);
+
+
+
+            // gsap 이용하여 스크롤시 헤더 온오프
+            const hd = document.querySelector("#header");
+            const topBtn = document.querySelector('.topbtn');
+            const btnRightHidden = -250;
+
+            
+            
+
+            window.addEventListener('scroll', _.throttle(hdScroll, 300));
+
+            function hdScroll() {
+                // 만약 100px이상 스크롤이 되면
+                if (window.scrollY > 100) {
+                    // 헤더를 숨기기
+                    // gsap사용
+                    gsap.to(hd,{opacity:0, display:"none", duration:0.5});
+                    // 버튼 보이기
+                    // gsap.to(".topbtn",2,{x:-200});
+                    gsap.set(topBtn,{x:-200});
+                    
+
+                } else {
+                    // 헤더를 보이기
+                    gsap.to(hd,{opacity:1, display:"flex", duration:0.5});
+                    // 버튼 숨기기
+                    // gsap.to(".topbtn",2,{x:200});
+                    gsap.set(topBtn,{x:200});
+                }
+            };
+
+            btnTop.addEventListener("click",function(event) {
+                //링크 이동방지
+                // 둘 중 아무거나 사용 가능
+                event.preventDefault();
+                gsap.to(window,{
+                    scrollTo:0,
+                    duration:1
+                })
+            });
+           
+                
+            
+
+            // 스크롤트리거 사용을 위한 기초
+            // gsap.to("엘리먼트",{scrolltrigger:{trigger:"엘리먼트",스크롤속성:값,스크롤속성:값},속성:값,duration:시간})
+            gsap.to(".circle1", {
+                scrollTrigger:{
+                    trigger: ".area2", //스크롤트리거 '모션'이 어느 지점에서 시작되는지
+                    markers: true, //인터렉션의 시작과 끝에 마커를 표시
+                    start: "top 50%", //인터렉션이 시작되는 지점(trigger의 상대 위치, 뷰포트의 절대 위치)
+                    end: "+=250", // 모션이 끝나는 지점
+                    scrub:true //스크롤의 양방향으로 모션을 재생
+                },
+                    x: 300, duration: 1
+            });
+
+            gsap.to(".circle2",{
+                scrollTrigger:{
+                    trigger:".area2",
+                    markers:true,
+                    start:"50% 50%",
+                    end:"+=250",
+                    scrub:true
+                },
+                duration:1,
+                scale:10
+            });
+
+            
+
+        </script>
+    </body>
+</html>

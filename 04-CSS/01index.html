@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS기초</title>
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/04-CSS/assets/CSS/comm.css">
+    <style>
+        /* 임베디드 방식 */
+        p {
+            font-size: 20px;
+            color: lightcoral;
+            background-color: black;
+            padding: 10px;
+            border-radius: 10px;
+            border: 10px solid red;
+            text-align: center;
+
+            height: 100px;
+            width: 100%;
+
+            /* 스펠링 틀리면 적용이 안됨 -> 개발자 모드로 확인하면 틀린부분 표기 됨 */
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS기초</h1>
+
+    <div>
+        <span>인라인 방식 : 제일 높은 우선순위</span>
+        <br />
+        <strong style="font-size: 20px; font-weight: 100;" >
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.</strong>
+        <pre class="desc1"> 태그 안에 style="속성:값" 넣는게 인라인 방식
+                ex (strong style="font-size:00px; font-weight:00"")
+                큰 따옴표 안에 같이 쓰면되고, 한 속성이 끝나면 ';'꼭 마감해야 함
+                그래도 보통 인라인 태그는 지양 한다. 정말 폰트 사이즈 처럼 간단하게
+                할 때에만 사용 한다. 그리고 넣어져 있는건 대부분 라이브러리나, JS가
+                바로 제어 하기 위해서 넣어둔것임 
+        </pre>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br/>
+            Quas debitis recusandae pariatur ullam deleniti. <br/>
+            Eaque facere quisquam, perferendis explicabo animi pariatur in? Sint nihil itaque laudantium quo. Blanditiis, possimus animi?</p>
+        <p class="desc2">zmffa;jdf;ja;dfj;ash;heiruietiytkdjfkj</p>
+    
+    
+    </div>
+
+    <em>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Qui labore impedit amet, ab dicta eaque assumenda,
+        laboriosam consequatur earum esse molestias quo eum in,
+        deserunt a veritatis.
+        Quos, nam repellat.</em>
+    
+
+    <div class="main">
+        <section class="bbs">
+            <ul>공지사항
+                <li><a href="#">lorem ipsum</a></li>
+                <li><a href="#">lorem ipsum</a></li>
+                <li><a href="#">lorem ipsum</a></li>
+                <li><a href="#">lorem ipsum</a></li>
+            </ul>
+        </section>
+    </div>
+    <div id="main">
+        <div class="header dark">내용은 이렇게 있어요
+            <nav>
+                <input class="input" type="search" title="검색" value="search">
+            </nav>
+            <ul class="depth1">
+                <li>
+                    <a href="#">menu1</a>
+                        <ul class="depth2">
+                            <a href="#">menu1-1</a>
+                            <a href="#">menu1-2</a>
+                            <a href="#">menu1-3</a>
+                            <a href="#">menu1-4</a>
+                        </ul>
+                </li>
+                <li><a href="#">menu2</a></li>
+                <li><a href="#">menu3</a></li>
+                <li><a href="#">menu4</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="goto">
+        <!-- 디자인요소는 CSS로 삽입 -->
+        <ul>
+            <li><a href="#">바로가기1</a></li>
+            <li><a href="#">바로가기1</a></li>
+            <li><a href="#">바로가기1</a></li>
+            <li><a href="#">바로가기1</a></li>
+        </ul> 
+    </section>
+    <!-- 뉴스, 배너 등 운영성 이미지는 태그로 삽입 -->
+        <ul>
+            <li>
+                <a href="#">
+                    <img src="./images/thumb.jpeg" alt="기사이미지">
+                </a>
+            </li>
+        </ul>
+        
+        <ul class="icon" style="font-size: 64px;">
+            <li><i class="las la-home"></i>home</li>
+            <li>search</li>
+            <!-- 라인어썸 i태그로 직접 넣어도 되지만 -->
+            <!-- 중복이 많을 경우에는 css 가상공간으로 해서 넣는다 -->
+            <li>menu</li>
+            <li>menu</li>
+            <li>menu</li>
+            <li>menu</li>
+            <li>menu</li>
+        </ul>
+
+        <ul class="icon2" style="font-size: 64px;">
+            <li><a href="#">home</a></li>
+            <li>search</li>
+            <li>instagram</li>
+            <li>youtube</li>
+        </ul>
+         
+    </body>
+
+</html>
