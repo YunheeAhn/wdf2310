@@ -1,31 +1,29 @@
-import { Box, Button, Card, CardBody, CardHeader, Flex,Stat,StatLabel} from "@chakra-ui/react"
-import { faChartSimple, faPlus} from "@fortawesome/free-solid-svg-icons";
+import { Box, Button, Card, CardHeader, Flex, Text} from "@chakra-ui/react"
+import { faChartSimple} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { barChartDataDailyTraffic, barChartOptionsDailyTraffic } from "../../../components/variables/charts";
 // import ColumnChart from "../../../components/charts/BarChart";
 
-import LineChart from "../../../components/charts/LineChart";
-import { lineChartDataTotalSpent, lineChartOptionsTotalSpent } from "../../../components/variables/charts";
+import BarChart from "../../../components/charts/BarChart";
+import { barChartDataConsumption, barChartOptionsConsumption, lineChartDataTotalSpent, lineChartOptionsTotalSpent } from "../../../components/variables/charts";
 
 
 const WeeklyRevenue = ( ) => {
     return (
-        <Card ml={'10px'}>
+        <Card>
             <CardHeader>
-                <Stat>
                     <Flex display={'flex'}  alignItems={'center'} justifyContent={'space-between'} borderRadius={'50%'} >
-                        <StatLabel color={'brand.200'}>This month</StatLabel>
+                        <Text fontSize={'18px'} fontWeight={700} color={'navy.700'}>Weekly Revenue</Text>
                         <Box>
                             <Button variant={'ghost'} >
-                                <FontAwesomeIcon icon={faPlus} color='#422AFB' />
+                                <FontAwesomeIcon icon={faChartSimple} color='#422AFB' />
                             </Button>
                         </Box>
                     </Flex>
-                </Stat>    
             </CardHeader>
 
             <Box h={'100%'}>
-                <LineChart chartData={lineChartDataTotalSpent} chartOptions={lineChartOptionsTotalSpent} />
+                <BarChart chartData={barChartDataConsumption} chartOptions={barChartOptionsConsumption} />
             </Box>
         </Card>
     )

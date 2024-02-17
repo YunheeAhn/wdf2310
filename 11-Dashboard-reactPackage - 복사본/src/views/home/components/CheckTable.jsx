@@ -1,6 +1,6 @@
 import { Card, CardHeader, Checkbox, Flex, Text } from "@chakra-ui/react"
 import { Table,Thead,Tbody,Tr,Th,Td,TableContainer,} from '@chakra-ui/react'
-import { faChartSimple} from "@fortawesome/free-solid-svg-icons";
+import { faEllipsis} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { tabledataCheck } from "../../../components/variables/tables";
 
@@ -8,12 +8,12 @@ const CheckTable = ( ) => {
 
     return (
         <>
-            <Card ml={'10px'}>
+            <Card >
                 <CardHeader>
                     <Flex alignItems={'center'} justifyContent={'space-between'}>
                             <Text color={'brand.200'}>This month</Text>
 
-                            <FontAwesomeIcon icon={faChartSimple} color='#422AFB' />
+                            <FontAwesomeIcon icon={faEllipsis} color='#422AFB' />
                     </Flex>
                 </CardHeader>
                 <TableContainer>

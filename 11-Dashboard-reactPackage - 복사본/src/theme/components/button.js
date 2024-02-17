@@ -16,9 +16,11 @@ export const buttonStyles = {
       },
       variants: {
         ghost: () => ({
-          bg: "rgba(256,256,256,0.6)",
+          bg: "rgb(237 242 247)",
           color : "white",
-
+          borderRadius : "10px",
+          width : "40px",
+          height : "40px",
         }),
         icon: () => ({
           w: '45px',

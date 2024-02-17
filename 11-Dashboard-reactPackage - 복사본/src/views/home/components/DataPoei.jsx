@@ -1,4 +1,4 @@
-import { Box, Card, CardBody, CardHeader, Flex, Stat, StatLabel, Text } from "@chakra-ui/react"
+import { Box, Button, Card, CardBody, CardHeader, Flex, Stat, StatLabel, Text } from "@chakra-ui/react"
 import { faChartSimple} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PieChart from '../../../components/charts/PieChart'
@@ -13,7 +13,9 @@ const DataPoei = () => {
                     <Stat>
                         <Flex display={'flex'}  alignItems={'center'} justifyContent={'space-between'} borderRadius={'50%'}>
                             <StatLabel color={'brand.200'}>PieChart</StatLabel>
-                            <FontAwesomeIcon icon={faChartSimple} color='#422AFB' />
+                            <Button variant={"ghost"} >
+                                <FontAwesomeIcon icon={faChartSimple} color='#422AFB' />
+                            </Button>
                         </Flex>
                     </Stat>
                 </CardHeader>

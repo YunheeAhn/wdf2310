@@ -12,6 +12,8 @@ import Daily from "./components/Daily";
 import DataPoei from "./components/DataPoei";
 import RTChart from "./components/ReactTable";
 import ComplexTable from "./components/ComplexTable"; 
+import TaskTable from "./components/Tasktable";
+import { DragDropContext } from "react-beautiful-dnd";
 
 
 
@@ -20,7 +22,7 @@ const Home = () => {
     return (
         <>
         
-        <VStack spacing="10px" width={'100%'}>
+        <VStack spacing="10px" ml={'10px'} width={'100%'} >
             <SimpleGrid columns={{base : 1,md : 2,xl : 6}} spacing={'10px'} width={'100%'}>
                 <Ministatics name="Earnings" value='$350.4' startContent={
                     <IconBox w={'52px'} h={'52px'} bg={'bgDefault'} icon={<FontAwesomeIcon icon={faChartSimple} color='#422AFB' />} />
@@ -49,7 +51,7 @@ const Home = () => {
                 <WeeklyRevenue bg={'tomato'} height={'90px'}></WeeklyRevenue>
             </SimpleGrid>
 
-            <SimpleGrid columns={{base : 1,md : 2}} spacing={'20px'} width={'100%'}>
+            <SimpleGrid columns={{base : 1,md : 2}} spacing={'10px'} width={'100%'}>
                 <CheckTable bg={'tomato'} height={'90px'}></CheckTable>
                 <SimpleGrid columns={{base : 1,md : 2}} spacing={'10px'} width={'100%'}>
                 <Daily bg={'tomato'} height={'90px'}></Daily>
@@ -63,14 +65,15 @@ const Home = () => {
                 <RTChart bg={'White'} height={'90px'}></RTChart> 
             </SimpleGrid>
 
-            <SimpleGrid columns={{base : 1,md : 2}} spacing={'20px'} width={'100%'}>
+            <SimpleGrid columns={{base : 1,md : 2}} spacing={'10px'} width={'100%'}>
                 <ComplexTable bg={'White'} height={'90px'}></ComplexTable> 
                 <SimpleGrid columns={{base : 1,md : 2}} spacing={'10px'} width={'100%'}>
-                    <Box bg={'White'} height={'90px'}></Box> 
+                    <DragDropContext>
+                    <TaskTable bg={'White'} height={'90px'}></TaskTable>
+                    </DragDropContext>
                     <Box bg={'White'} height={'90px'}></Box> 
                 </SimpleGrid>
             </SimpleGrid>
-
         </VStack>
 
         </>

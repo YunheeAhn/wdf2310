@@ -1,5 +1,5 @@
 import { Box, Button, Card, CardHeader, Flex, Progress, Stat, StatLabel, Table, TableContainer, Tbody, Td, Th, Thead, Tr } from "@chakra-ui/react"
-import { faChartSimple, faCircleCheck, faCircleExclamation,faCircleXmark, faPlus } from "@fortawesome/free-solid-svg-icons"
+import { faChartSimple, faCircleCheck, faCircleExclamation,faCircleXmark, faEllipsis, faPlus } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { complexDataTable } from "../../../components/variables/tables"
 
@@ -19,7 +19,7 @@ const ComplexTable = () => {
                             <StatLabel color={'brand.200'}>Complex Table</StatLabel>
                             <Box>
                                 <Button variant={'ghost'} >
-                                    <FontAwesomeIcon icon={faPlus} color='#422AFB' />
+                                <FontAwesomeIcon icon={faEllipsis} color='#422AFB' />
                                 </Button>
                             </Box>
                         </Flex>
