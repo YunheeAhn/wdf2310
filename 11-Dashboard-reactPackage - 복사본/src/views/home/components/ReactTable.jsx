@@ -1,8 +1,10 @@
 import React from 'react'
 import { useTable, useSortBy } from 'react-table'
-import { Card, CardHeader, Checkbox, Table, TableContainer, Tbody, Td, Th, Thead, Tr } from '@chakra-ui/react'
+import { Box, Button, Card, CardHeader, Checkbox, Flex, Table, TableContainer, Tbody, Td, Text, Th, Thead, Tr } from '@chakra-ui/react'
 import { FaAngleDown, FaAngleUp } from 'react-icons/fa6'
 import { columnsData } from '../../../components/variables/columnData'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEllipsis } from '@fortawesome/free-solid-svg-icons'
 
 const RTChart = () => {
     const data = React.useMemo(() => columnsData, [])
@@ -51,7 +53,16 @@ const RTChart = () => {
 
     return (
         <Card>
-            <CardHeader>Reac Table 라이브러리 사용하기</CardHeader>
+            <CardHeader>
+                    <Flex display={'flex'}  alignItems={'center'} justifyContent={'space-between'} borderRadius={'50%'} >
+                        <Text fontSize={'20px'} fontWeight={700} color={'navy.700'}>React Table</Text>
+                        <Box>
+                            <Button variant={'ghost'} >
+                                <FontAwesomeIcon icon={faEllipsis} color='#422AFB' />
+                            </Button>
+                        </Box>
+                    </Flex>
+            </CardHeader>
             <TableContainer>
                 <Table variant="simple" {...getTableProps()}>
                     <Thead>

@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import ColumnChart from "../../../components/charts/BarChart";
 
 import BarChart from "../../../components/charts/BarChart";
-import { barChartDataConsumption, barChartOptionsConsumption, lineChartDataTotalSpent, lineChartOptionsTotalSpent } from "../../../components/variables/charts";
+import { barChartDataConsumption, barChartOptionsConsumption } from "../../../components/variables/charts";
 
 
 const WeeklyRevenue = ( ) => {

@@ -34,7 +34,7 @@ const RTChart = () => {
 
     return (
         <>
-            <Card >
+            <Card>
                 <CardHeader>Reac Table 라이브러리 사용하기</CardHeader>
                 <TableContainer>
                     <Table {...getTableProps}>

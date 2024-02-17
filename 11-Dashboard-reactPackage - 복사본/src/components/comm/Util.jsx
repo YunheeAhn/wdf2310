@@ -1,4 +1,4 @@
-import { Avatar, Box, Button, ButtonGroup, Flex, Input, InputGroup, InputLeftElement, Spacer, Stack } from "@chakra-ui/react"
+import { Avatar, Button, ButtonGroup, Flex, Input, InputGroup, InputLeftElement, Spacer } from "@chakra-ui/react"
 import { faBell, faMagnifyingGlass, faMoon } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 

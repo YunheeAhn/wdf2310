@@ -212,7 +212,8 @@ export const pieChartOptions = {
   labels: ["Your files", "System", "Empty"],
   colors: ["#4318FF", "#6AD2FF", "#EFF4FB"],
   chart: {
-    width: "50px",
+    width: "100%",
+    height: '100%',
   },
   states: {
     hover: {

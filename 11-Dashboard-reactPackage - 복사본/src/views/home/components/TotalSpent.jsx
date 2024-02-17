@@ -36,7 +36,7 @@ class TotalSpent extends Component {
                     <Flex display={'flex'}  alignItems={'center'} justifyContent={'space-between'} borderRadius={'50%'} width={'100%'} padding={0} >
                         
                         <Box alignItems={'center'} justifyContent={'space-between'} padding={0}>
-                            <Button color={'brand.200'} display={'flex'}  alignItems={'center'} gap={'5px'} borderRadius={'10px'} >
+                            <Button bg={'#edf2f7'} color={'brand.200'} display={'flex'}  alignItems={'center'} gap={'5px'} borderRadius={'10px'} >
                                 <FontAwesomeIcon icon={faPlus} width={'16px'} height={'16px'} />
                                 <Text fontSize={'14px'} fontWeight={500} color={'brand.200'}>This month</Text>
                             </Button>
