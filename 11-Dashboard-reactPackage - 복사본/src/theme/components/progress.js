@@ -14,6 +14,7 @@ export const progressStyles = {
           w: "40px",
           h: "20px",
           borderRadius: "20px",
+          bg : '#e3e3e3',
           _focus: {
             boxShadow: "none",
           },
