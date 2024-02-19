@@ -56,7 +56,7 @@ export const complexDataTable = [
         name: 'Marketplace',
         status: 'Error',
         date: 'Apr 26, 2022',
-        progress: '90%',
+        progress: '100%',
     },
     {
         name: 'Marketplace',
