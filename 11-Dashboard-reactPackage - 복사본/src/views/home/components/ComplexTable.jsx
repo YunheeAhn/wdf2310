@@ -1,5 +1,5 @@
 import { Box, Button, Card, CardHeader, Flex, Progress, Stat, StatLabel, Table, TableContainer, Tbody, Td, Th, Thead, Tr } from "@chakra-ui/react"
-import { faCircleCheck, faCircleExclamation,faCircleXmark, faEllipsis, faPlus } from "@fortawesome/free-solid-svg-icons"
+import { faCircleCheck, faCircleExclamation,faCircleXmark, faEllipsis } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { complexDataTable } from "../../../components/variables/tables"
 

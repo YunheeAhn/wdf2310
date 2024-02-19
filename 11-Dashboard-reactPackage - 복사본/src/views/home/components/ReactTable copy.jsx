@@ -39,7 +39,7 @@ const RTChart = () => {
                 <TableContainer>
                     <Table {...getTableProps}>
                         <Thead>
-                            {headerGroups.map((headerGroup)=> {
+                            {headerGroups.map((headerGroup) => {
                                 <Tr {...headerGroup.getHeaderGroupProps()}>
                                     {headerGroup.headers.map((columnData) => (
                                     <Th {...columnData.getHeaderProps()} isNumeric={columnData.isNumeric}>
