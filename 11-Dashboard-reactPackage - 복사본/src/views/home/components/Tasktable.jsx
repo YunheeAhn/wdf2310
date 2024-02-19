@@ -9,12 +9,12 @@ import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd"
 // 드래그드롭 수도코드
 const TaskTable = () => {
     const tasklist = [
-        { list : 'Landing Page Design'},
-        { list : 'Mobile App Design'},
-        { list : 'Dashboard Builder'},
-        { list : 'Landing Page Design'},
-        { list : 'Dashboard Builder'}
-    ]
+        { id: 'task1', list: 'Landing page Design' },
+        { id: 'task2', list: 'Mobile App Design' },
+        { id: 'task3', list: 'Dashboard Builder' },
+        { id: 'task4', list: 'Landing page Design' },
+        { id: 'task5', list: 'Dashboard Builder' }
+    ];
     
     const onDragEnd = () => {
         console.log("드래그")
@@ -43,7 +43,7 @@ const TaskTable = () => {
                     <Flex flexDir={'column'} ref={provided.innerRef} {...provided.droppableProps}>
                         {tasklist.map((item, index) => (
                             // 드리거블
-                            <Draggable draggableId="task-list" index={index} key={index}>
+                            <Draggable draggableId={item.id} index={index} key={index}>
                             {provided => (
                             <Flex className="task-list-box"  ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps} alignItems={'center'} justifyContent={'space-between'}>
                                 <Flex className="checkText-box" marginBottom={'8px'} padding={'8px'}>
