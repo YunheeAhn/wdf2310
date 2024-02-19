@@ -1,6 +1,6 @@
 // 첫페이지
 
-import { Box, SimpleGrid, VStack } from "@chakra-ui/react";
+import { SimpleGrid, VStack } from "@chakra-ui/react";
 import Ministatics from "../../components/card/Ministatics";
 import IconBox from "../../components/icons/IconBox";
 import { faChartSimple, faHouse, faPaste, faQrcode } from "@fortawesome/free-solid-svg-icons";
@@ -13,7 +13,7 @@ import DataPoei from "./components/DataPoei";
 import RTChart from "./components/ReactTable";
 import ComplexTable from "./components/ComplexTable"; 
 import TaskTable from "./components/Tasktable";
-import { DragDropContext } from "react-beautiful-dnd";
+import MiniCalendar from "../../components/calendar/MiniCalendar";
 
 
 
@@ -68,10 +68,8 @@ const Home = () => {
             <SimpleGrid columns={{base : 1,md : 2}} spacing={'10px'} width={'100%'}>
                 <ComplexTable bg={'White'} height={'90px'}></ComplexTable> 
                 <SimpleGrid columns={{base : 1,md : 2}} spacing={'10px'} width={'100%'}>
-                    <DragDropContext>
                     <TaskTable bg={'White'} height={'90px'}></TaskTable>
-                    </DragDropContext>
-                    <Box bg={'White'} height={'90px'}></Box> 
+                    <MiniCalendar bg={'White'} height={'90px'}></MiniCalendar> 
                 </SimpleGrid>
             </SimpleGrid>
         </VStack>
