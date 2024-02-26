@@ -15,6 +15,14 @@ export const buttonStyles = {
         },
       },
       variants: {
+        banner: () => ({
+          bg: '#fff',
+          color: '#000',
+          width: '120px',
+          height: '24px',
+          padding: '20px',
+          borderRadius : "10px",
+        }),
         ghost: () => ({
           bg: "rgb(237 242 247)",
           color : "white",
