@@ -1,7 +1,6 @@
-import { AvatarGroup, Box, Button, Card, CardBody, CardFooter, CardHeader, Flex, Heading,  Image,  Link,  SimpleGrid, Text } from "@chakra-ui/react"
+import { Box, Button, Flex, Heading } from "@chakra-ui/react"
 
-import { faHeart } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 
 import React, { useEffect } from 'react'
 

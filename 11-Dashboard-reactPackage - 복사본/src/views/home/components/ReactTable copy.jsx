@@ -35,11 +35,11 @@ const RTChart = () => {
     return (
         <>
             <Card>
-                <CardHeader>Reac Table 라이브러리 사용하기</CardHeader>
+                <CardHeader>React Table 라이브러리 사용하기</CardHeader>
                 <TableContainer>
                     <Table {...getTableProps}>
                         <Thead>
-                            {headerGroups.map((headerGroup) => {
+                            {headerGroups.map((headerGroup) => (
                                 <Tr {...headerGroup.getHeaderGroupProps()}>
                                     {headerGroup.headers.map((columnData) => (
                                     <Th {...columnData.getHeaderProps()} isNumeric={columnData.isNumeric}>
@@ -47,7 +47,7 @@ const RTChart = () => {
                                     </Th>
                                     ))}
                                 </Tr>
-                            })}
+                            ))}
                         </Thead>
                         <Tbody {...getTableBodyProps()}>
                         {rows.map((row) => {

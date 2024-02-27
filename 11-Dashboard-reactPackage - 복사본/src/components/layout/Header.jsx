@@ -1,6 +1,6 @@
 // 헤더컴포넌트
 
-import { Box, Flex, Heading, Text} from "@chakra-ui/react";
+import { Box, Heading, Text} from "@chakra-ui/react";
 import { Link } from 'react-router-dom';
 import Gnb from './Gnb';
 import { Link as ReactRouterLink } from 'react-router-dom'

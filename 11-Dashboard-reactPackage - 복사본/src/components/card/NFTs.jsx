@@ -1,5 +1,5 @@
 // Chakra imports
-import { Box, Button, Flex, Image, Link, Text,SimpleGrid, CardHeader, CardBody, AvatarGroup, CardFooter, Avatar, Card } from "@chakra-ui/react";
+import { Box, Button, Flex, Image, Link, Text, CardHeader, CardBody, AvatarGroup, CardFooter, Avatar, Card } from "@chakra-ui/react";
 
   // Assets
 import React from "react";

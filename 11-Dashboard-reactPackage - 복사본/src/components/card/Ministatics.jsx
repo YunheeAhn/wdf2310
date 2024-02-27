@@ -1,4 +1,4 @@
-import { Card, Flex, Spacer, Stat, StatHelpText, StatLabel, StatNumber, Text } from "@chakra-ui/react";
+import { Card, Flex, Spacer, Stat, StatHelpText, StatLabel, StatNumber } from "@chakra-ui/react";
 
 
 const Ministatics = (props) => {
