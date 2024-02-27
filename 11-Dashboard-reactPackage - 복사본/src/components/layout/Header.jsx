@@ -1,6 +1,6 @@
 // 헤더컴포넌트
 
-import { Box, Heading} from "@chakra-ui/react";
+import { Box, Flex, Heading, Text} from "@chakra-ui/react";
 import { Link } from 'react-router-dom';
 import Gnb from './Gnb';
 import { Link as ReactRouterLink } from 'react-router-dom'
@@ -20,9 +20,11 @@ const Header = () => {
                 borderBottom={'1px solid'}
                 borderColor={'lineDefault'}>
                     
-                <Link as={ReactRouterLink} to="/">
-                    <span>Horizon</span>
-                    <span>Free</span>
+                <Link as={ReactRouterLink} to="/" >
+                    <Box fontSize={'26px'} w={'100%'} display={'flex'} alignItems={'center'} textAlign={'center'} justifyContent={'center'} gap={'5px'}>
+                        <Text color={'navy.700'} fontWeight={700}>HORIZON</Text>
+                        <Text>FREE</Text>
+                    </Box>
                 </Link>
             </Heading>
 
