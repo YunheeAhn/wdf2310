@@ -6,7 +6,7 @@ import { Box } from "@chakra-ui/react";
 
 const Footer = () => {
     return (
-        <Box as="footer" h={20} bg={'#eee'}>
+        <Box as="footer" h={20} bg={'#eee'} position={'fixed'} bottom={0} w={'100%'}>
             <Containerwrap as="footer" h={20} bg={'#eee'}>
                 저스트쇼핑몰
             </Containerwrap>
