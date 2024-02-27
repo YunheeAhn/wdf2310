@@ -12,10 +12,9 @@ const Marketplace = () => {
         < >
             <Grid p={'10px'} templateColumns='repeat(3, 1fr)' gap={'10px'} display={{base: 'block', xl : 'grid' }} >
                 <GridItem gridColumn={'1 / span 2'} w='100%' h='10'  >
-                    <Flex flexDir={'column'} gap={'10px'}>
+                    <Flex flexDir={'column'} gap={'10px'} >
                         <Banner w={'100%'} bg={'tomato'} height={'90px'}></Banner>
                         <Trending w={'100%'} bg={'tomato'} height={'90px'}></Trending>
-                        <Box w={'100%'} bg={'tomato'} height={'90px'}></Box>
                     </Flex>
                 </GridItem>
                 <GridItem w='100%' h='10' >

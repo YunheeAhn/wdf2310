@@ -74,7 +74,7 @@ export const buttonStyles = {
         }),
         darkBrand: (props) => ({
           bg: mode("brand.900", "brand.400")(props),
-          color: "white",
+          // color: "white",
           _focus: {
             bg: mode("brand.900", "brand.400")(props),
           },
