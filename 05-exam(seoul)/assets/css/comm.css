@@ -1,0 +1,161 @@
+* {
+    /* background : #ffffff; */
+    color: #333333;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: none;
+    text-decoration: none;
+
+}
+
+.inner {
+    display: flex;
+
+}
+/* 헤더 */
+#header {
+
+    display: flex;
+    flex-direction: column;
+
+    width: 200px;
+}
+/* 헤더-로고 */
+#header #logo {
+    display: block;
+
+    margin-bottom: 30px;
+    padding: 20px;
+
+}
+#header #logo a {
+    display: block;
+}
+#header #logo a img {
+    
+    margin: 0 auto;
+}
+/* 헤더-gnb */
+.gnb {
+    padding: 5px;
+}
+.gnb .gnb-inner .list .list-depth1 {
+    display: flex;
+    flex-direction: column;
+
+    font-size: 20px;
+    font-weight: 700;
+
+    margin-bottom: 10px;
+    border-bottom: 1px solid black;
+
+}
+.gnb .gnb-inner .list .list-depth1 > a {
+    width: 100%;
+    height: 35px;
+
+    line-height: 35px;
+    
+    padding-left: 10px;
+    
+}
+.gnb .gnb-inner .list .list-depth1 .depth2 {
+    width: 100%;
+    font-size: 14px;
+    font-weight: 400;
+
+    transition: max-height 0.5s;
+    
+    max-height: 0;
+    overflow: hidden;
+}
+
+.gnb .gnb-inner .list .list-depth1:hover .depth2 {
+    max-height: 100px;
+
+    background: rgb(255, 224, 224);
+}
+.gnb .gnb-inner .list .list-depth1:hover .depth2 .depth2_item {
+    margin-bottom: 3px;
+    padding: 5px;
+}
+
+
+
+/* 메인 */
+#main {
+    width: calc(100% - 200px);
+    background: gray;
+
+    display: flex;
+    flex-direction: column;
+}
+.topwrap {
+    background: lightgray;
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+    height: 400px;
+}
+.topwrap .slide {
+    width: calc(100% - 230px);
+    background: #333333;
+
+    position: relative;
+    overflow: hidden;
+}
+.topwrap .slide ul {
+    display: flex;
+
+    width: 300%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.topwrap .slide li {
+    width: 100%;
+}
+.topwrap .slide ul li a img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.topwrap .contents {
+    width: 230px;
+}
+
+.bottomwrap {
+    height: 250px;
+
+    display: flex;
+}
+.notice,
+.gallery {
+    width: 50%;
+}
+.gallery .gallery-wrap {
+    display: flex;
+    flex-direction: row;
+}
+
+#footer {
+    width: 100%;
+    background: yellow;
+    height: 100px;
+
+    display: flex;
+    justify-content: space-between;
+}
+#footer .logo {
+    width: 200px;
+}
+#footer .familySite {
+    width: 230px;
+}

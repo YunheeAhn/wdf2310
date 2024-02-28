@@ -3,6 +3,7 @@
 import { Box, Flex, Grid, GridItem } from "@chakra-ui/react";
 import Banner from "./components/Banner";
 import Trending from "./components/Trending";
+import TopcreatorsTable from "./components/TopcreatorsTable";
 
 
 
@@ -19,7 +20,7 @@ const Marketplace = () => {
                 </GridItem>
                 <GridItem w='100%' h='10' >
                     <Flex flexDir={'column'} gap={'10px'}>
-                        <Box w={'100%'} bg={'purple'} height={'90px'}></Box>
+                        <TopcreatorsTable w={'100%'} bg={'purple'} height={'90px'}></TopcreatorsTable>
                         <Box w={'100%'} bg={'purple'} height={'90px'}></Box>
                     </Flex>
                 </GridItem>
