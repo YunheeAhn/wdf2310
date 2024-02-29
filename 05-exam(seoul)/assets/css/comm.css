@@ -75,7 +75,7 @@
 .gnb .gnb-inner .list .list-depth1:hover .depth2 {
     max-height: 100px;
 
-    background: rgb(255, 224, 224);
+    background: rgb(251, 222, 255);
 }
 .gnb .gnb-inner .list .list-depth1:hover .depth2 .depth2_item {
     margin-bottom: 3px;
@@ -87,24 +87,24 @@
 /* 메인 */
 #main {
     width: calc(100% - 200px);
-    background: gray;
 
     display: flex;
     flex-direction: column;
 }
 .topwrap {
-    background: lightgray;
     display: flex;
     justify-content: space-between;
 
     width: 100%;
     height: 400px;
 }
+/* 슬라이드 */
 .topwrap .slide {
     width: calc(100% - 230px);
     background: #333333;
 
     position: relative;
+
     overflow: hidden;
 }
 .topwrap .slide ul {
@@ -116,6 +116,8 @@
     position: absolute;
     top: 0;
     left: 0;
+
+    transition: left .3s ease-in;
 }
 .topwrap .slide li {
     width: 100%;
@@ -136,26 +138,207 @@
 
     display: flex;
 }
-.notice,
+/* 배너이미지 */
+.contents {
+    width: 100%;
+    height: 100%;
+}
+.contents .banner img {
+    width: 230px;
+    height: 400px;
+
+    object-fit: cover;
+}
+/* 공지사항 갤러리 */
+.tabs {
+    position: relative;
+}
+.tabs,
 .gallery {
     width: 50%;
+    padding: 10px;
 }
 .gallery .gallery-wrap {
     display: flex;
     flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
 }
 
+/* 공지사항 */
+
+.list-title,
+.list-title a {
+    font-size: 20px;
+    font-weight: 600;
+
+    margin-bottom: 10px;
+}
+.list-item a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 5px 0;
+
+    border-bottom: 1px solid transparent;
+}
+.list-item a:hover {
+    border-bottom: 1px solid #333333;
+}
+.list-item a p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.list-item a em {
+    font-size: 14px;
+    color: #888888;
+}
+
+/* 갤러리 */
+.row-1 {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #ffffff70;
+}
+.row-1 img {
+    width: 100px;
+    height: 150px;
+
+    object-fit: contain;
+}
+.row-1 p {
+    display: block;
+
+    padding: 5px;
+
+    height: 20px;
+    line-height: 20px;
+
+    font-size: 14px;
+    color: #888888;
+}
+/* 탭스 위치 */
+.active .notice2 .notice2-list{
+    display: block;
+}
+.notice2-wrap .list-title .tab-tit {
+    position: absolute;
+
+    top: 11px;
+    left : 100px
+}
+.notice2-wrap .notice2-list {
+    display: none;
+
+    position: absolute;
+
+    top: 47px;
+    left : 10px
+}
+.notice2 .list-item a {
+    display: flex;
+    justify-content: space-between;
+}
+/* 탭 활성화 시 */
+.active .notice-wrap .list-title .tab-tit, 
+.active .notice2-wrap .list-title .tab-tit {
+    background: pink;
+}
+
+/* 풋터 */
 #footer {
-    width: 100%;
-    background: yellow;
+    background: #eeeeee;
     height: 100px;
 
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 #footer .logo {
-    width: 200px;
+    height: 100px;
+}
+#footer .logo .logo-b {
+    height: 100px;
+}
+#footer .logo .logo-b img {
+    height: 60%;
+
+    padding: 20px;
+
+    display: block;
+    object-fit: contain;
+
+    filter: grayscale(100%);
+    opacity: 0.7;
+
+}
+#footer .copy {
+    font-size: 13px;
+    color: #888888;
 }
 #footer .familySite {
     width: 230px;
+}
+
+/* 모달 */
+#modal {
+    display: none;
+
+    background: #33333370;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+.modal-box {
+    width: 500px;
+    height: 300px;
+
+    background: #ffffff;
+
+    border-radius: 20px;
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    padding: 40px;
+
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.modal-box strong {
+    font-size: 36px;
+    font-weight: 700;
+
+}
+.modal-box button {
+    padding: 5px;
+
+    font-size: 13px;
+    line-height: 5px;
+    text-align: center;
+
+    width: 50px;
+    height: 30px;
+
+    border-radius: 5px;
+    border: none;
+
+    background: red;
+    color: white;
+
+    cursor: pointer;
 }
