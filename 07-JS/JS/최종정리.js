@@ -214,3 +214,144 @@ console.log('---let of를 사용한 for문')
 for (let food of foods) {
     console.log(`${food.name}의 가격은 ${food.price} 입니다`)
 }
+
+
+// 함수
+
+// // 일반 함수는 가능
+// // 일반함수는 호이스팅이 가능
+// hello()
+// // 익명함수는 호이스팅 불가능
+// hello2()
+
+function hello() {
+    console.log('안녕하세요. 선언문 입니다.')
+}
+hello()
+
+const hello2 = function () {
+    console.log('안녕하세요. 익명함수 표현식입니다.')
+}
+hello2()
+
+function sum(xx,yy) {
+    return xx + yy
+}
+console.log(sum(3,5)) // 8 출력
+console.log(sum(2)) // NaN 출력 <= (2 + undefined) , 기본값 설정하면 이슈 해결 ex(xx,yy = 1)
+
+// 함수 선언
+const userX = {
+    name : 'Ahn',
+    age : 25
+}
+function getName1 (props) {
+    return props.name
+}
+console.log(getName1(userX))
+
+// name은 age살 입니다로 만들어 보기
+function getName2 (props) {
+    return `${props.name}의 나이는 ${props.age}살 입니다`
+}
+console.log(getName2(userX))
+
+// 함수의 매개변수 구조분해 할당하기
+function getName3(props) {
+    const {name, age} = props
+    return `${name}의 나이는 ${age}살 입니다. 구조분해`
+}
+console.log(getName3(userX))
+
+const userE = {
+    name : 'Ahn',
+    age : 25,
+    email : ''
+}
+function getEmail(props) {
+    const {name, age, email} = props
+    return `${name}의 나이는 ${age}살 입니다. 이메일은 ${email}입니다.`
+}
+console.log(getEmail(userE))
+
+// 배열의 구조분해 할당 알아보기
+const table = ['row1','row2','row3']
+
+function get2(props) {
+    // arr3의 2번째 배열을 콘솔창에 출력하기
+    return props // 배열 전체
+    // 순서를 정해준다면?
+    // return props[i]
+}
+console.log(get2(table)) // 배열이 출력됨
+console.log(get2(table[0])) // table의 [0]번째 출력
+console.log(get2(table[1])) // table의 [1]번째 출력
+console.log(get2(table[2])) // table의 [2]번째 출력
+
+// 배열 구조분해 할당 하기
+function get22(props) {
+    const [a,b,c] = props
+    return `${a} ${b} ${c} + 구조분해 햇슈`
+}
+console.log(get22(table))
+
+
+// 나머지 매개변수
+function sum5(...rest) {
+    return rest
+}
+console.log(sum5(1,2,3,4,5,6,7,8,9,10,11,12))
+
+
+// 화살표 함수
+const arrow = x => {} // 매개변수 1개일 경우 소괄호 생략 가능
+const arrow2 = (x,y) => {} // 화살표 함수 기본 문법
+
+const sum3 = () => {
+    return 'sum3 화살표 함수'
+}
+console.log(sum3())
+
+const sum33 = (a,b) => {
+    return a + b
+}
+console.log(sum33(2,5))
+
+const sum333 = (a,b) => a + b; // 화살표 함수 축약형
+console.log(sum333(3,6))
+
+// 화살표 함수의 다양한 예시
+
+// 1. 매개변수가 없는 경우
+const aa = () => {} ;
+// 2. 매개변수가 하나인 경우
+const bb = a => {};
+// 3. 매개변수가 여러개인 경우
+const cc = (a,b) => {}
+// 4. 리턴이 있는 경우
+const dd = (ab,af) => {
+    return ab + af
+}
+// 5. 리턴이 있는 경우의 축약형
+const ee = (ab,af) => ab + af;
+// 6. 리턴으로 시작하지 않는 경우
+    // 중괄호를 포함한 리턴을 생략 할 수 없다
+const ff = (a,b) => {
+    console.log(a,b)
+}
+// 7. 객체 데이터를 반환 하는 경우
+const gg = () => {
+    return {a:1, b:2}
+}
+// 8. 객체 데이터 반환하는 경우의 축약형
+// 객체 데이터를 축약 하는 경우,
+// 객체 데이터의 { }와 화살표 함수의 { }를 구분해야 함
+// 그래서 ({객체데이터}) 소괄호로 객체 데이터를 감싼다
+const hh = () => ({a : 1, b : 2}) 
+
+// 9. 배열데이터를 반환하는 경우
+const ii = () => {
+    return [1,2,3]
+}
+// 10. 배열데이터의 축약형
+const jj = () => [1,2,3]
