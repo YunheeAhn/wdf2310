@@ -277,3 +277,71 @@ const Ff = () => ({Xa : 1});
 // {}중괄호 포함 리턴 생략 가능
 const Gg = () => [1,2,3]
 // const Gg = () => {return [1,2,3]};
+
+
+
+// 호출 스케쥴링
+// setTimeout(함수, 시간)
+// 일정 시간이 지난 후에 함수를 실행 하는 함수
+const setTimer = setTimeout(() => {
+    console.log('곧 폭탄이 터집니다') 
+},100000000000)
+
+
+const stopBtn = document.querySelector('.btn-stop')
+const startBtn = document.querySelector('.btn-start')
+
+stopBtn.addEventListener('click', () => {
+    console.log('stop')
+    clearTimeout(setTimer)
+})
+startBtn.addEventListener('click', () => {
+    console.log('start')
+})
+
+
+// setInterval(함수, 시간)
+// 일정 시간 간격으로 함수를 실행
+const setTimer2 = setInterval(() => {
+    console.log('안녕 난 나야!')
+},100000000000) 
+
+const stopSlide = document.querySelector('.slide-stop')
+stopSlide.addEventListener('click',() => {
+    console.log('슬라이드 정지')
+    clearInterval(setTimer2)
+})
+
+
+// 콜백 함수
+// 함수의 매개변수로 전달되는 함수를 콜백 함수라고 한다.
+const aA = (props) => {
+    props() // 함수 실행
+    console.log('A를 실행 했어요')
+}
+const bB = () => {
+    console.log('B를 실행 했어요')
+}
+aA(bB)
+// bB()
+
+// 예제를 통해 콜백 함수 알아보기
+const sumCallBack = (a,b) => {
+    setTimeout(() => {
+        return a + b
+    }, 1000)
+}
+console.log(sumCallBack(2,4)) // undefined
+console.log(sumCallBack(9594,4674)) //undefined
+// seetTimeout을 1초 뒤에 추가 하는걸로 했는데
+// sumCallBack 함수가 실행 되기 전에 반환 되므로 값이 undefined가 된다
+
+// 변경된 부분
+const sumCallBack2 = (a,b,c) => {
+    setTimeout(() => { //setTimeout 함수를 c라는 매개변수의 인수로 넣는다
+        return c(a + b) //c는 a+b의 값으로 나오게 return : 합을 알고 싶으니까
+    }, 1000)
+}
+sumCallBack2(1,2,(value) => { // 위에서 인수로 정한C를 화살표 함수로 콜백
+    console.log(value)
+})
