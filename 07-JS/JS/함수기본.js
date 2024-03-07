@@ -340,8 +340,109 @@ console.log(sumCallBack(9594,4674)) //undefined
 const sumCallBack2 = (a,b,c) => {
     setTimeout(() => { //setTimeout 함수를 c라는 매개변수의 인수로 넣는다
         return c(a + b) //c는 a+b의 값으로 나오게 return : 합을 알고 싶으니까
-    }, 1000)
+    }, 0)
 }
 sumCallBack2(1,2,(value) => { // 위에서 인수로 정한C를 화살표 함수로 콜백
     console.log(value)
 })
+
+// -------------------콜백함수 다시 연습해보기--------------------------------------------
+const bbB = () => {
+    console.log('b call')
+}
+// aaA()
+
+const aaA = (props) => {  //값을 props로 받아오고
+    props()                 // props() 값을 실행 하고
+    console.log('a call')
+}
+aaA(bbB) // bbB() 함수에 aaA를 인수로 넣는다. 인수로서의 역할이기 때문에 소괄호는 삭제
+
+const sum6 = (a,b,c) => {
+    setTimeout(() => {
+        return c(a + b)
+    },2000)
+}
+sum6(1,5,(value) => {
+    console.log(value)
+})
+// --------------------------------------------------------------------------------------
+
+// 재귀함수
+// 스스로가 스스로를 호출하는 함수
+
+// 간단 예제
+let i = 0
+
+const recursion = () => {
+    console.log('재귀함수실행')
+    i++
+    if(i<5) {
+        recursion()
+    }
+    // recursion() => 무한 호출됨
+}
+recursion()
+
+// 심화 예제
+const user01 = {
+    name : '01',
+    parent : null
+}
+const user02 = {
+    name : '02',
+    parent : user01
+}
+const user03 = {
+    name : '03',
+    parent : user02
+}
+const user04 = {
+    name : '04',
+    parent : user03
+}
+
+const getRootUser = (props) => {
+    if(props.parent) {
+        return getRootUser(props.parent)
+    } else {
+        return props.parent
+    }
+}
+console.log(getRootUser(user04))
+
+// this 함수
+// 일반 함수는 호출 위치에 따라 this가 정해진다.
+// 화살표 함수는 자신이 선언된 함수 범위에서 this가 정해진다. === 화살표 함수 쓰지 말자
+const objThis = {
+    name : '아메리카노',
+    price : 4500,
+    // front : function () {}
+    front() {
+        return `${this.name}의 가격은 ${this.price}원 입니다`
+    }
+}
+console.log(objThis.front())
+
+function coffee2() {
+    this.name = '프라푸치노'
+    this.price = 6500
+
+    return {
+        name : '라떼',
+        price : 5000,
+        front : () => { 
+            return `${this.name}의 가격은 ${this.price}원 입니다`
+        }
+    }
+}
+const coffee3 = coffee2()
+
+// const objThis2 = {
+//     name : '라떼',
+//     price : 5000,
+//     front : () => { // 화살표 함수가 되면 값들을 찾지 못함
+//         return `${this.name}의 가격은 ${this.price}원 입니다`
+//     }
+// }
+// console.log(objThis2.front())
