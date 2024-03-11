@@ -14,6 +14,7 @@ import RTChart from "./components/ReactTable";
 import ComplexTable from "./components/ComplexTable"; 
 import TaskTable from "./components/Tasktable";
 import MiniCalendar from "../../components/calendar/MiniCalendar";
+import Userslist from "../../components/api/Userslist";
 
 
 
@@ -71,6 +72,10 @@ const Home = () => {
                     <TaskTable bg={'White'} height={'90px'}></TaskTable>
                     <MiniCalendar bg={'White'} height={'90px'}></MiniCalendar> 
                 </SimpleGrid>
+            </SimpleGrid>
+
+            <SimpleGrid columns={{base : 1,md : 1}} spacing={'10px'} width={'100%'}>
+                <Userslist bg={'tomato'} height={'90px'}>1</Userslist>
             </SimpleGrid>
         </VStack>
 

@@ -9,6 +9,7 @@ import { ThemeProvider } from "styled-components";
 // gsap 라이브러리 임포트, 제일 상위에 붙이기
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Userslist from "./components/api/Userslist";
 
 
 
