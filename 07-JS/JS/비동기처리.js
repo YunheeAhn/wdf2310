@@ -6,7 +6,7 @@ console.log('아메리카노 주문')
 console.log('슈렉 프라푸치노 제공')
 console.log('아메리카노 제공')
 
-  //비동기 처리 해보기
+  //1. 비동기 처리 해보기
 //   setTimeout() 이용
 console.log('슈렉 프라푸치노 주문-1번으로 받았는데')
 console.log('아메리카노 주문-두번째로 주문받았는데')
@@ -29,3 +29,60 @@ function orderCoffee(drink,time) {
     },4000)
 }
 orderCoffee('아메리카노',4000)
+
+  //2.  콜백 함수를 이용한 비동기 처리
+function orderCoffee2(coffee,callback) {
+    console.log(`${coffee} 주문 완료`)
+    setTimeout(()=> {
+        console.log(`${coffee}를 마십니다`)
+        callback()
+    },3000)
+}
+function drinkCoffee2(coffee) {
+    console.log('커피를 마신다.')
+}
+
+function drinkCoffee3() {
+    return '커피를 마십니다ㅇㅇㅇㅇㅇ'
+}
+orderCoffee2('아메리카노',drinkCoffee3)
+drinkCoffee2()
+console.log(drinkCoffee3())
+
+  // 3. promise로 비동기 처리하기
+//   생성자 함수 만들기
+//   인수 두가지 생성하기(성공했을 떄, 실패 했을 떄)
+const coffeOrder = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve('아메리카노 준비 완료 프로미스 객체 이용 예정')
+    },3000)
+})
+// 프로미스객체 이용하기
+coffeOrder
+    // 성공했을때
+    .then((props) => {
+        console.log(props)
+    })
+    // 실패 했을 때
+    .catch((error) => {
+        console.log(error)
+    })
+
+const cooffeOrder2 = new Promise((resolve,reject) => {
+    setTimeout(()=>{
+        if(Math.random() > 0.5) {
+            resolve('아메리카노 랜덤 준비완료')
+        }else {
+            reject('아메리카노 랜덤 준비실패')
+        }
+    },1000)
+})
+cooffeOrder2
+    // 성공했을때
+    .then((props) => {
+        console.log(props)
+    })
+    // 실패 했을 때
+    .catch((error) => {
+        console.log(error)
+    })
