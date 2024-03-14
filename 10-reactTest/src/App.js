@@ -1,7 +1,10 @@
+import { useState } from "react";
 import Btntoggle from "./Buttontoggle";
 import Comments from "./Ccoments";
 import Event from "./Event";
+import JoinSign from "./Joinsign";
 import Layout from "./Layout";
+import Organizing from "./Organizing";
 import Product from "./Product";
 import SetNumber from "./Setnumber";
 import State from "./State";
@@ -9,8 +12,21 @@ import Switch from "./Switch";
 
 function App() { 
 
+  const [user, setUser] = useState({
+    name: '',
+    gender : '',
+    age : '',
+    intro : ''
+  })
+  
   return ( 
     <>
+    {/* 정리 컴포넌트 아래꺼 */}
+
+    <Organizing />
+    <hr />
+    <JoinSign user={user} setUser={setUser} />
+    <hr />
     <Switch />
     <hr />
     <Btntoggle />
