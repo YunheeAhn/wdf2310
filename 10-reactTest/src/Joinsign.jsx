@@ -1,7 +1,13 @@
-import React, { useState } from "react"
+import React, { useState, useRef } from "react"
 
 // 최적화 React.memo
 const JoinSign = React.memo(({user,setUser}) => {
+    // ref기능 사용 선언 하기
+    const inputRef = useRef()
+    // 폼 입력 초기화
+    const handleReset = () => {
+        inputRef.current.value = ''
+    }
 
     const changeName = (e) => {
         console.log("변경된 이름 : " + e.target.value)
@@ -12,7 +18,6 @@ const JoinSign = React.memo(({user,setUser}) => {
             [name]: value,
         })
     }
-
     const changeGender = (e) => {
         console.log('변경된 성별 : ' + e.target.value)
         setGender(e.target.value)
@@ -26,7 +31,8 @@ const JoinSign = React.memo(({user,setUser}) => {
             <div>
                 <form>
                     <label htmlFor="myName">이름</label>
-                    <input onChange={changeName} type="text" id="myName" value={user.name}  placeholder="이름을 입력하세요" />
+                    <input ref={inputRef} onChange={changeName} type="text" id="myName" value={user.name}  placeholder="이름을 입력하세요" />
+                    <button onClick={handleReset}>초기화</button>
                 </form>
             </div>
             <div>
