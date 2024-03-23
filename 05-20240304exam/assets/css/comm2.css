@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  color: #333333;
+  background: #ffffff;
+
+  box-sizing: none;
+
+  width: 100%;
+}
+
+body {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+#header {
+  height: 100px;
+}
+
+#main {
+  height: 500px;
+
+  display: flex;
+  flex-direction: reverse-column;
+}
